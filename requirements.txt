@@ -3,3 +3,15 @@ pandas
 matplotlib
 jupyter-book
 tabulate
+numpy
+pyyaml
+docutils
+click
+pydata-sphinx-theme
+beautifulsoup4
+importlib-resources
+sphinx-book-theme
+nbconvert
+gdown
+ruamel.yaml
+openpyxl

@@ -5,13 +5,10 @@
 # ---
 # These files are used to configure and organize the website's contents.
 
-# In[1]:
-
-
-#%load_ext autoreload
-#%autoreload 2
-#%matplotlib inline
-
+# %load_ext autoreload
+# %autoreload 2
+# %matplotlib inline
+# 
 
 # In[2]:
 
@@ -25,15 +22,24 @@ import subprocess
 import yaml
 import builder as bd
 from pathlib import Path
+import gdown
 base_path=Path('..')
 config_path = base_path / 'config'
 cf=bd.load_yaml_file(config_path / 'config.yml')
 excel_file= config_path / cf['excel_file']
 class_path= base_path / cf['class']
 content_path = class_path / 'content'
+cf
 
 
 # In[3]:
+
+
+url = 'https://drive.google.com/uc?id='+cf['google_fileid']
+gdown.download(url, str(config_path / cf['excel_file']), quiet=False)
+
+
+# In[4]:
 
 
 # These load configuration from the excel files 
@@ -44,10 +50,10 @@ schedule= pd.read_excel(excel_file, sheet_name = 'Schedule',  index_col=None)
 content={}
 content['Before Class']= pd.read_excel(excel_file, sheet_name = 'Before',  index_col=None)
 content['In Class']= pd.read_excel(excel_file, sheet_name = 'During',  index_col=None)
-content['Assignment']= pd.read_excel(excel_file, sheet_name = 'Assignments',  index_col=None)
+#content['Assignment']= pd.read_excel(excel_file, sheet_name = 'Assignments',  index_col=None)
 
 
-# In[4]:
+# In[5]:
 
 
 #Create the syllabus link.
@@ -55,26 +61,26 @@ content['Assignment']= pd.read_excel(excel_file, sheet_name = 'Assignments',  in
 #bd.create_syllabus(content['Before Class'],0,cf['syllabus_message'],content_path / 'syllabus.md', config['repository']['url'])
 
 
-# In[5]:
+# In[6]:
 
 
 #Fix in case individual tries to publish where session is NA. This isn't allowed. 
 schedule.loc[schedule['Session'].isna(),'Publish']=0. 
 
 
-# In[6]:
+# In[7]:
 
 
 #Generate Links from the schedule to the sessions and within the other tables. 
 schedule.loc[schedule['Publish']==1,'Location']=schedule.loc[schedule['Publish']==1,'Session'].apply(lambda x: '../sessions/session'+str(int(x)))
 schedule.loc[schedule['Publish']==1,'Type']='Markdown'
 schedule=bd.link_generator(schedule, 'Summary',config['repository']['url'],'Link')
-content['Assignment']=bd.link_generator(content['Assignment'], 'Assignment',config['repository']['url'],'Starter')
+#content['Assignment']=bd.link_generator(content['Assignment'], 'Assignment',config['repository']['url'],'Starter')
 content['Before Class']=bd.link_generator(content['Before Class'], 'Content',config['repository']['url'],'Link')
 content['In Class']=bd.link_generator(content['In Class'], 'Content',config['repository']['url'],'Link')
 
 
-# In[7]:
+# In[8]:
 
 
 #Get the in class activities and prepare and output a markdown file. 
@@ -83,43 +89,48 @@ schedule_ic= schedule_ic.loc[schedule_ic['Content'].notnull(),['Week', 'Session'
 schedule_ic=bd.pandas_to_md(schedule_ic, content_path / 'in_class.md', 'In Class',         include = ['Week', 'Session', 'Date', 'Content'], header=cf['in_class_header'])
 
 
-# In[8]:
+# In[9]:
 
 
 #Get the before class activities and prepare and output a markdown file. 
 schedule_bc=schedule.merge(content['Before Class'], left_on='Session', right_on='Session', how='left')
 schedule_bc= schedule_bc.loc[schedule_bc['Content'].notnull(),['Week', 'Session', 'Date', 'Content']]
 schedule_bc=bd.pandas_to_md(schedule_bc, content_path / 'preparation.md', 'Before Class',                              include = ['Week', 'Session', 'Date', 'Content'], header=cf['bc_class_header'])
-schedule=schedule.merge(content['Assignment'], left_on='Session', right_on='Session', how='left')
+#schedule=schedule.merge(content['Assignment'], left_on='Session', right_on='Session', how='left')
 
 
-# In[9]:
-
-
-#Get the assignments and prepare and output a markdown file. 
-assignments_new = schedule.loc[schedule['Assignment'].notnull(),['Week', 'Session', 'Date', 'Assignment', 'Due']]
-assignments_new=bd.pandas_to_md(assignments_new, content_path / 'assignments.md', 'Assignments',                              include = ['Week', 'Session', 'Date', 'Assignment', 'Due'],header=cf['assignments_header'])
-
+# #Get the assignments and prepare and output a markdown file. 
+# assignments_new = schedule.loc[schedule['Assignment'].notnull(),['Week', 'Session', 'Date', 'Assignment', 'Due']]
+# if len(assignments_new)>0:
+#     assignments_new=bd.pandas_to_md(assignments_new, content_path / 'assignments.md', 'Assignments', \
+#                             include = ['Week', 'Session', 'Date', 'Assignment', 'Due'],header=cf['assignments_header'])
 
 # In[10]:
 
 
 #Output the schedule to markdown.
-schedule=bd.pandas_to_md(schedule, content_path / 'schedule.md', 'Schedule',                              include = ['Week', 'Session', 'Date', 'Day', 'Topic', 'Summary', 'Assignment', 'Due'],header=cf['schedule_header'])
+schedule=bd.pandas_to_md(schedule, content_path / 'schedule.md', 'Schedule',                              include = ['Week', 'Session', 'Date', 'Day', 'Topic', 'Summary'],header=cf['schedule_header'])
+
+
+# In[ ]:
+
+
+
 
 
 # In[11]:
 
 
 #Generate Session Files
-toc=bd.generate_sessions(config, toc, 2, schedule, class_path / 'sessions',content, ['Before Class', 'In Class', 'Assignment'])
+#generate_sessions(config, toc, toc_part, schedule, path, content, keys):
+bd.generate_sessions(config=config, toc=toc, schedule=schedule, path=class_path / 'sessions', content=content, keys=['Before Class', 'In Class'])
 
 
 # In[12]:
 
 
 #Update the sessions to the yaml file.  Other updates to notebooks need to be done manually.
-bd.update_yaml_file(class_path / '_toc.yml', toc)
+#bd.update_yaml_file(class_path / '_toc.yml', toc)
 
 
 # In[13]:
