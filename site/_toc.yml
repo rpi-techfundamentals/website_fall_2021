@@ -4,10 +4,8 @@ parts:
 - caption: OVERVIEW
   chapters:
   - file: content/schedule
-  - file: content/syllabus
-  - file: content/preparation
+  - file: content/before_class
   - file: content/in_class
-  - file: content/capstone
 - caption: SESSIONS
   numbered: True
   start_numbering_at: 1
@@ -18,9 +16,11 @@ parts:
   start_numbering_at: 1
   chapters:
   - glob: notebooks/nb*
-- caption: DEEP LEARNING
-  numbered: true
+- caption: Resources
+  numbered: False
   chapters:
+  - url: https://github.com/ageron/handson-ml2
+    title: Hands On Machine Learning with Python
   - url: https://github.com/ageron/handson-ml2
     title: Hands On Machine Learning with Python
   - url: https://github.com/fastai/fastbook
@@ -31,3 +31,4 @@ parts:
     title: Pytorch Tutorials
   - url: https://www.kaggle.com/learn/intro-to-deep-learning
     title: Kaggle Introduction to Deep Learning Course
+  - file: content/capstone

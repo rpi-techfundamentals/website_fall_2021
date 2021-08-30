@@ -66,10 +66,12 @@ def create_md_title(title, content=""):
 
 def pandas_to_md(df, file, title,  include, header="",footer=""):
     if DATE in df.columns:
+        df[DATE] = pd.to_datetime(df[DATE], errors='coerce')
         #if pd.core.dtypes.common.is_datetime_or_timedelta_dtype(df[DATE]):
         print("Converting datetime to ")
         df[DATE]=df[DATE].dt.strftime('%m/%d')
     if DUE in df.columns:
+        df[DUE] = pd.to_datetime(df[DUE], errors='coerce')
         #if pd.core.dtypes.common.is_datetime_or_timedelta_dtype(df[DATE]):
         print("Converting datetime to ")
         df[DUE]=df[DUE].dt.strftime('%m/%d')
