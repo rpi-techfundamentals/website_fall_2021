@@ -4,8 +4,11 @@ parts:
 - caption: OVERVIEW
   chapters:
   - file: content/schedule
+    title: Schedule
   - file: content/before_class
+    title: Before Class
   - file: content/in_class
+    title: During Class
 - caption: SESSIONS
   numbered: True
   start_numbering_at: 1
