@@ -19,6 +19,8 @@ parts:
 - caption: Resources
   numbered: False
   chapters:
+  - url: https://rpi.box.com/s/2rivfabp5r2sc224nwgv3en1cmks3cec
+    title: Box Link
   - url: https://github.com/ageron/handson-ml2
     title: Hands On Machine Learning with Python
   - url: https://github.com/ageron/handson-ml2
