@@ -1,18 +1,18 @@
 Welcome to Introduction to Machine Learning Applications
 ============================
 
-IMPORTANT LINKS
+SECTION-01 IMPORTANT LINKS
+- Prof Kuruzovich
 - [RPI LMS](https://lms.rpi.edu/)
 - [Join link for WEBEX TEAMS Discussion Space](https://eurl.io/#oBwbKC5XC)
-
-SECTION 01
-- Prof Kuruzovich WEBEX Meetings Classroom Link [https://rensselaer.webex.com/meet/kuruzj](https://rensselaer.webex.com/meet/kuruzj)
-- [Box File link*](https://rpi.box.com/s/g3wsswc1gvqxvamkuxee77eb4qugizvj)
+- [Box File link*](https://rpi.box.com/s/2rivfabp5r2sc224nwgv3en1cmks3cec)
 - Office Hours Tuesday 8:00 AM – 10:00 AM Virtually Via Webex Teams.
-- TA: Yuanyuan Liu  	Office Location:  Virtually Via Webex Teams
-TA Office Hours:   TBD	    
+- TA Name:	Yuanyuan Liu  	Office Location:  Virtually Via Webex Teams or via
+https://rensselaer.webex.com/meet/liuy55
+- TA Office Hours:   Monday 10am-12PM
 
-*We will use box to share everything from the syllabus to powerpoint presentations. In order to be able to reach the Box file share, you will need an RPI Box Account.  Please sign up for it [here](https://itssc.rpi.edu/hc/en-us/articles/360004742212-Box-Overview-Registering-for-an-RPI-Box-Account).
+
+*We will use the course website to share Jupyter notebooks and Box to share files like Powerpoint presentations.  To access Box, you need to setup a Box account with your RPI email, as described here: [https://itssc.rpi.edu/hc/en-us/articles/360004742212-Box-Overview-Registering-for-an-RPI-Box-Account](https://itssc.rpi.edu/hc/en-us/articles/360004742212-Box-Overview-Registering-for-an-RPI-Box-Account) In addition, you may find it useful to download box drive [https://www.box.com/resources/downloads](https://www.box.com/resources/downloads).  
 
 This is the website for the Rensselaer class *Introduction to Machine Learning Applications*.  
 
