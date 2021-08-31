@@ -37,7 +37,7 @@ jobs:
         jupyter-book build site/
     - name: Convert Script
       run: |
-        cp CNAME ./site/_build/html
+        cp CNAME ./site/_build/html/CNAME
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
