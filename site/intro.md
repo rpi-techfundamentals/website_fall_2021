@@ -22,9 +22,9 @@ I want to be very responsive to your questions and concerns as we go through the
 
 ## Course Content
 This website will be the primary source of content for the class.
-  - [Course Schedule](./content/schedule.md)  This covers when assignments are do.
+  - [Course Schedule](./content/schedule.md)  This will cover topics.
   - Sessions Each day will summaries the variety of different activities on the session page.
-  - Assignments. All instructions for assignments will be provided on LMS
+  - Assignments. All instructions for assignments will be provided on LMS.
   - Box will be used to share files (presentations, spreadsheets, etc.).
 
 ## LMS: Assignment Submission, Quizzes, and Grading
