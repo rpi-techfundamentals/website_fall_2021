@@ -25,7 +25,7 @@ only method of handling drive files. You will configure the API for a  `desktop 
 make sure to download the credential file as `credentials.json`. If you do not do this, the API will throw a Permission Denied error
 
 ## Building a Jupyter Book
-
+ 
 Run the following command in your terminal:
 
 ```bash
