@@ -19,6 +19,11 @@ parts:
   start_numbering_at: 1
   chapters:
   - glob: notebooks/nb*
+- caption: ASSIGNMENTS
+  numbered: True
+  start_numbering_at: 1
+  chapters:
+  - glob: assignments/h*
 - caption: Resources
   numbered: False
   chapters:

@@ -22,15 +22,15 @@ I want to be very responsive to your questions and concerns as we go through the
 
 ## Course Content
 This website will be the primary source of content for the class.
-  - [Course Schedule](./content/schedule.md)  This covers when assignments are do.
+  - [Course Schedule](./content/schedule.md)  This will cover topics.
   - Sessions Each day will summaries the variety of different activities on the session page.
-  - Assignments. All instructions for assignments will be provided on LMS
+  - Assignments. All instructions for assignments will be provided on LMS.
   - Box will be used to share files (presentations, spreadsheets, etc.).
 
 ## LMS: Assignment Submission, Quizzes, and Grading
-  - Please be aware of the variety of course assignments listed on the schedule. We might even through a few quizes in there. These will done through the LMS.
-  - In some cases, a starter excel spreadsheet or Jupyter notebook will be provided. Always upload the actual completed .xlsx file or .ipynb file for grading rather than a pdf.
-[RPI LMS](https://lms.rpi.edu/)
+  - Please be aware that I might do in-class quizzes to encourage attendance.
+  - For assignments a starter excel spreadsheet or Jupyter notebook will be provided. Always start with that and upload the actual completed .xlsx file or .ipynb file for grading rather than a pdf.
+
 
 
 
