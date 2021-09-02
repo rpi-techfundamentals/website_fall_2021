@@ -122,6 +122,16 @@
    2. Python Basics; HW1 (09/02)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session3.html">
+   3. Python Conditionals, Loops, Functions, Aggregating (09/07)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sessions/session4.html">
+   4. Python Conditionals, Loops, Functions, Aggregating (continued) HW2 (09/09)
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -281,7 +291,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/assignments/hw1.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/assignments/assignment-1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -301,7 +311,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fassignments/hw1.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fassignments/assignment-1.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -322,7 +332,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/assignments/hw1.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/assignments/assignment-1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -330,7 +340,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/assignments/hw1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/assignments/assignment-1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -658,11 +668,6 @@
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#that-is-it">
-   14. That is it!
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -685,9 +690,9 @@
 <p>Before you submit this homework, make sure everything runs as expected. First, restart the kernel (in the menu, select Kernel → Restart) and then run all cells (in the menubar, select Cell → Run All). You can discuss with others regarding the homework but all work must be your own.</p>
 <p>This homework will test your knowledge on basics of Python. The Python notebooks shared will be helpful to solve these problems.</p>
 <p>Steps to evaluate your solutions:</p>
-<p>Step-1: Ensure you have installed Anaconda (Windows: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">https://docs.anaconda.com/anaconda/install/windows/</a> ; Mac:<a class="reference external" href="https://docs.anaconda.com/anaconda/install/mac-os/">https://docs.anaconda.com/anaconda/install/mac-os/</a> ; Linux: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">https://docs.anaconda.com/anaconda/install/linux/</a>)</p>
-<p>Step-2: Open the Jupyter Notebook by first launching the anaconda software console</p>
-<p>Step-3: Open the hw1.ipynb file and write your solutions at the appropriate location “# YOUR CODE HERE”</p>
+<p>Step-1: Try on Colab or Anaconda (Windows: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">https://docs.anaconda.com/anaconda/install/windows/</a> ; Mac:<a class="reference external" href="https://docs.anaconda.com/anaconda/install/mac-os/">https://docs.anaconda.com/anaconda/install/mac-os/</a> ; Linux: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">https://docs.anaconda.com/anaconda/install/linux/</a>)</p>
+<p>Step-2: Open the Jupyter Notebook by first launching the anaconda software console or</p>
+<p>Step-3: Open the hw1.ipynb file and write your solutions at the appropriate location “# YOUR CODE HERE” (deleting the code <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">NotImplementedError()</span></code>).</p>
 <p>Step-4: You can restart the kernel and click run all (in the menubar, select Cell → Run All) on the center-right on the top of this window.</p>
 <p>Step-5: Now go to “File” then click on “Download as” then click on “Notebook (.ipynb)” Please DO NOT change the file name and just keep it as “hw1.ipynb”</p>
 <p>Step-6: Go to <a class="reference external" href="http://lms.rpi.edu">lms.rpi.edu</a> and upload your homework at the appropriate link to submit this homework.</p>
@@ -710,7 +715,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Assign x; y; z</span>
 
-<span class="c1"># YOUR CODE HERE (When you implement the code, delete the following error.)</span>
+<span class="c1"># YOUR CODE HERE</span>
 <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -739,7 +744,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Need to create li1, li2, li3, li4, li5 according to the instructions</span>
 
-<span class="c1"># YOUR CODE HERE (When you implement the code, delete the following raise command.)</span>
+<span class="c1"># YOUR CODE HERE</span>
 <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -967,11 +972,6 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="that-is-it">
-<h1><span class="section-number">14. </span>That is it!<a class="headerlink" href="#that-is-it" title="Permalink to this headline">¶</a></h1>
-<p>Please restart the kernel and run everything again, making sure that it runs without errors.</p>
-<p>Then upload it to LMS.</p>
 </div>
 
     <script type="text/x-thebe-config">
