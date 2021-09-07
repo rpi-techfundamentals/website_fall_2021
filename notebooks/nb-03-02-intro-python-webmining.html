@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>16. This tutorial is directly from the the BeautifulSoup documentation. &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>12. Web Mining &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="18. Overview" href="nb-03-03-visualization-python-seaborn.html" />
-    <link rel="prev" title="11. Before you Begin #1" href="nb-03-01-intro-api-twitter.html" />
+    <link rel="next" title="13. Introduction to Seaborn" href="nb-03-03-visualization-python-seaborn.html" />
+    <link rel="prev" title="11. Introduction to APIs" href="nb-03-01-intro-api-twitter.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -191,27 +191,32 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-01-intro-api-twitter.html">
-   11. Before you Begin #1
+   11. Introduction to APIs
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   16. This tutorial is directly from the the BeautifulSoup documentation.
+   12. Web Mining
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-03-visualization-python-seaborn.html">
-   18. Overview
+   13. Introduction to Seaborn
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-04-strings-regular-expressions.html">
-   22. String Manipulation and Regular Expressions
+   14. String Manipulation and Regular Expressions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-05-features-dummies.html">
-   23. Feature Extraction
+   15. Feature Extraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-03-06-matplotlib.html">
+   17. MatplotLab
   </a>
  </li>
 </ul>
@@ -384,26 +389,26 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   16. This tutorial is directly from the the BeautifulSoup documentation.
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#this-tutorial-is-directly-from-the-the-beautifulsoup-documentation">
+   12.1. This tutorial is directly from the the BeautifulSoup documentation.
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#before-you-begin">
-     16.1. Before you begin
+     12.1.1. Before you begin
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#all-html-documents-have-structure-here-we-can-see-a-basic-html-page">
-   17. All html documents have structure.  Here, we can see a basic html page.
+   12.2. All html documents have structure.  Here, we can see a basic html page.
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-retreived-beautiful-soup-object">
-     17.1. A Retreived Beautiful Soup Object
+     12.2.1. A Retreived Beautiful Soup Object
     </a>
    </li>
   </ul>
@@ -421,21 +426,23 @@
                 
   <p><a class="reference external" href="http://rpi.analyticsdojo.com"><img alt="AnalyticsDojo" src="https://github.com/rpi-techfundamentals/spring2019-materials/blob/master/fig/final-logo.png?raw=1" /></a></p>
 <center><h1>Introduction to Python - Web Mining</h1></center>
-<center><h3><a href = 'http://rpi.analyticsdojo.com'>rpi.analyticsdojo.com</a></h3></center><div class="section" id="this-tutorial-is-directly-from-the-the-beautifulsoup-documentation">
-<h1><span class="section-number">16. </span>This tutorial is directly from the the BeautifulSoup documentation.<a class="headerlink" href="#this-tutorial-is-directly-from-the-the-beautifulsoup-documentation" title="Permalink to this headline">¶</a></h1>
+<center><h3><a href = 'http://introml.analyticsdojo.com'>introml.analyticsdojo.com</a></h3></center><div class="section" id="web-mining">
+<h1><span class="section-number">12. </span>Web Mining<a class="headerlink" href="#web-mining" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="this-tutorial-is-directly-from-the-the-beautifulsoup-documentation">
+<h2><span class="section-number">12.1. </span>This tutorial is directly from the the BeautifulSoup documentation.<a class="headerlink" href="#this-tutorial-is-directly-from-the-the-beautifulsoup-documentation" title="Permalink to this headline">¶</a></h2>
 <p>[<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a>]</p>
 <div class="section" id="before-you-begin">
-<h2><span class="section-number">16.1. </span>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">12.1.1. </span>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this headline">¶</a></h3>
 <p>If running locally you need to make sure that you have beautifulsoup4 installed.
 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">beautifulsoup4</span></code></p>
 <p>It should already be installed on colab.</p>
 </div>
 </div>
 <div class="section" id="all-html-documents-have-structure-here-we-can-see-a-basic-html-page">
-<h1><span class="section-number">17. </span>All html documents have structure.  Here, we can see a basic html page.<a class="headerlink" href="#all-html-documents-have-structure-here-we-can-see-a-basic-html-page" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">12.2. </span>All html documents have structure.  Here, we can see a basic html page.<a class="headerlink" href="#all-html-documents-have-structure-here-we-can-see-a-basic-html-page" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
 <span class="s2">&lt;body&gt;</span>
 <span class="s2">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;</span>
@@ -463,7 +470,7 @@ and they lived at the bottom of a well.</p>
 <p class="story">...</p>
 </body></html><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 
@@ -473,20 +480,20 @@ and they lived at the bottom of a well.</p>
 </div>
 </div>
 <div class="section" id="a-retreived-beautiful-soup-object">
-<h2><span class="section-number">17.1. </span>A Retreived Beautiful Soup Object<a class="headerlink" href="#a-retreived-beautiful-soup-object" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">12.2.1. </span>A Retreived Beautiful Soup Object<a class="headerlink" href="#a-retreived-beautiful-soup-object" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Can be parsed via dot notation to travers down the hierarchy by <em>class name</em>, <em>tag name</em>, <em>tag type</em>, etc.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Select the title class.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Select the title class.</span>
 <span class="n">soup</span><span class="o">.</span><span class="n">title</span>
  
 </pre></div>
@@ -495,84 +502,70 @@ and they lived at the bottom of a well.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Name of the tag.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Name of the tag.</span>
 <span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">name</span>
-
-
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#String contence inside the tag</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#String contence inside the tag</span>
 <span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">string</span>
-
-
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Parent in hierarchy.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Parent in hierarchy.</span>
 <span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span>
-
-
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the first p tag.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the first p tag.</span>
 <span class="n">soup</span><span class="o">.</span><span class="n">p</span>
-
-
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the class of the first p tag.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the class of the first p tag.</span>
 <span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
-
-
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the class of the first a tag.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the class of the first a tag.</span>
 <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
-
-
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#List all a tags.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#List all a tags.</span>
 <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link3&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link3&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#The Robots.txt listing who is allowed.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The Robots.txt listing who is allowed.</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://en.wikipedia.org/robots.txt&quot;</span><span class="p">)</span>
 <span class="n">txt</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
@@ -582,7 +575,7 @@ and they lived at the bottom of a well.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.rpi.edu&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.rpi.edu&quot;</span><span class="p">)</span>
 <span class="n">txt</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
 <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 
@@ -593,14 +586,14 @@ and they lived at the bottom of a well.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experiment with selecting your own website.  Selecting out a url. </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experiment with selecting your own website.  Selecting out a url. </span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;enter url here&quot;</span><span class="p">)</span>
 <span class="n">txt</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
@@ -613,6 +606,7 @@ and they lived at the bottom of a well.</p>
 </div>
 <p>#For more info, see
 <a class="reference external" href="https://github.com/stanfordjournalism/search-script-scrape">https://github.com/stanfordjournalism/search-script-scrape</a></p>
+</div>
 </div>
 </div>
 
@@ -650,7 +644,7 @@ and they lived at the bottom of a well.</p>
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">11. </span>Before you Begin #1</p>
+                <p class="prevnext-title"><span class="section-number">11. </span>Introduction to APIs</p>
             </div>
         </a>
     </div>
@@ -658,7 +652,7 @@ and they lived at the bottom of a well.</p>
         <a class="right-next" href="nb-03-03-visualization-python-seaborn.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">18. </span>Overview</p>
+                <p class="prevnext-title"><span class="section-number">13. </span>Introduction to Seaborn</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
