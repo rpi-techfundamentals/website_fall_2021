@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10. Kaggle Baseline &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>16. This tutorial is directly from the the BeautifulSoup documentation. &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11. Before you Begin #1" href="nb-03-01-intro-api-twitter.html" />
-    <link rel="prev" title="9. More Pivottables" href="nb-02-04-pivottable.html" />
+    <link rel="next" title="18. Overview" href="nb-03-03-visualization-python-seaborn.html" />
+    <link rel="prev" title="11. Before you Begin #1" href="nb-03-01-intro-api-twitter.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -184,8 +184,8 @@
    9. More Pivottables
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-05-kaggle-baseline.html">
    10. Kaggle Baseline
   </a>
  </li>
@@ -194,8 +194,8 @@
    11. Before you Begin #1
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="nb-03-02-intro-python-webmining.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    16. This tutorial is directly from the the BeautifulSoup documentation.
   </a>
  </li>
@@ -316,7 +316,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/nb-02-05-kaggle-baseline.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebooks/nb-03-02-intro-python-webmining.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -336,7 +336,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-02-05-kaggle-baseline.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-03-02-intro-python-webmining.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -357,7 +357,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-02-05-kaggle-baseline.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-03-02-intro-python-webmining.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -365,7 +365,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-02-05-kaggle-baseline.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-03-02-intro-python-webmining.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -384,52 +384,29 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-code-using-kaggle-notebooks">
-   10.1. Running Code using Kaggle Notebooks
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   16. This tutorial is directly from the the BeautifulSoup documentation.
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#before-you-begin">
+     16.1. Before you begin
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#train-and-test-set-on-kaggle">
-   10.2.
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     train
-    </span>
-   </code>
-   and
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     test
-    </span>
-   </code>
-   set on Kaggle
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#all-html-documents-have-structure-here-we-can-see-a-basic-html-page">
+   17. All html documents have structure.  Here, we can see a basic html page.
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#baseline-models-no-survivors">
-   10.3. Baseline Models: No Survivors
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#write-to-csv">
-   10.4. Write to CSV
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#download-from-colab">
-   10.5. Download from Colab
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-first-rule-of-shipwrecks">
-   10.6. The First Rule of Shipwrecks
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#writeout-and-then-download-your-file">
-   10.7. Writeout and then Download your File
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-retreived-beautiful-soup-object">
+     17.1. A Retreived Beautiful Soup Object
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -443,163 +420,199 @@
               <div>
                 
   <p><a class="reference external" href="http://rpi.analyticsdojo.com"><img alt="AnalyticsDojo" src="https://github.com/rpi-techfundamentals/spring2019-materials/blob/master/fig/final-logo.png?raw=1" /></a></p>
-<center><h1>Introduction to Python - Kaggle Baseline</h1></center>
-<center><h3><a href = 'http://rpi.analyticsdojo.com'>rpi.analyticsdojo.com</a></h3></center>
-<div class="section" id="kaggle-baseline">
-<h1><span class="section-number">10. </span>Kaggle Baseline<a class="headerlink" href="#kaggle-baseline" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="running-code-using-kaggle-notebooks">
-<h2><span class="section-number">10.1. </span>Running Code using Kaggle Notebooks<a class="headerlink" href="#running-code-using-kaggle-notebooks" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Kaggle utilizes Docker to create a fully functional environment for hosting competitions in data science.</p></li>
-<li><p>You could download/run this locally or view the <a class="reference external" href="https://www.kaggle.com/analyticsdojo/titanic-baseline-models-analyticsdojo-python/editnb">published version</a> and <code class="docutils literal notranslate"><span class="pre">fork</span></code> it.</p></li>
-<li><p>Kaggle has created an incredible resource for learning analytics.  You can view a number of <em>toy</em> examples that can be used to understand data science and also compete in real problems faced by top companies.</p></li>
-</ul>
+<center><h1>Introduction to Python - Web Mining</h1></center>
+<center><h3><a href = 'http://rpi.analyticsdojo.com'>rpi.analyticsdojo.com</a></h3></center><div class="section" id="this-tutorial-is-directly-from-the-the-beautifulsoup-documentation">
+<h1><span class="section-number">16. </span>This tutorial is directly from the the BeautifulSoup documentation.<a class="headerlink" href="#this-tutorial-is-directly-from-the-the-beautifulsoup-documentation" title="Permalink to this headline">¶</a></h1>
+<p>[<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a>]</p>
+<div class="section" id="before-you-begin">
+<h2><span class="section-number">16.1. </span>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this headline">¶</a></h2>
+<p>If running locally you need to make sure that you have beautifulsoup4 installed.
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">beautifulsoup4</span></code></p>
+<p>It should already be installed on colab.</p>
+</div>
+</div>
+<div class="section" id="all-html-documents-have-structure-here-we-can-see-a-basic-html-page">
+<h1><span class="section-number">17. </span>All html documents have structure.  Here, we can see a basic html page.<a class="headerlink" href="#all-html-documents-have-structure-here-we-can-see-a-basic-html-page" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/train.csv
-<span class="o">!</span>wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/test.csv
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;</span>
 
-<span class="c1"># Input data files are available in the &quot;../input/&quot; directory.</span>
-<span class="c1"># Let&#39;s input them into a Pandas DataFrame</span>
-<span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;train.csv&quot;</span><span class="p">)</span>
-<span class="n">test</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;test.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="train-and-test-set-on-kaggle">
-<h2><span class="section-number">10.2. </span><code class="docutils literal notranslate"><span class="pre">train</span></code> and <code class="docutils literal notranslate"><span class="pre">test</span></code> set on Kaggle<a class="headerlink" href="#train-and-test-set-on-kaggle" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">train</span></code> file contains a wide variety of information that might be useful in understanding whether they survived or not. It also includes a record as to whether they survived or not.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">test</span></code> file contains all of the columns of the first file except whether they survived. Our goal is to predict whether the individuals survived.</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="baseline-models-no-survivors">
-<h2><span class="section-number">10.3. </span>Baseline Models: No Survivors<a class="headerlink" href="#baseline-models-no-survivors" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>The Titanic problem is one of classification, and often the simplest baseline of all 0/1 is an appropriate baseline.</p></li>
-<li><p>Think of the baseline as the simplest model you can think of that can be used to lend intuition on how your model is working.</p></li>
-<li><p>Even if you aren’t familiar with the history of the tragedy, by checking out the <a class="reference external" href="https://en.wikipedia.org/wiki/RMS_Titanic">Wikipedia Page</a> we can quickly see that the majority of people (68%) died.</p></li>
-<li><p>As a result, our baseline model will be for no survivors.</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="p">[</span><span class="s2">&quot;Survived&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submission</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;PassengerId&quot;</span><span class="p">,</span> <span class="s2">&quot;Survived&quot;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submission</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="write-to-csv">
-<h2><span class="section-number">10.4. </span>Write to CSV<a class="headerlink" href="#write-to-csv" title="Permalink to this headline">¶</a></h2>
-<p>The code below will write your dataframe to a CSV.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submission</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;everyone_dies.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="download-from-colab">
-<h2><span class="section-number">10.5. </span>Download from Colab<a class="headerlink" href="#download-from-colab" title="Permalink to this headline">¶</a></h2>
-<p>Working on colab requires you to download a file via a google specific package.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
-<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;everyone_dies.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="the-first-rule-of-shipwrecks">
-<h2><span class="section-number">10.6. </span>The First Rule of Shipwrecks<a class="headerlink" href="#the-first-rule-of-shipwrecks" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>You may have seen it in a movie or read it in a novel, but <a class="reference external" href="https://en.wikipedia.org/wiki/Women_and_children_first">women and children first</a> has at it’s roots something that could provide our first model.</p></li>
-<li><p>Now let’s recode the <code class="docutils literal notranslate"><span class="pre">Survived</span></code> column based on whether was a man or a woman.</p></li>
-<li><p>We are using conditionals to <em>select</em> rows of interest (for example, where test[‘Sex’] == ‘male’) and recoding appropriate columns.</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Here we can code it as Survived, but if we do so we will overwrite our other prediction. </span>
-<span class="c1">#Instead, let&#39;s code it as PredGender</span>
+<span class="s2">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span>
+<span class="s2">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="s2">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span>
+<span class="s2">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span>
+<span class="s2">and they lived at the bottom of a well.&lt;/p&gt;</span>
 
-<span class="n">test</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;PredGender&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">test</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;female&#39;</span><span class="p">,</span> <span class="s1">&#39;PredGender&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="c1">#test.PredGender.astype(int)</span>
-<span class="n">test</span>
+<span class="s2">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<html><head><title>The Dormouse's story</title></head>
+<body>
+<p class="title"><b>The Dormouse's story</b></p>
+<p class="story">Once upon a time there were three little sisters; and their names were
+<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>,
+<a class="sister" href="http://example.com/lacie" id="link2">Lacie</a> and
+<a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>;
+and they lived at the bottom of a well.</p>
+<p class="story">...</p>
+</body></html><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="a-retreived-beautiful-soup-object">
+<h2><span class="section-number">17.1. </span>A Retreived Beautiful Soup Object<a class="headerlink" href="#a-retreived-beautiful-soup-object" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Can be parsed via dot notation to travers down the hierarchy by <em>class name</em>, <em>tag name</em>, <em>tag type</em>, etc.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submission</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;PassengerId&#39;</span><span class="p">,</span> <span class="s1">&#39;PredGender&#39;</span><span class="p">]]</span>
-<span class="c1"># But we have to change the column name.</span>
-<span class="c1"># Option 1: submission.columns = [&#39;PassengerId&#39;, &#39;Survived&#39;]</span>
-<span class="c1"># Option 2: Rename command.</span>
-<span class="n">submission</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;PredGender&#39;</span><span class="p">:</span> <span class="s1">&#39;Survived&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="writeout-and-then-download-your-file">
-<h2><span class="section-number">10.7. </span>Writeout and then Download your File<a class="headerlink" href="#writeout-and-then-download-your-file" title="Permalink to this headline">¶</a></h2>
-<p>Try your first submission to Kaggle!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">submission</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;women_survive.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Select the title class.</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span>
+ 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
-<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;women_survive.csv&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Name of the tag.</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">name</span>
+
+
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#String contence inside the tag</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">string</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Parent in hierarchy.</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the first p tag.</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">p</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the class of the first p tag.</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the class of the first a tag.</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#List all a tags.</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#The Robots.txt listing who is allowed.</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://en.wikipedia.org/robots.txt&quot;</span><span class="p">)</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.rpi.edu&quot;</span><span class="p">)</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experiment with selecting your own website.  Selecting out a url. </span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;enter url here&quot;</span><span class="p">)</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#For more info, see
+<a class="reference external" href="https://github.com/stanfordjournalism/search-script-scrape">https://github.com/stanfordjournalism/search-script-scrape</a></p>
 </div>
 </div>
 
@@ -633,19 +646,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="nb-02-04-pivottable.html" title="previous page">
+        <a class="left-prev" href="nb-03-01-intro-api-twitter.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">9. </span>More Pivottables</p>
+                <p class="prevnext-title"><span class="section-number">11. </span>Before you Begin #1</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="nb-03-01-intro-api-twitter.html" title="next page">
+        <a class="right-next" href="nb-03-03-visualization-python-seaborn.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">11. </span>Before you Begin #1</p>
+                <p class="prevnext-title"><span class="section-number">18. </span>Overview</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
