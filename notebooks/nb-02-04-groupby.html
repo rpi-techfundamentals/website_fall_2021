@@ -220,33 +220,38 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-EX-Exercise.html">
+   11. Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="nb-03-01-intro-api-twitter.html">
-   11. Introduction to APIs
+   12. Introduction to APIs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-02-intro-python-webmining.html">
-   12. Web Mining
+   13. Web Mining
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-03-visualization-python-seaborn.html">
-   13. Introduction to Seaborn
+   14. Introduction to Seaborn
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-04-strings-regular-expressions.html">
-   14. String Manipulation and Regular Expressions
+   15. String Manipulation and Regular Expressions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-05-features-dummies.html">
-   15. Feature Extraction
+   16. Feature Extraction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-06-matplotlib.html">
-   17. MatplotLab
+   18. MatplotLab
   </a>
  </li>
 </ul>
@@ -457,21 +462,13 @@
 <h1><span class="section-number">8. </span>Groupby and Pivot Tables<a class="headerlink" href="#groupby-and-pivot-tables" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/train.csv
-<span class="o">!</span>wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/test.csv
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 
 <span class="c1"># Input data files are available in the &quot;../input/&quot; directory.</span>
 <span class="c1"># Let&#39;s input them into a Pandas DataFrame</span>
-<span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;train.csv&quot;</span><span class="p">)</span>
-<span class="n">test</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/train.csv&#39;</span><span class="p">)</span>
+<span class="n">test</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/test.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -488,10 +485,139 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.9250</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>113803</td>
+      <td>53.1000</td>
+      <td>C123</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Allen, Mr. William Henry</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>373450</td>
+      <td>8.0500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PassengerId      int64
+Survived         int64
+Pclass           int64
+Name            object
+Sex             object
+Age            float64
+SibSp            int64
+Parch            int64
+Ticket          object
+Fare           float64
+Cabin           object
+Embarked        object
+dtype: object
 </pre></div>
 </div>
 </div>
@@ -503,6 +629,14 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex
+female    0.742038
+male      0.188908
+Name: Survived, dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -511,11 +645,40 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex     Pclass
+female  1         0.968085
+        2         0.921053
+        3         0.500000
+male    1         0.368852
+        2         0.157407
+        3         0.135447
+Name: Survived, dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#What does this tell us?  Here it doesn&#39;t look so clear. We could separate by set age ranges.</span>
 <span class="n">train</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span><span class="s1">&#39;Age&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">Survived</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex     Age  
+female  0.75     1.000000
+        1.00     1.000000
+        2.00     0.333333
+        3.00     0.500000
+        4.00     1.000000
+                   ...   
+male    70.00    0.000000
+        70.50    0.000000
+        71.00    0.000000
+        74.00    0.000000
+        80.00    1.000000
+Name: Survived, Length: 145, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -539,6 +702,84 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sex</th>
+      <th>Pclass</th>
+      <th>Survived</th>
+      <th>PerSurv</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>female</td>
+      <td>1</td>
+      <td>91</td>
+      <td>96.808511</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>female</td>
+      <td>2</td>
+      <td>70</td>
+      <td>92.105263</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>female</td>
+      <td>3</td>
+      <td>72</td>
+      <td>50.000000</td>
+      <td>144</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>male</td>
+      <td>1</td>
+      <td>45</td>
+      <td>36.885246</td>
+      <td>122</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>male</td>
+      <td>2</td>
+      <td>17</td>
+      <td>15.740741</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>male</td>
+      <td>3</td>
+      <td>47</td>
+      <td>13.544669</td>
+      <td>347</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -547,6 +788,18 @@
 <span class="n">spcount</span><span class="o">=</span><span class="n">train</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span><span class="s1">&#39;Pclass&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">Survived</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">spsum</span><span class="o">=</span><span class="n">train</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span><span class="s1">&#39;Pclass&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">Survived</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="n">spsum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex     Pclass
+female  1          94
+        2          76
+        3         144
+male    1         122
+        2         108
+        3         347
+Name: Survived, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -561,20 +814,96 @@
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Load it and create a pivot table.</span>
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
-<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;train.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#List the index and the functions you want to aggregage by. </span>
-<span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">train</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">,</span><span class="s2">&quot;Pclass&quot;</span><span class="p">],</span><span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Survived&quot;</span><span class="p">],</span><span class="n">aggfunc</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">,</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;mean&#39;</span><span class="p">,])</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">train</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">,</span><span class="s2">&quot;Pclass&quot;</span><span class="p">],</span><span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Survived&quot;</span><span class="p">],</span><span class="n">aggfunc</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">,</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;mean&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>count</th>
+      <th>sum</th>
+      <th>mean</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Survived</th>
+      <th>Survived</th>
+      <th>Survived</th>
+    </tr>
+    <tr>
+      <th>Sex</th>
+      <th>Pclass</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">female</th>
+      <th>1</th>
+      <td>94</td>
+      <td>91</td>
+      <td>0.968085</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>76</td>
+      <td>70</td>
+      <td>0.921053</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>144</td>
+      <td>72</td>
+      <td>0.500000</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">male</th>
+      <th>1</th>
+      <td>122</td>
+      <td>45</td>
+      <td>0.368852</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>108</td>
+      <td>17</td>
+      <td>0.157407</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>347</td>
+      <td>47</td>
+      <td>0.135447</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 </div>
