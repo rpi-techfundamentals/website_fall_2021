@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11. Exercise &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>7. Introduction to Apply Function &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12. Introduction to APIs" href="nb-03-01-intro-api-twitter.html" />
-    <link rel="prev" title="10. Kaggle Baseline" href="nb-02-05-kaggle-baseline.html" />
+    <link rel="next" title="8. Null Values" href="nb-02-03-null-values.html" />
+    <link rel="prev" title="6. Functions" href="nb-02-02-functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -199,59 +199,64 @@
    6. Functions
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Introduction to Apply Function
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-02-03-null-values.html">
-   7. Null Values
+   8. Null Values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-02-04-groupby.html">
-   8. Groupby and Pivot Tables
+   9. Groupby and Pivot Tables
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-02-04-pivottable.html">
-   9. More Pivottables
+   10. More Pivottables
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-02-05-kaggle-baseline.html">
-   10. Kaggle Baseline
+   11. Kaggle Baseline
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   11. Exercise
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-EX-Exercise1.html">
+   12. Exercise 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-01-intro-api-twitter.html">
-   12. Introduction to APIs
+   13. Introduction to APIs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-02-intro-python-webmining.html">
-   13. Web Mining
+   14. Web Mining
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-03-visualization-python-seaborn.html">
-   14. Introduction to Seaborn
+   15. Introduction to Seaborn
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-04-strings-regular-expressions.html">
-   15. String Manipulation and Regular Expressions
+   16. String Manipulation and Regular Expressions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-05-features-dummies.html">
-   16. Feature Extraction
+   17. Feature Extraction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-06-matplotlib.html">
-   18. MatplotLab
+   19. MatplotLab
   </a>
  </li>
 </ul>
@@ -361,7 +366,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/nb-02-EX-Exercise.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebooks/nb-02-02a-pandas-functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -381,7 +386,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-02-EX-Exercise.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-02-02a-pandas-functions.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -402,7 +407,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-02-EX-Exercise.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-02-02a-pandas-functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -410,7 +415,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-02-EX-Exercise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-02-02a-pandas-functions.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -430,8 +435,23 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#challenge-problem">
-   11.1. Challenge Problem
+  <a class="reference internal nav-link" href="#make-it-easy-with-the-lambda-function">
+   7.1. Make it easy with the lambda function.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#or-define-an-entire-function">
+   7.2. Or define an entire function.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pass-additional-values">
+   7.3. Pass Additional Values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-values-from-more-than-one-column">
+   7.4. Using Values from more than one column
   </a>
  </li>
 </ul>
@@ -445,19 +465,18 @@
         
               <div>
                 
-  <div class="section" id="exercise">
-<h1><span class="section-number">11. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h1>
-<p>The following will be used as an in-class exercise.</p>
-<ol class="simple">
-<li><p>Write a function Square that takes an integer argument and outputs the square value of this argument. For example, if the input is 3, output should be 9.</p></li>
-</ol>
-<ol class="simple">
-<li><p>Write a comprehensive code to initialize a dictionary where values are squares of keys – keys from 1 to 10.</p></li>
-</ol>
+  <p><a class="reference external" href="http://rpi.analyticsdojo.com"><img alt="AnalyticsDojo" src="https://github.com/rpi-techfundamentals/spring2019-materials/blob/master/fig/final-logo.png?raw=1" /></a></p>
+<center><h1>Introduction to Python - Introduction to Apply Function</h1></center>
+<center><h3><a href = 'http://rpi.analyticsdojo.com'>rpi.analyticsdojo.com</a></h3></center>
+<div class="section" id="introduction-to-apply-function">
+<h1><span class="section-number">7. </span>Introduction to Apply Function<a class="headerlink" href="#introduction-to-apply-function" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Don’t loop over a dataframe.</p></li>
+<li><p>Instead, us the apply function to process a function across each value.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Keep this here: Loading Data. </span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/train.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
@@ -667,26 +686,361 @@
 <p>891 rows × 12 columns</p>
 </div></div></div>
 </div>
-<ol class="simple">
-<li><p>Find the median of the <code class="docutils literal notranslate"><span class="pre">age</span></code> column and assign it to the <code class="docutils literal notranslate"><span class="pre">age_median</span></code> variable.</p></li>
-</ol>
-<ol class="simple">
-<li><p>Count the number of NaN in the <code class="docutils literal notranslate"><span class="pre">Age</span></code> column.</p></li>
-</ol>
-<ol class="simple">
-<li><p>Replace the NAN with the <code class="docutils literal notranslate"><span class="pre">age_median</span></code>.</p></li>
-</ol>
-<ol class="simple">
-<li><p>Create a Pivot table which examines the survived by <code class="docutils literal notranslate"><span class="pre">Embarked</span></code> and <code class="docutils literal notranslate"><span class="pre">Sex</span></code> columns.</p></li>
-</ol>
-<div class="section" id="challenge-problem">
-<h2><span class="section-number">11.1. </span>Challenge Problem<a class="headerlink" href="#challenge-problem" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Create a function which accepts a dataframe (<code class="docutils literal notranslate"><span class="pre">df</span></code>) and a list of columns (<code class="docutils literal notranslate"><span class="pre">cols</span></code>), and a function to use (<code class="docutils literal notranslate"><span class="pre">use</span></code> with potential values <code class="docutils literal notranslate"><span class="pre">mean</span></code> or <code class="docutils literal notranslate"><span class="pre">median</span></code> or <code class="docutils literal notranslate"><span class="pre">mode</span></code>).  For each of the columns listed the function should replace NaN with the appropriate value, returning a dataframe.</p></li>
-</ol>
-<p>Add your solution to this notebook:</p>
-<p><a class="reference external" href="https://colab.research.google.com/drive/1QDeA-aIjC9o2f638Hmhu_xHBQf3W1CXs?usp=sharing">https://colab.research.google.com/drive/1QDeA-aIjC9o2f638Hmhu_xHBQf3W1CXs?usp=sharing</a></p>
-<p>Put your name.</p>
+<div class="section" id="make-it-easy-with-the-lambda-function">
+<h2><span class="section-number">7.1. </span>Make it easy with the lambda function.<a class="headerlink" href="#make-it-easy-with-the-lambda-function" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Create a value for <code class="docutils literal notranslate"><span class="pre">Age-squared</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age-squared&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="or-define-an-entire-function">
+<h2><span class="section-number">7.2. </span>Or define an entire function.<a class="headerlink" href="#or-define-an-entire-function" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Define a function to get the title from the name.</p></li>
+<li><p>Always test your function with a single entry, not the apply.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_title</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  
+  <span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="c1">#Split at the comma</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#remove any leading spaces</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="c1">#Split at the spaces</span>
+  <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1">#Always test your function with a single entry, not the apply.</span>
+<span class="n">get_title</span><span class="p">(</span><span class="s1">&#39;Dooley, Mr. Patrick&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mr.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_title</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="s1">&#39;Title&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>Mr.</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>Mrs.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>Miss.</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>Mrs.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Allen, Mr. William Henry</td>
+      <td>Mr.</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>886</th>
+      <td>Montvila, Rev. Juozas</td>
+      <td>Rev.</td>
+    </tr>
+    <tr>
+      <th>887</th>
+      <td>Graham, Miss. Margaret Edith</td>
+      <td>Miss.</td>
+    </tr>
+    <tr>
+      <th>888</th>
+      <td>Johnston, Miss. Catherine Helen "Carrie"</td>
+      <td>Miss.</td>
+    </tr>
+    <tr>
+      <th>889</th>
+      <td>Behr, Mr. Karl Howell</td>
+      <td>Mr.</td>
+    </tr>
+    <tr>
+      <th>890</th>
+      <td>Dooley, Mr. Patrick</td>
+      <td>Mr.</td>
+    </tr>
+  </tbody>
+</table>
+<p>891 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Mr.&#39;, &#39;Mrs.&#39;, &#39;Miss.&#39;, &#39;Master.&#39;, &#39;Don.&#39;, &#39;Rev.&#39;, &#39;Dr.&#39;, &#39;Mme.&#39;,
+       &#39;Ms.&#39;, &#39;Major.&#39;, &#39;Lady.&#39;, &#39;Sir.&#39;, &#39;Mlle.&#39;, &#39;Col.&#39;, &#39;Capt.&#39;, &#39;the&#39;,
+       &#39;Jonkheer.&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mr.          517
+Miss.        182
+Mrs.         125
+Master.       40
+Dr.            7
+Rev.           6
+Major.         2
+Col.           2
+Mlle.          2
+Lady.          1
+Capt.          1
+Jonkheer.      1
+Don.           1
+Ms.            1
+the            1
+Mme.           1
+Sir.           1
+Name: Title, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pass-additional-values">
+<h2><span class="section-number">7.3. </span>Pass Additional Values<a class="headerlink" href="#pass-additional-values" title="Permalink to this headline">¶</a></h2>
+<p>You can even use things that pass additional values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RECODE_MRS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Lady.&#39;</span><span class="p">,</span><span class="s1">&#39;Mme.&#39;</span><span class="p">]</span>
+<span class="n">RECODE_MISS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Ms.&#39;</span><span class="p">]</span>
+<span class="n">RECODE_MR</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Sir.&#39;</span><span class="p">,</span><span class="s1">&#39;the&#39;</span><span class="p">,</span><span class="s1">&#39;Don.&#39;</span><span class="p">,</span><span class="s1">&#39;Jonkheer.&#39;</span><span class="p">,</span><span class="s1">&#39;Capt.&#39;</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">get_title2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">recode_mrs</span><span class="p">,</span> <span class="n">recode_miss</span><span class="p">,</span> <span class="n">recode_mr</span><span class="p">):</span>
+  
+  <span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="c1">#Split at the comma</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#remove any leading spaces</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="c1">#Split at the spaces</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#select the first word. </span>
+  <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">recode_mrs</span><span class="p">:</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Mrs.&#39;</span>
+  <span class="k">elif</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">recode_miss</span><span class="p">:</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Miss.&#39;</span>
+  <span class="k">elif</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">recode_mr</span><span class="p">:</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Mr.&#39;</span>
+  <span class="k">return</span> <span class="n">x</span>
+
+<span class="c1">#Always test your function with a single entry, not the apply.</span>
+<span class="n">get_title</span><span class="p">(</span><span class="s1">&#39;Dooley, Sir., Patrick&#39;</span><span class="p">,</span> <span class="n">recode_mrs</span><span class="o">=</span><span class="n">RECODE_MRS</span><span class="p">,</span> <span class="n">recode_miss</span><span class="o">=</span><span class="n">RECODE_MISS</span><span class="p">,</span> <span class="n">recode_mr</span><span class="o">=</span><span class="n">RECODE_MR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mr.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_title2</span><span class="p">,</span><span class="n">recode_mrs</span><span class="o">=</span><span class="n">RECODE_MRS</span><span class="p">,</span> <span class="n">recode_miss</span><span class="o">=</span><span class="n">RECODE_MISS</span><span class="p">,</span> <span class="n">recode_mr</span><span class="o">=</span><span class="n">RECODE_MR</span> <span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="s1">&#39;Title&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>Mr.</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>Mrs.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>Miss.</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>Mrs.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Allen, Mr. William Henry</td>
+      <td>Mr.</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>886</th>
+      <td>Montvila, Rev. Juozas</td>
+      <td>Rev.</td>
+    </tr>
+    <tr>
+      <th>887</th>
+      <td>Graham, Miss. Margaret Edith</td>
+      <td>Miss.</td>
+    </tr>
+    <tr>
+      <th>888</th>
+      <td>Johnston, Miss. Catherine Helen "Carrie"</td>
+      <td>Miss.</td>
+    </tr>
+    <tr>
+      <th>889</th>
+      <td>Behr, Mr. Karl Howell</td>
+      <td>Mr.</td>
+    </tr>
+    <tr>
+      <th>890</th>
+      <td>Dooley, Mr. Patrick</td>
+      <td>Mr.</td>
+    </tr>
+  </tbody>
+</table>
+<p>891 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mr.        521
+Miss.      183
+Mrs.       127
+Master.     40
+Dr.          7
+Rev.         6
+Mlle.        2
+Major.       2
+Col.         2
+Capt.        1
+Name: Title, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="using-values-from-more-than-one-column">
+<h2><span class="section-number">7.4. </span>Using Values from more than one column<a class="headerlink" href="#using-values-from-more-than-one-column" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Apply somethign on the entire dataframe if calcs involve more than once column.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">complex_process</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+  
+  <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">])</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">complex_process</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        male22.0
+1      female38.0
+2      female26.0
+3      female35.0
+4        male35.0
+          ...    
+886      male27.0
+887    female19.0
+888     femalenan
+889      male26.0
+890      male32.0
+Length: 891, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -720,19 +1074,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="nb-02-05-kaggle-baseline.html" title="previous page">
+        <a class="left-prev" href="nb-02-02-functions.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">10. </span>Kaggle Baseline</p>
+                <p class="prevnext-title"><span class="section-number">6. </span>Functions</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="nb-03-01-intro-api-twitter.html" title="next page">
+        <a class="right-next" href="nb-02-03-null-values.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">12. </span>Introduction to APIs</p>
+                <p class="prevnext-title"><span class="section-number">8. </span>Null Values</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

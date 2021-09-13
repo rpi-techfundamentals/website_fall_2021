@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>16. Feature Extraction &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>17. Feature Extraction &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="18. MatplotLab" href="nb-03-06-matplotlib.html" />
-    <link rel="prev" title="15. String Manipulation and Regular Expressions" href="nb-03-04-strings-regular-expressions.html" />
+    <link rel="next" title="19. MatplotLab" href="nb-03-06-matplotlib.html" />
+    <link rel="prev" title="16. String Manipulation and Regular Expressions" href="nb-03-04-strings-regular-expressions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -202,58 +202,63 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-02a-pandas-functions.html">
+   7. Introduction to Apply Function
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="nb-02-03-null-values.html">
-   7. Null Values
+   8. Null Values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-02-04-groupby.html">
-   8. Groupby and Pivot Tables
+   9. Groupby and Pivot Tables
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-02-04-pivottable.html">
-   9. More Pivottables
+   10. More Pivottables
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-02-05-kaggle-baseline.html">
-   10. Kaggle Baseline
+   11. Kaggle Baseline
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="nb-02-EX-Exercise.html">
-   11. Exercise
+  <a class="reference internal" href="nb-02-EX-Exercise1.html">
+   12. Exercise 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-01-intro-api-twitter.html">
-   12. Introduction to APIs
+   13. Introduction to APIs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-02-intro-python-webmining.html">
-   13. Web Mining
+   14. Web Mining
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-03-visualization-python-seaborn.html">
-   14. Introduction to Seaborn
+   15. Introduction to Seaborn
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-04-strings-regular-expressions.html">
-   15. String Manipulation and Regular Expressions
+   16. String Manipulation and Regular Expressions
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   16. Feature Extraction
+   17. Feature Extraction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-06-matplotlib.html">
-   18. MatplotLab
+   19. MatplotLab
   </a>
  </li>
 </ul>
@@ -433,39 +438,39 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   16. Feature Extraction
+   17. Feature Extraction
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-are-features">
-     16.1. What Are Features?
+     17.1. What Are Features?
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#numerical-features">
-     16.2. Numerical Features
+     17.2. Numerical Features
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#categorical-features">
-     16.3. Categorical Features
+     17.3. Categorical Features
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#derived-features">
-     16.4. Derived Features
+     17.4. Derived Features
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#combining-numerical-and-categorical-features">
-     16.5. Combining Numerical and Categorical Features
+     17.5. Combining Numerical and Categorical Features
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#feature-preprocessing-with-scikit-learn">
-   17. Feature Preprocessing with Scikit Learn
+   18. Feature Preprocessing with Scikit Learn
   </a>
  </li>
 </ul>
@@ -516,7 +521,7 @@ test.csv.1          100%[===================&gt;]  27.96K  --.-KB/s    in 0.005s
 </div>
 </div>
 <div class="section" id="feature-extraction">
-<h1><span class="section-number">16. </span>Feature Extraction<a class="headerlink" href="#feature-extraction" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">17. </span>Feature Extraction<a class="headerlink" href="#feature-extraction" title="Permalink to this headline">¶</a></h1>
 <p>Here we will talk about an important piece of machine learning: the extraction of
 quantitative features from data.  By the end of this section you will</p>
 <ul class="simple">
@@ -525,10 +530,10 @@ quantitative features from data.  By the end of this section you will</p>
 </ul>
 <p>In addition, we will go over several basic tools within scikit-learn which can be used to accomplish the above tasks.</p>
 <div class="section" id="what-are-features">
-<h2><span class="section-number">16.1. </span>What Are Features?<a class="headerlink" href="#what-are-features" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1. </span>What Are Features?<a class="headerlink" href="#what-are-features" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="numerical-features">
-<h2><span class="section-number">16.2. </span>Numerical Features<a class="headerlink" href="#numerical-features" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.2. </span>Numerical Features<a class="headerlink" href="#numerical-features" title="Permalink to this headline">¶</a></h2>
 <p>Recall that data in scikit-learn is expected to be in two-dimensional arrays, of size
 <strong>n_samples</strong> <span class="math notranslate nohighlight">\(\times\)</span> <strong>n_features</strong>.</p>
 <p>Previously, we looked at the iris dataset, which has 150 samples and 4 features</p>
@@ -557,7 +562,7 @@ quantitative features from data.  By the end of this section you will</p>
 of floating-point numbers corresponding to the features</p>
 </div>
 <div class="section" id="categorical-features">
-<h2><span class="section-number">16.3. </span>Categorical Features<a class="headerlink" href="#categorical-features" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.3. </span>Categorical Features<a class="headerlink" href="#categorical-features" title="Permalink to this headline">¶</a></h2>
 <p>What if you have categorical features?  For example, imagine there is data on the color of each
 iris:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>color in [red, blue, purple]
@@ -584,7 +589,7 @@ represented as a <strong>sparse matrix</strong>, as we’ll see with the text cl
 below.</p>
 </div>
 <div class="section" id="derived-features">
-<h2><span class="section-number">16.4. </span>Derived Features<a class="headerlink" href="#derived-features" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.4. </span>Derived Features<a class="headerlink" href="#derived-features" title="Permalink to this headline">¶</a></h2>
 <p>Another common feature type are <strong>derived features</strong>, where some pre-processing step is
 applied to the data to generate features that are somehow more informative.  Derived
 features may be based in <strong>feature extraction</strong> and <strong>dimensionality reduction</strong> (such as PCA or manifold learning),
@@ -592,7 +597,7 @@ may be linear or nonlinear combinations of features (such as in polynomial regre
 or may be some more sophisticated transform of the features.</p>
 </div>
 <div class="section" id="combining-numerical-and-categorical-features">
-<h2><span class="section-number">16.5. </span>Combining Numerical and Categorical Features<a class="headerlink" href="#combining-numerical-and-categorical-features" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.5. </span>Combining Numerical and Categorical Features<a class="headerlink" href="#combining-numerical-and-categorical-features" title="Permalink to this headline">¶</a></h2>
 <p>As an example of how to work with both categorical and numerical data, we will perform survival predicition for the passengers of the HMS Titanic.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1351,7 +1356,7 @@ We can do that using the pandas <code class="docutils literal notranslate"><span
 </div>
 </div>
 <div class="section" id="feature-preprocessing-with-scikit-learn">
-<h1><span class="section-number">17. </span>Feature Preprocessing with Scikit Learn<a class="headerlink" href="#feature-preprocessing-with-scikit-learn" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">18. </span>Feature Preprocessing with Scikit Learn<a class="headerlink" href="#feature-preprocessing-with-scikit-learn" title="Permalink to this headline">¶</a></h1>
 <p>Here we are going to look at a more efficient way to prepare our datasets using pipelines.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1760,7 +1765,7 @@ dtype: int64
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">15. </span>String Manipulation and Regular Expressions</p>
+                <p class="prevnext-title"><span class="section-number">16. </span>String Manipulation and Regular Expressions</p>
             </div>
         </a>
     </div>
@@ -1768,7 +1773,7 @@ dtype: int64
         <a class="right-next" href="nb-03-06-matplotlib.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">18. </span>MatplotLab</p>
+                <p class="prevnext-title"><span class="section-number">19. </span>MatplotLab</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
