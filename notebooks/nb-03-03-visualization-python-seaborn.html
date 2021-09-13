@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>15. Introduction to Seaborn &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>16. Introduction to Seaborn &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="16. String Manipulation and Regular Expressions" href="nb-03-04-strings-regular-expressions.html" />
-    <link rel="prev" title="14. Web Mining" href="nb-03-02-intro-python-webmining.html" />
+    <link rel="next" title="17. Web Mining" href="nb-03-04-intro-python-webmining.html" />
+    <link rel="prev" title="15. String Manipulation and Regular Expressions" href="nb-03-02-strings-regular-expressions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -230,33 +230,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="nb-03-01-intro-api-twitter.html">
-   13. Introduction to APIs
+  <a class="reference internal" href="nb-03-01-features-dummies.html">
+   13. Feature Extraction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="nb-03-02-intro-python-webmining.html">
-   14. Web Mining
+  <a class="reference internal" href="nb-03-02-strings-regular-expressions.html">
+   15. String Manipulation and Regular Expressions
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   15. Introduction to Seaborn
+   16. Introduction to Seaborn
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="nb-03-04-strings-regular-expressions.html">
-   16. String Manipulation and Regular Expressions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="nb-03-05-features-dummies.html">
-   17. Feature Extraction
+  <a class="reference internal" href="nb-03-04-intro-python-webmining.html">
+   17. Web Mining
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-03-06-matplotlib.html">
-   19. MatplotLab
+   18. MatplotLab
   </a>
  </li>
 </ul>
@@ -436,34 +431,34 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
-   15.1. Overview
+   16.1. Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#distribution-plots">
-   15.2. Distribution Plots
+   16.2. Distribution Plots
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distribution-plot-distplot">
-     15.2.1. Distribution Plot (distplot)
+     16.2.1. Distribution Plot (distplot)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#box-plots">
-     15.2.2. Box Plots
+     16.2.2. Box Plots
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#relationship-plots">
-   15.3. Relationship Plots
+   16.3. Relationship Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#visualizing-summary-data">
-   15.4. Visualizing Summary Data
+   16.4. Visualizing Summary Data
   </a>
  </li>
 </ul>
@@ -480,9 +475,9 @@
   <p><a class="reference external" href="http://rpi.analyticsdojo.com"><img alt="AnalyticsDojo" src="https://github.com/rpi-techfundamentals/spring2019-materials/blob/master/fig/final-logo.png?raw=1" /></a></p>
 <center><h1>Introduction to Seaborn - Python</h1></center>
 <center><h3><a href = 'http://introml.analyticsdojo.com'>introml.analyticsdojo.com</a></h3></center><div class="section" id="introduction-to-seaborn">
-<h1><span class="section-number">15. </span>Introduction to Seaborn<a class="headerlink" href="#introduction-to-seaborn" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">16. </span>Introduction to Seaborn<a class="headerlink" href="#introduction-to-seaborn" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
-<h2><span class="section-number">15.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Look at distributions</p></li>
 <li><p>Seaborn is an alternate data visualization package.</p></li>
@@ -510,7 +505,7 @@
 </div>
 </div>
 <div class="section" id="distribution-plots">
-<h2><span class="section-number">15.2. </span>Distribution Plots<a class="headerlink" href="#distribution-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.2. </span>Distribution Plots<a class="headerlink" href="#distribution-plots" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Histogram with KDE</p></li>
 <li><p>Histogram with Rugplot</p></li>
@@ -550,7 +545,7 @@
 </div>
 </div>
 <div class="section" id="distribution-plot-distplot">
-<h3><span class="section-number">15.2.1. </span>Distribution Plot (distplot)<a class="headerlink" href="#distribution-plot-distplot" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.2.1. </span>Distribution Plot (distplot)<a class="headerlink" href="#distribution-plot-distplot" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Any compbination of hist, rug, kde</p></li>
 <li><p>Note it also has in it a KDE plot included</p></li>
@@ -605,7 +600,7 @@
 </div>
 </div>
 <div class="section" id="box-plots">
-<h3><span class="section-number">15.2.2. </span>Box Plots<a class="headerlink" href="#box-plots" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.2.2. </span>Box Plots<a class="headerlink" href="#box-plots" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Break data into quartiles.</p></li>
 <li><p>Can show distribution/ranges of different categories.</p></li>
@@ -731,7 +726,7 @@
 </div>
 </div>
 <div class="section" id="relationship-plots">
-<h2><span class="section-number">15.3. </span>Relationship Plots<a class="headerlink" href="#relationship-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.3. </span>Relationship Plots<a class="headerlink" href="#relationship-plots" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Pairplots to show all</p></li>
 <li><p>Regplot for 2 continuous variables</p></li>
@@ -817,7 +812,7 @@
 </div>
 </div>
 <div class="section" id="visualizing-summary-data">
-<h2><span class="section-number">15.4. </span>Visualizing Summary Data<a class="headerlink" href="#visualizing-summary-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.4. </span>Visualizing Summary Data<a class="headerlink" href="#visualizing-summary-data" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Barplots will show the</p></li>
 </ul>
@@ -2190,19 +2185,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="nb-03-02-intro-python-webmining.html" title="previous page">
+        <a class="left-prev" href="nb-03-02-strings-regular-expressions.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">14. </span>Web Mining</p>
+                <p class="prevnext-title"><span class="section-number">15. </span>String Manipulation and Regular Expressions</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="nb-03-04-strings-regular-expressions.html" title="next page">
+        <a class="right-next" href="nb-03-04-intro-python-webmining.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">16. </span>String Manipulation and Regular Expressions</p>
+                <p class="prevnext-title"><span class="section-number">17. </span>Web Mining</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
