@@ -9,11 +9,7 @@ parts:
     title: Before Class
   - file: content/in_class
     title: During Class
-- caption: SESSIONS
-  numbered: True
-  start_numbering_at: 1
-  chapters:
-  - glob: sessions/session*
+#
 - caption: NOTEBOOKS
   numbered: True
   start_numbering_at: 1
@@ -23,7 +19,7 @@ parts:
   numbered: True
   start_numbering_at: 1
   chapters:
-  - glob: homeworks/hm*
+  - glob: assignments/hm*
 - caption: Resources
   numbered: False
   chapters:
