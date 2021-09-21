@@ -40,8 +40,9 @@ jobs:
         cp CNAME ./site/_build/html/CNAME
 
     # Push the book's HTML to github-pages
-    - name: GitHub Pages action
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./site/_build/html
+        enable_jekyll: true
