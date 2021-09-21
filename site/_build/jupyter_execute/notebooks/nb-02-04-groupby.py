@@ -10,14 +10,7 @@
 
 # # Groupby and Pivot Tables
 
-# In[ ]:
-
-
-get_ipython().system('wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/train.csv')
-get_ipython().system('wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/test.csv')
-
-
-# In[ ]:
+# In[1]:
 
 
 import numpy as np 
@@ -25,41 +18,41 @@ import pandas as pd
 
 # Input data files are available in the "../input/" directory.
 # Let's input them into a Pandas DataFrame
-train = pd.read_csv("train.csv")
-test  = pd.read_csv("test.csv")
+train = pd.read_csv('https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/train.csv')
+test  = pd.read_csv('https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/test.csv')
 
 
 # ### Groupby
 # - Often it is useful to see statistics by different classes.
 # - Can be used to examine different subpopulations
 
-# In[ ]:
+# In[2]:
 
 
 train.head()
 
 
-# In[ ]:
+# In[3]:
 
 
 print(train.dtypes)
 
 
-# In[ ]:
+# In[4]:
 
 
 #What does this tell us?  
 train.groupby(['Sex']).Survived.mean()
 
 
-# In[ ]:
+# In[5]:
 
 
 #What does this tell us?  
 train.groupby(['Sex','Pclass']).Survived.mean()
 
 
-# In[ ]:
+# In[6]:
 
 
 #What does this tell us?  Here it doesn't look so clear. We could separate by set age ranges.
@@ -71,7 +64,7 @@ train.groupby(['Sex','Age']).Survived.mean()
 # - *Applying* a function to each group independently
 # - *Combining* the results into a data structure
 
-# In[ ]:
+# In[7]:
 
 
 s = train.groupby(['Sex','Pclass'], as_index=False).Survived.sum()
@@ -82,7 +75,7 @@ survived =s.Survived
 s
 
 
-# In[ ]:
+# In[8]:
 
 
 #What does this tell us?  
@@ -97,19 +90,11 @@ spsum
 # - It can be used to that sum, sort, averge, count, over a pandas dataframe. 
 # - Download and open data in excel to appreciate the ways that you can use Pivot Tables. 
 
-# In[ ]:
-
-
-#Load it and create a pivot table.
-from google.colab import files
-files.download('train.csv')
-
-
-# In[ ]:
+# In[10]:
 
 
 #List the index and the functions you want to aggregage by. 
-pd.pivot_table(train,index=["Sex","Pclass"],values=["Survived"],aggfunc=['count','sum','mean',])
+pd.pivot_table(train,index=["Sex","Pclass"],values=["Survived"],aggfunc=['count','sum','mean'])
 
 
 # In[ ]:

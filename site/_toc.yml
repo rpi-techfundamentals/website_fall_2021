@@ -5,11 +5,6 @@ parts:
   chapters:
   - file: content/schedule
     title: Schedule
-  - file: content/before_class
-    title: Before Class
-  - file: content/in_class
-    title: During Class
-#
 - caption: NOTEBOOKS
   numbered: True
   start_numbering_at: 1
@@ -19,7 +14,7 @@ parts:
   numbered: True
   start_numbering_at: 1
   chapters:
-  - glob: assignments/hm*
+  - glob: assignments/h*
 - caption: Resources
   numbered: False
   chapters:
