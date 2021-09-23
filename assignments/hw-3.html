@@ -459,86 +459,62 @@
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q1-5-points-shape-of-a-data-frame">
-   34. Q1 [5 points]. Shape of a Data Frame.
+  <a class="reference internal nav-link" href="#q1-shape-of-a-data-frame">
+   34. Q1. Shape of a Data Frame.
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q2-5-points-aggregate-operation">
-   35. Q2 [5 points]. Aggregate operation
+  <a class="reference internal nav-link" href="#q2-dataframe-basic-analyses">
+   35. Q2 Dataframe Basic Analyses
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q3-5-points-now-use-this-ggby-format-to">
-   36. Q3 [5 points]. Now use this
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     ggby
-    </span>
-   </code>
-   format to
+  <a class="reference internal nav-link" href="#q3-groupby">
+   36. Q3 Groupby
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q4-5-points-now-use-the-above-groups-obtained-by-grouping-on-the-gender-attribute">
-   37. Q4 [5 points]. Now use the above groups obtained by grouping on the
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     gender
-    </span>
-   </code>
-   attribute
+  <a class="reference internal nav-link" href="#q4-split-dataframe">
+   37. Q4 Split Dataframe
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q5-filter-missing-values">
+     37.1. Q5 Filter Missing Values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q6-stratified-sampling">
+   38. Q6 Stratified sampling
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q7-feature-manipulation">
+     38.1. Q7  Feature Manipulation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q8-feature-creation-2">
+     38.2. Q8 Feature Creation 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q9-beautiful-soup">
+   39. Q9. Beautiful Soup
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q5-5-points-now-using-fmdf">
-   38. Q5 [5 points]. Now using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     fmdf
-    </span>
-   </code>
+  <a class="reference internal nav-link" href="#q10-string-operations">
+   40. Q10 String operations
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q6-5-points-lets-focus-on-stratified-sampling">
-   39. Q6 [5 points]. Lets focus on stratified sampling
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q7-10-points-lets-focus-on-feature-manipulation">
-   40. Q7 [10 points]. Lets focus on feature manipulation
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q8-10-points-lets-now-focus-on-binarization">
-   41. Q8 [10 points]. Lets now focus on binarization
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q9-10-points-use-the-html-content-shared-here-below-and-parse-it-using-the-soup-object-to">
-   42. Q9 [10 points]. Use the html content shared here below and parse it using the ‘soup’ object to
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q10-5-points-given-a-string-str10-first-split-the-string-into-words-and-convert-them-to-lowercase">
-   43. Q10 [5 points]. Given a string ‘str10’ first split the string into words and convert them to lowercase.
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q11-5-points-use-the-regular-expressions-package-to-extract-all-the-email-ids-mentioned-in-the-above-sentence-str10-as-a-list-object-emails">
-   44. Q11 [5 points]. Use the regular expressions package to extract all the email ids mentioned in the above sentence
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     str10
-    </span>
-   </code>
-   as a list object
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     emails
-    </span>
-   </code>
+  <a class="reference internal nav-link" href="#q11-regular-expressions">
+   41. Q11. Regular Expressions
   </a>
  </li>
 </ul>
@@ -581,35 +557,42 @@
 </ul>
 </li>
 </ul>
-<p>Use the titanic dataset found here:  (<a class="reference external" href="https://raw.githubusercontent.com/lmanikon/lmanikon.github.io/master/teaching/datasets/titanic.csv">https://raw.githubusercontent.com/lmanikon/lmanikon.github.io/master/teaching/datasets/titanic.csv</a>)
-Please note that we will use this dataset in some of the questions here below.</p>
+<p>Use the titanic dataset from this url (‘<a class="reference external" href="https://raw.githubusercontent.com/Spring2021IntrotoML/Spring2021IntrotoML.github.io/main/Lectures/titanic.csv">https://raw.githubusercontent.com/Spring2021IntrotoML/Spring2021IntrotoML.github.io/main/Lectures/titanic.csv</a>’) and we will use the same dataset in some of the questions here below.</p>
 </div>
-<div class="section" id="q1-5-points-shape-of-a-data-frame">
-<h1><span class="section-number">34. </span>Q1 [5 points]. Shape of a Data Frame.<a class="headerlink" href="#q1-5-points-shape-of-a-data-frame" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="q1-shape-of-a-data-frame">
+<h1><span class="section-number">34. </span>Q1. Shape of a Data Frame.<a class="headerlink" href="#q1-shape-of-a-data-frame" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">
 <li><p>Import pandas package as pd.</p></li>
-<li><p>Read the file from the ‘url’ and load the data into dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code> with default index.</p></li>
-<li><p>print the number of rows and columns as <code class="docutils literal notranslate"><span class="pre">rows1</span></code> and <code class="docutils literal notranslate"><span class="pre">cols1</span></code> respectively.</p></li>
+<li><p>Read the file from the ‘url’ and load the data into dataframe ‘df’ with default index.</p></li>
+<li><p>Set number of rows equal to the variable <code class="docutils literal notranslate"><span class="pre">totalrows</span></code> and the number of columns equal to the variable <code class="docutils literal notranslate"><span class="pre">totalcols</span></code>.</p></li>
+<li><p>Print out the number of rows and columns, clearly labeling each.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/lmanikon/lmanikon.github.io/master/teaching/datasets/titanic.csv&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Spring2021IntrotoML/Spring2021IntrotoML.github.io/main/Lectures/titanic.csv&#39;</span>
 
 <span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">rows1</span><span class="o">==</span><span class="mi">891</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">totalrows</span><span class="o">==</span><span class="mi">891</span>
 <span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">==</span><span class="mf">21205.17</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now we will be using the above dataframe df to do preprocessing operations on this data.
-All the required libraries for further processing will be loaded here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we will be using the above dataframe df to do some preprocessing operations on this data. All the required libraries for further processing will be loaded here.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -619,92 +602,94 @@ All the required libraries for further processing will be loaded here.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="q2-5-points-aggregate-operation">
-<h1><span class="section-number">35. </span>Q2 [5 points]. Aggregate operation<a class="headerlink" href="#q2-5-points-aggregate-operation" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>Use the dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code> created in the previous cell to group together rows based on the <code class="docutils literal notranslate"><span class="pre">gender</span></code> and assign this output to <code class="docutils literal notranslate"><span class="pre">ggby</span></code></p></li>
-</ol>
-<ul class="simple">
-<li><p>Hint – Use groupby operation</p></li>
-</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Use the Dataframe `df` created in Q1 </span>
-<span class="c1">#Hint -- use groupby </span>
-
-
-<span class="c1"># YOUR CODE HERE</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ggby</span><span class="p">)</span><span class="o">==</span><span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="c1">#df.groupby([&#39;gender&#39;]).Class</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="q3-5-points-now-use-this-ggby-format-to">
-<h1><span class="section-number">36. </span>Q3 [5 points]. Now use this <code class="docutils literal notranslate"><span class="pre">ggby</span></code> format to<a class="headerlink" href="#q3-5-points-now-use-this-ggby-format-to" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>compute the mean age (use the ‘age’ attribute) of passengers who are <code class="docutils literal notranslate"><span class="pre">female</span></code> and <code class="docutils literal notranslate"><span class="pre">male</span></code> (‘gender’ attribute) as <code class="docutils literal notranslate"><span class="pre">fage</span></code> and <code class="docutils literal notranslate"><span class="pre">mage</span></code> respectively.</p></li>
-<li><p>Round the <code class="docutils literal notranslate"><span class="pre">fage</span></code> and <code class="docutils literal notranslate"><span class="pre">mage</span></code> to print only 2 decimal places – for example 3.14156 converts to 3.14</p></li>
-</ol>
+<div class="section" id="q2-dataframe-basic-analyses">
+<h1><span class="section-number">35. </span>Q2 Dataframe Basic Analyses<a class="headerlink" href="#q2-dataframe-basic-analyses" title="Permalink to this headline">¶</a></h1>
+<p>Determine how many first, second, and third class (assiging to the variables <code class="docutils literal notranslate"><span class="pre">class1</span></code>, <code class="docutils literal notranslate"><span class="pre">class2</span></code>, <code class="docutils literal notranslate"><span class="pre">class3</span></code>) passangers there are.</p>
+<p><em>Hint – Use value_counts operation</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Hint -- Use ONLY the dataframe&#39;s mean operation</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your answer here. </span>
 
 <span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">fage</span><span class="o">==</span><span class="mf">27.92</span>
-<span class="k">assert</span> <span class="n">mage</span><span class="o">==</span><span class="mf">30.73</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">class1</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="k">assert</span> <span class="n">class2</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="k">assert</span> <span class="n">class3</span><span class="o">&gt;</span><span class="mi">0</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="q4-5-points-now-use-the-above-groups-obtained-by-grouping-on-the-gender-attribute">
-<h1><span class="section-number">37. </span>Q4 [5 points]. Now use the above groups obtained by grouping on the <code class="docutils literal notranslate"><span class="pre">gender</span></code> attribute<a class="headerlink" href="#q4-5-points-now-use-the-above-groups-obtained-by-grouping-on-the-gender-attribute" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>and consider only the ‘female’ group to save that group as a sub dataframe <code class="docutils literal notranslate"><span class="pre">fmdf</span></code>.</p></li>
-</ol>
-<p>Note that <code class="docutils literal notranslate"><span class="pre">fmdf</span></code> will act as a new dataframe with all the columns as the original dataframe.</p>
+<div class="section" id="q3-groupby">
+<h1><span class="section-number">36. </span>Q3 Groupby<a class="headerlink" href="#q3-groupby" title="Permalink to this headline">¶</a></h1>
+<p>Now use a groupby statement to calculate the mean age (use the ‘age’ attribute) of passengers who are are from each of the different passanger classes.</p>
+<p>Round the age to 2 decimal places (for example 3.14156 converts to 3.14 ) and assign the resulting variable to <code class="docutils literal notranslate"><span class="pre">class1_age</span></code>, <code class="docutils literal notranslate"><span class="pre">class1_age</span></code>, <code class="docutils literal notranslate"><span class="pre">class1_age</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your answer </span>
+
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">class1_age</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">class1_age</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">class2_age</span><span class="o">&gt;</span><span class="mi">0</span> 
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">class1_age</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">class3_age</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">class1_age</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="q4-split-dataframe">
+<h1><span class="section-number">37. </span>Q4 Split Dataframe<a class="headerlink" href="#q4-split-dataframe" title="Permalink to this headline">¶</a></h1>
+<p>Now split the dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code> into two different dataframes <code class="docutils literal notranslate"><span class="pre">males</span></code> and <code class="docutils literal notranslate"><span class="pre">females</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your answer</span>
+
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">males</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span><span class="o">==</span><span class="mi">577</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">females</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span><span class="o">==</span><span class="mi">314</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="q5-filter-missing-values">
+<h2><span class="section-number">37.1. </span>Q5 Filter Missing Values<a class="headerlink" href="#q5-filter-missing-values" title="Permalink to this headline">¶</a></h2>
+<p>Now using ‘females’ remove all the rows where at least one element is missing and save this as a new dataframe object ‘newfm’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">fmdf</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span><span class="o">==</span><span class="mi">314</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">fmdf</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">==</span><span class="mi">15</span>
-<span class="k">assert</span> <span class="p">(</span><span class="n">fmdf</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">==</span><span class="mf">7286.0</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="q5-5-points-now-using-fmdf">
-<h1><span class="section-number">38. </span>Q5 [5 points]. Now using <code class="docutils literal notranslate"><span class="pre">fmdf</span></code><a class="headerlink" href="#q5-5-points-now-using-fmdf" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>remove all the rows where atleast one element is missing and</p></li>
-<li><p>save this as a new dataframe object <code class="docutils literal notranslate"><span class="pre">newfm</span></code></p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Use &#39;fmdf&#39; from Q4 above. </span>
-
-<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -718,94 +703,87 @@ All the required libraries for further processing will be loaded here.</p>
 </div>
 </div>
 </div>
-<div class="section" id="q6-5-points-lets-focus-on-stratified-sampling">
-<h1><span class="section-number">39. </span>Q6 [5 points]. Lets focus on stratified sampling<a class="headerlink" href="#q6-5-points-lets-focus-on-stratified-sampling" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>Utilize the original dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code> we created in Q1 to now perform 3 different subgroups of data based on the <code class="docutils literal notranslate"><span class="pre">who</span></code> attribute</p></li>
-</ol>
-<ul class="simple">
-<li><p>There are 3 groups – <code class="docutils literal notranslate"><span class="pre">woman</span></code>, <code class="docutils literal notranslate"><span class="pre">man</span></code>, <code class="docutils literal notranslate"><span class="pre">child</span></code></p></li>
-</ul>
-<ol class="simple">
-<li><p>Perform random sampling to sample 5 data points (or rows) from each group – <code class="docutils literal notranslate"><span class="pre">wsample</span></code>, <code class="docutils literal notranslate"><span class="pre">msample</span></code> and <code class="docutils literal notranslate"><span class="pre">csample</span></code> – these will look like dataframes as well</p></li>
-</ol>
+</div>
+<div class="section" id="q6-stratified-sampling">
+<h1><span class="section-number">38. </span>Q6 Stratified sampling<a class="headerlink" href="#q6-stratified-sampling" title="Permalink to this headline">¶</a></h1>
+<p>Utilize the original dataframe ‘df’ we created in Q1 to now perform 3 different subgroups of data based on the ‘who’ attribute.  There are 3 groups – ‘woman’, ‘man’, ‘child’. Perform random sampling to sample 5 data points (or rows) from each group and assign them to <code class="docutils literal notranslate"><span class="pre">woman_sam</span></code>, <code class="docutils literal notranslate"><span class="pre">man_sam</span></code> and <code class="docutils literal notranslate"><span class="pre">child_sam</span></code> – these will look like dataframes as well.</p>
+<p>*Hint: use the random package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Stratified sampling</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your answer</span>
 
 <span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">wsample</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">])</span><span class="o">==</span><span class="p">{</span><span class="s1">&#39;female&#39;</span><span class="p">}</span>
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">msample</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">])</span><span class="o">==</span><span class="p">{</span><span class="s1">&#39;male&#39;</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">women_sam</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">])</span><span class="o">==</span><span class="p">{</span><span class="s1">&#39;female&#39;</span><span class="p">}</span>
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">man_sam</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">])</span><span class="o">==</span><span class="p">{</span><span class="s1">&#39;male&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="q7-10-points-lets-focus-on-feature-manipulation">
-<h1><span class="section-number">40. </span>Q7 [10 points]. Lets focus on feature manipulation<a class="headerlink" href="#q7-10-points-lets-focus-on-feature-manipulation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="q7-feature-manipulation">
+<h2><span class="section-number">38.1. </span>Q7  Feature Manipulation<a class="headerlink" href="#q7-feature-manipulation" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>Consider the original dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p></li>
-<li><p>Remove all the rows with atleast one missing value.</p></li>
-<li><p>Then Standardize the <code class="docutils literal notranslate"><span class="pre">age</span></code> attribute – which means replace each value in  the <code class="docutils literal notranslate"><span class="pre">age</span></code> attribute with the corresponding standardized value. You are modifying <code class="docutils literal notranslate"><span class="pre">df['age']</span></code>.</p></li>
+<li><p>Consider the original dataframe ‘df’. Create a copy of this and call it <code class="docutils literal notranslate"><span class="pre">dfage</span></code>.</p></li>
+<li><p>Remove all the rows of <code class="docutils literal notranslate"><span class="pre">dfage</span></code> in which the age value is missing.</p></li>
+<li><p>Then create a new column <code class="docutils literal notranslate"><span class="pre">dfage['age_st']</span></code> which replaces each value in the ‘age’ attribute with the corresponding standardized value <em>rounded to 2 decimal places</em>. You are not modifying <code class="docutils literal notranslate"><span class="pre">dfage['age']</span></code>.</p></li>
 </ol>
-<p>Please use the definition I gave during the lectures about what standardize means.
-For this question only use <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.std()</span></code> functions to compute the mean and standard deviation values for a given series.</p>
+<p><em>Hint: See this for definition of standardized value.  <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_score">https://en.wikipedia.org/wiki/Standard_score</a> You can use np.mean() and np.std() functions to compute the mean and standard deviation values.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Only use numpy&#39;s mean() and std() functions </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">dfage</span><span class="o">.</span><span class="n">shape</span><span class="o">==</span><span class="p">(</span><span class="mi">714</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">dfage</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="q8-feature-creation-2">
+<h2><span class="section-number">38.2. </span>Q8 Feature Creation 2<a class="headerlink" href="#q8-feature-creation-2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Re-read the file and create ‘df’.</p></li>
+<li><p>Remove all the rows with at least one missing value.</p></li>
+<li><p>Create a column <code class="docutils literal notranslate"><span class="pre">stown</span></code> in <code class="docutils literal notranslate"><span class="pre">df</span></code> using <code class="docutils literal notranslate"><span class="pre">embark_town</span></code>.  For the <code class="docutils literal notranslate"><span class="pre">embark_town</span></code> is ‘Southampton’ make <code class="docutils literal notranslate"><span class="pre">stown</span></code> 1. Otherwise <code class="docutils literal notranslate"><span class="pre">stown</span></code> is 0.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Spring2021IntrotoML/Spring2021IntrotoML.github.io/main/Lectures/titanic.csv&#39;</span>
 
 <span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="mf">145.84</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;stown&#39;</span><span class="p">])</span><span class="o">==</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span>
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="o">==</span><span class="p">(</span><span class="mi">182</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="q8-10-points-lets-now-focus-on-binarization">
-<h1><span class="section-number">41. </span>Q8 [10 points]. Lets now focus on binarization<a class="headerlink" href="#q8-10-points-lets-now-focus-on-binarization" title="Permalink to this headline">¶</a></h1>
-<p>Utilize the original data frame <code class="docutils literal notranslate"><span class="pre">df</span></code> we created in Q1 (cell 2) to perform binarization</p>
-<ol class="simple">
-<li><p>Re-read the file from url in Q1 and create a dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code></p></li>
-<li><p>Remove all the rows with atleast one missing value</p></li>
-<li><p>If the <code class="docutils literal notranslate"><span class="pre">embark_town</span></code> is <code class="docutils literal notranslate"><span class="pre">Queenstown</span></code> replace with 1 otherwise 0.</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/lmanikon/lmanikon.github.io/master/teaching/datasets/titanic.csv&#39;</span>
-
-<span class="c1"># YOUR CODE HERE</span>
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;embark_town&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">==</span><span class="mi">2</span>
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;embark_town&#39;</span><span class="p">])</span><span class="o">==</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="q9-10-points-use-the-html-content-shared-here-below-and-parse-it-using-the-soup-object-to">
-<h1><span class="section-number">42. </span>Q9 [10 points]. Use the html content shared here below and parse it using the ‘soup’ object to<a class="headerlink" href="#q9-10-points-use-the-html-content-shared-here-below-and-parse-it-using-the-soup-object-to" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>print all the unique <code class="docutils literal notranslate"><span class="pre">Hometown</span></code> values as a list object <code class="docutils literal notranslate"><span class="pre">hts</span></code></p></li>
-<li><p>Convert each value of the hometown to a lower-case</p></li>
-<li><p>Failure to print the answer as a list will lead to loss of points.</p></li>
-</ol>
+<div class="section" id="q9-beautiful-soup">
+<h1><span class="section-number">39. </span>Q9. Beautiful Soup<a class="headerlink" href="#q9-beautiful-soup" title="Permalink to this headline">¶</a></h1>
+<p>Use the html content shared here below and parse it using the ‘soup’ object to
+assign all the unique ‘Hometown’ values to as a list object <code class="docutils literal notranslate"><span class="pre">hts</span></code></p>
+<p>Strip any leading or trailing white space and convert each value of the hometown in <code class="docutils literal notranslate"><span class="pre">hts</span></code> to a lower-case.</p>
+<p>Print the final answer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -835,8 +813,8 @@ For this question only use <code class="docutils literal notranslate"><span clas
 <span class="s2">&quot;&quot;&quot;</span>
 <span class="n">hts</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">newtext</span><span class="p">)</span>
-
 <span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -850,17 +828,18 @@ For this question only use <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 </div>
-<div class="section" id="q10-5-points-given-a-string-str10-first-split-the-string-into-words-and-convert-them-to-lowercase">
-<h1><span class="section-number">43. </span>Q10 [5 points]. Given a string ‘str10’ first split the string into words and convert them to lowercase.<a class="headerlink" href="#q10-5-points-given-a-string-str10-first-split-the-string-into-words-and-convert-them-to-lowercase" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Now using the ‘join’ operation we learnt in the class, concatenate these words to a new string <code class="docutils literal notranslate"><span class="pre">str11</span></code> to ensure each word will now be in a new line</p></li>
-<li><p>for example: str1 is ‘it is cold today’ to str2 will be:</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">it</span> <span class="pre">is</span> <span class="pre">cold</span> <span class="pre">today</span></code></p>
+<div class="section" id="q10-string-operations">
+<h1><span class="section-number">40. </span>Q10 String operations<a class="headerlink" href="#q10-string-operations" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p>Given a string <code class="docutils literal notranslate"><span class="pre">str10</span></code> first split the string into words, strip any leading or trailing white space, and convert them to lowercase.</p></li>
+<li><p>Now using the ‘join’ operation we learnt in the class, concatenate these words to a new string <code class="docutils literal notranslate"><span class="pre">str11</span></code> with a ‘-‘ between each.</p></li>
+</ol>
+<p>For example: str1 is ‘it is cold today’ to str2 will be: ‘it-is-cold-today’</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">str10</span> <span class="o">=</span> <span class="s1">&#39;Email the company at xyz@abcd.com and is the easiest way compared to tweet @abcdxyz&#39;</span>
 <span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -873,14 +852,18 @@ For this question only use <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 </div>
-<div class="section" id="q11-5-points-use-the-regular-expressions-package-to-extract-all-the-email-ids-mentioned-in-the-above-sentence-str10-as-a-list-object-emails">
-<h1><span class="section-number">44. </span>Q11 [5 points]. Use the regular expressions package to extract all the email ids mentioned in the above sentence <code class="docutils literal notranslate"><span class="pre">str10</span></code> as a list object <code class="docutils literal notranslate"><span class="pre">emails</span></code><a class="headerlink" href="#q11-5-points-use-the-regular-expressions-package-to-extract-all-the-email-ids-mentioned-in-the-above-sentence-str10-as-a-list-object-emails" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="q11-regular-expressions">
+<h1><span class="section-number">41. </span>Q11. Regular Expressions<a class="headerlink" href="#q11-regular-expressions" title="Permalink to this headline">¶</a></h1>
+<p>Use the regular expressions package to extract all the email ids mentioned in the above sentence ‘str10’ as a list <code class="docutils literal notranslate"><span class="pre">emails</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">str10</span> <span class="o">=</span> <span class="s1">&#39;Email the company at xyz@abcd.com and is the easiest way compared to tweet @abcdxyz&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###Q11. Use the regular expressions package to extract all the email ids mentioned in the above sentence &#39;str10&#39;</span>
+<span class="c1">### as a list &#39;emails&#39;</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="n">str10</span> <span class="o">=</span> <span class="s1">&#39;Email the company at xyz@abcd.co and is the easiest way compared to tweet @abcdxyz&#39;</span>
 <span class="n">emails</span><span class="o">=</span><span class="p">[]</span>
 <span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -888,7 +871,7 @@ For this question only use <code class="docutils literal notranslate"><span clas
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span>
-<span class="k">assert</span> <span class="n">emails</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;xyz@abcd.com&#39;</span>
+<span class="k">assert</span> <span class="n">emails</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;xyz@abcd.co&#39;</span>
 </pre></div>
 </div>
 </div>
