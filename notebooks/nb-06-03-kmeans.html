@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>31. k-Means Clustering &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>30. k-Means Clustering &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="32. Coronavirus Data Modeling" href="nb-06-04-covid19.html" />
-    <link rel="prev" title="30. In Depth: Principal Component Analysis" href="nb-06-02-pca2.html" />
+    <link rel="next" title="31. Coronavirus Data Modeling" href="nb-06-04-covid19.html" />
+    <link rel="prev" title="29. In Depth: Principal Component Analysis" href="nb-06-02-pca2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -217,48 +217,48 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="nb-04-05-features_dummies.html">
-   23. Preprocessing function
+  <a class="reference internal" href="nb-04-05-revisit-titanic.html">
+   23. Titanic Classification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-01-matrix-regression-gradient-decent-python.html">
-   25. Linear Regression
+   24. Linear Regression
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-02-regression-boston-housing-python.html">
-   26. Boston Housing
+   25. Boston Housing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-03-ridge-lasso-python.html">
-   27. Lasso Ridge Regression
+   26. Lasso Ridge Regression
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-04-stats-models.html">
-   28. Regression with Stats-Models
+   27. Regression with Stats-Models
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-01-introduction-pca.html">
-   29. Introduction to Principal Component Analysis
+   28. Introduction to Principal Component Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-02-pca2.html">
-   30. In Depth: Principal Component Analysis
+   29. In Depth: Principal Component Analysis
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   31. k-Means Clustering
+   30. k-Means Clustering
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-04-covid19.html">
-   32. Coronavirus Data Modeling
+   31. Coronavirus Data Modeling
   </a>
  </li>
 </ul>
@@ -443,37 +443,37 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introducing-k-means">
-   31.1. Introducing k-Means
+   30.1. Introducing k-Means
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#k-means-algorithm-expectationmaximization">
-   31.2. k-Means Algorithm: Expectation–Maximization
+   30.2. k-Means Algorithm: Expectation–Maximization
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#caveats-of-expectationmaximization">
-     31.2.1. Caveats of expectation–maximization
+     30.2.1. Caveats of expectation–maximization
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-globally-optimal-result-may-not-be-achieved">
-       31.2.1.1. The globally optimal result may not be achieved
+       30.2.1.1. The globally optimal result may not be achieved
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-number-of-clusters-must-be-selected-beforehand">
-       31.2.1.2. The number of clusters must be selected beforehand
+       30.2.1.2. The number of clusters must be selected beforehand
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#k-means-is-limited-to-linear-cluster-boundaries">
-       31.2.1.3. k-means is limited to linear cluster boundaries
+       30.2.1.3. k-means is limited to linear cluster boundaries
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#k-means-can-be-slow-for-large-numbers-of-samples">
-       31.2.1.4. k-means can be slow for large numbers of samples
+       30.2.1.4. k-means can be slow for large numbers of samples
       </a>
      </li>
     </ul>
@@ -482,17 +482,17 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#examples">
-   31.3. Examples
+   30.3. Examples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-1-k-means-on-digits">
-     31.3.1. Example 1: k-means on digits
+     30.3.1. Example 1: k-means on digits
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-2-k-means-for-color-compression">
-     31.3.2. Example 2:
+     30.3.2. Example 2:
      <em>
       k
      </em>
@@ -520,7 +520,7 @@
 <p>&lt; <span class="xref myst">In-Depth: Manifold Learning</span> | <span class="xref myst">Contents</span> | <span class="xref myst">In Depth: Gaussian Mixture Models</span> &gt;</p>
 <p><a href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.11-K-Means.ipynb"><img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open and Execute in Google Colaboratory"></a></p>
 <div class="section" id="k-means-clustering">
-<h1><span class="section-number">31. </span>k-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">30. </span>k-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Permalink to this headline">¶</a></h1>
 <p>In the previous few sections, we have explored one category of unsupervised machine learning models: dimensionality reduction.
 Here we will move on to another class of unsupervised machine learning models: clustering algorithms.
 Clustering algorithms seek to learn, from the properties of the data, an optimal division or discrete labeling of groups of points.</p>
@@ -537,7 +537,7 @@ Clustering algorithms seek to learn, from the properties of the data, an optimal
 </div>
 </div>
 <div class="section" id="introducing-k-means">
-<h2><span class="section-number">31.1. </span>Introducing k-Means<a class="headerlink" href="#introducing-k-means" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.1. </span>Introducing k-Means<a class="headerlink" href="#introducing-k-means" title="Permalink to this headline">¶</a></h2>
 <p>The <em>k</em>-means algorithm searches for a pre-determined number of clusters within an unlabeled multidimensional dataset.
 It accomplishes this using a simple conception of what the optimal clustering looks like:</p>
 <ul class="simple">
@@ -593,7 +593,7 @@ But you might wonder how this algorithm finds these clusters so quickly! After a
 Fortunately for us, such an exhaustive search is not necessary: instead, the typical approach to <em>k</em>-means involves an intuitive iterative approach known as <em>expectation–maximization</em>.</p>
 </div>
 <div class="section" id="k-means-algorithm-expectationmaximization">
-<h2><span class="section-number">31.2. </span>k-Means Algorithm: Expectation–Maximization<a class="headerlink" href="#k-means-algorithm-expectationmaximization" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.2. </span>k-Means Algorithm: Expectation–Maximization<a class="headerlink" href="#k-means-algorithm-expectationmaximization" title="Permalink to this headline">¶</a></h2>
 <p>Expectation–maximization (E–M) is a powerful algorithm that comes up in a variety of contexts within data science.
 <em>k</em>-means is a particularly simple and easy-to-understand application of the algorithm, and we will walk through it briefly here.
 In short, the expectation–maximization approach here consists of the following procedure:</p>
@@ -653,10 +653,10 @@ The following is a very basic implementation:</p>
 </div>
 <p>Most well-tested implementations will do a bit more than this under the hood, but the preceding function gives the gist of the expectation–maximization approach.</p>
 <div class="section" id="caveats-of-expectationmaximization">
-<h3><span class="section-number">31.2.1. </span>Caveats of expectation–maximization<a class="headerlink" href="#caveats-of-expectationmaximization" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">30.2.1. </span>Caveats of expectation–maximization<a class="headerlink" href="#caveats-of-expectationmaximization" title="Permalink to this headline">¶</a></h3>
 <p>There are a few issues to be aware of when using the expectation–maximization algorithm.</p>
 <div class="section" id="the-globally-optimal-result-may-not-be-achieved">
-<h4><span class="section-number">31.2.1.1. </span>The globally optimal result may not be achieved<a class="headerlink" href="#the-globally-optimal-result-may-not-be-achieved" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">30.2.1.1. </span>The globally optimal result may not be achieved<a class="headerlink" href="#the-globally-optimal-result-may-not-be-achieved" title="Permalink to this headline">¶</a></h4>
 <p>First, although the E–M procedure is guaranteed to improve the result in each step, there is no assurance that it will lead to the <em>global</em> best solution.
 For example, if we use a different random seed in our simple procedure, the particular starting guesses lead to poor results:</p>
 <div class="cell docutils container">
@@ -674,7 +674,7 @@ For example, if we use a different random seed in our simple procedure, the part
 <p>Here the E–M approach has converged, but has not converged to a globally optimal configuration. For this reason, it is common for the algorithm to be run for multiple starting guesses, as indeed Scikit-Learn does by default (set by the <code class="docutils literal notranslate"><span class="pre">n_init</span></code> parameter, which defaults to 10).</p>
 </div>
 <div class="section" id="the-number-of-clusters-must-be-selected-beforehand">
-<h4><span class="section-number">31.2.1.2. </span>The number of clusters must be selected beforehand<a class="headerlink" href="#the-number-of-clusters-must-be-selected-beforehand" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">30.2.1.2. </span>The number of clusters must be selected beforehand<a class="headerlink" href="#the-number-of-clusters-must-be-selected-beforehand" title="Permalink to this headline">¶</a></h4>
 <p>Another common challenge with <em>k</em>-means is that you must tell it how many clusters you expect: it cannot learn the number of clusters from the data.
 For example, if we ask the algorithm to identify six clusters, it will happily proceed and find the best six clusters:</p>
 <div class="cell docutils container">
@@ -693,7 +693,7 @@ For example, if we ask the algorithm to identify six clusters, it will happily p
 <p>Alternatively, you might use a more complicated clustering algorithm which has a better quantitative measure of the fitness per number of clusters (e.g., Gaussian mixture models; see <span class="xref myst">In Depth: Gaussian Mixture Models</span>) or which <em>can</em> choose a suitable number of clusters (e.g., DBSCAN, mean-shift, or affinity propagation, all available in the <code class="docutils literal notranslate"><span class="pre">sklearn.cluster</span></code> submodule)</p>
 </div>
 <div class="section" id="k-means-is-limited-to-linear-cluster-boundaries">
-<h4><span class="section-number">31.2.1.3. </span>k-means is limited to linear cluster boundaries<a class="headerlink" href="#k-means-is-limited-to-linear-cluster-boundaries" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">30.2.1.3. </span>k-means is limited to linear cluster boundaries<a class="headerlink" href="#k-means-is-limited-to-linear-cluster-boundaries" title="Permalink to this headline">¶</a></h4>
 <p>The fundamental model assumptions of <em>k</em>-means (points will be closer to their own cluster center than to others) means that the algorithm will often be ineffective if the clusters have complicated geometries.</p>
 <p>In particular, the boundaries between <em>k</em>-means clusters will always be linear, which means that it will fail for more complicated boundaries.
 Consider the following data, along with the cluster labels found by the typical <em>k</em>-means approach:</p>
@@ -743,7 +743,7 @@ It uses the graph of nearest neighbors to compute a higher-dimensional represent
 <p>We see that with this kernel transform approach, the kernelized <em>k</em>-means is able to find the more complicated nonlinear boundaries between clusters.</p>
 </div>
 <div class="section" id="k-means-can-be-slow-for-large-numbers-of-samples">
-<h4><span class="section-number">31.2.1.4. </span>k-means can be slow for large numbers of samples<a class="headerlink" href="#k-means-can-be-slow-for-large-numbers-of-samples" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">30.2.1.4. </span>k-means can be slow for large numbers of samples<a class="headerlink" href="#k-means-can-be-slow-for-large-numbers-of-samples" title="Permalink to this headline">¶</a></h4>
 <p>Because each iteration of <em>k</em>-means must access every point in the dataset, the algorithm can be relatively slow as the number of samples grows.
 You might wonder if this requirement to use all data at each iteration can be relaxed; for example, you might just use a subset of the data to update the cluster centers at each step.
 This is the idea behind batch-based <em>k</em>-means algorithms, one form of which is implemented in <code class="docutils literal notranslate"><span class="pre">sklearn.cluster.MiniBatchKMeans</span></code>.
@@ -752,11 +752,11 @@ The interface for this is the same as for standard <code class="docutils literal
 </div>
 </div>
 <div class="section" id="examples">
-<h2><span class="section-number">31.3. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.3. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>Being careful about these limitations of the algorithm, we can use <em>k</em>-means to our advantage in a wide variety of situations.
 We’ll now take a look at a couple examples.</p>
 <div class="section" id="example-1-k-means-on-digits">
-<h3><span class="section-number">31.3.1. </span>Example 1: k-means on digits<a class="headerlink" href="#example-1-k-means-on-digits" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">30.3.1. </span>Example 1: k-means on digits<a class="headerlink" href="#example-1-k-means-on-digits" title="Permalink to this headline">¶</a></h3>
 <p>To start, let’s take a look at applying <em>k</em>-means on the same simple digits data that we saw in <span class="xref myst">In-Depth: Decision Trees and Random Forests</span> and <span class="xref myst">In Depth: Principal Component Analysis</span>.
 Here we will attempt to use <em>k</em>-means to try to identify similar digits <em>without using the original label information</em>; this might be similar to a first step in extracting meaning from a new dataset about which you don’t have any <em>a priori</em> label information.</p>
 <p>We will start by loading the digits and then finding the <code class="docutils literal notranslate"><span class="pre">KMeans</span></code> clusters.
@@ -893,7 +893,7 @@ Let’s see how it does:</p>
 This is the power of unsupervised learning when used carefully: it can extract information from the dataset that it might be difficult to do by hand or by eye.</p>
 </div>
 <div class="section" id="example-2-k-means-for-color-compression">
-<h3><span class="section-number">31.3.2. </span>Example 2: <em>k</em>-means for color compression<a class="headerlink" href="#example-2-k-means-for-color-compression" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">30.3.2. </span>Example 2: <em>k</em>-means for color compression<a class="headerlink" href="#example-2-k-means-for-color-compression" title="Permalink to this headline">¶</a></h3>
 <p>One interesting application of clustering is in color compression within images.
 For example, imagine you have an image with millions of colors.
 In most images, a large number of the colors will be unused, and many of the pixels in the image will have similar or even identical colors.</p>
@@ -1061,7 +1061,7 @@ But the example shows the power of thinking outside of the box with unsupervised
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">30. </span>In Depth: Principal Component Analysis</p>
+                <p class="prevnext-title"><span class="section-number">29. </span>In Depth: Principal Component Analysis</p>
             </div>
         </a>
     </div>
@@ -1069,7 +1069,7 @@ But the example shows the power of thinking outside of the box with unsupervised
         <a class="right-next" href="nb-06-04-covid19.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">32. </span>Coronavirus Data Modeling</p>
+                <p class="prevnext-title"><span class="section-number">31. </span>Coronavirus Data Modeling</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

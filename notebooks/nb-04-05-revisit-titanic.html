@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>23. Preprocessing function &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>23. Titanic Classification &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="25. Linear Regression" href="nb-05-01-matrix-regression-gradient-decent-python.html" />
+    <link rel="next" title="24. Linear Regression" href="nb-05-01-matrix-regression-gradient-decent-python.html" />
     <link rel="prev" title="22. KNN" href="nb-04-04-knn.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -218,47 +218,47 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   23. Preprocessing function
+   23. Titanic Classification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-01-matrix-regression-gradient-decent-python.html">
-   25. Linear Regression
+   24. Linear Regression
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-02-regression-boston-housing-python.html">
-   26. Boston Housing
+   25. Boston Housing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-03-ridge-lasso-python.html">
-   27. Lasso Ridge Regression
+   26. Lasso Ridge Regression
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-04-stats-models.html">
-   28. Regression with Stats-Models
+   27. Regression with Stats-Models
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-01-introduction-pca.html">
-   29. Introduction to Principal Component Analysis
+   28. Introduction to Principal Component Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-02-pca2.html">
-   30. In Depth: Principal Component Analysis
+   29. In Depth: Principal Component Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-03-kmeans.html">
-   31. k-Means Clustering
+   30. k-Means Clustering
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-04-covid19.html">
-   32. Coronavirus Data Modeling
+   31. Coronavirus Data Modeling
   </a>
  </li>
 </ul>
@@ -373,7 +373,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/nb-04-05-features_dummies.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebooks/nb-04-05-revisit-titanic.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -393,7 +393,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-04-05-features_dummies.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-04-05-revisit-titanic.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -414,7 +414,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-04-05-features_dummies.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-04-05-revisit-titanic.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -422,7 +422,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-04-05-features_dummies.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-04-05-revisit-titanic.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -441,14 +441,14 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   23. Preprocessing function
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preprocessing-function">
+   23.1. Preprocessing function
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#challenge">
-   24. Challenge
+   23.2. Challenge
   </a>
  </li>
 </ul>
@@ -465,6 +465,8 @@
   <p><a class="reference external" href="http://rpi.analyticsdojo.com"><img alt="AnalyticsDojo" src="https://github.com/rpi-techfundamentals/spring2019-materials/blob/master/fig/final-logo.png?raw=1" /></a></p>
 <center><h1>Titanic Classification</h1></center>
 <center><h3><a href = 'http://introml.analyticsdojo.com'>introml.analyticsdojo.com</a></h3></center>
+<div class="section" id="titanic-classification">
+<h1><span class="section-number">23. </span>Titanic Classification<a class="headerlink" href="#titanic-classification" title="Permalink to this headline">¶</a></h1>
 <p>As an example of how to work with both categorical and numerical data, we will perform survival predicition for the passengers of the HMS Titanic.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -628,7 +630,7 @@
 </div></div></div>
 </div>
 <div class="section" id="preprocessing-function">
-<h1><span class="section-number">23. </span>Preprocessing function<a class="headerlink" href="#preprocessing-function" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">23.1. </span>Preprocessing function<a class="headerlink" href="#preprocessing-function" title="Permalink to this headline">¶</a></h2>
 <p>We want to create a preprocessing function that can address transformation of our train and test set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -949,8 +951,9 @@ Metrics score validation:  0.7126865671641791
 </div>
 </div>
 <div class="section" id="challenge">
-<h1><span class="section-number">24. </span>Challenge<a class="headerlink" href="#challenge" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">23.2. </span>Challenge<a class="headerlink" href="#challenge" title="Permalink to this headline">¶</a></h2>
 <p>Create a function that can accept any Scikit learn model and assess the perfomance in the validation set, storing results as a dataframe.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -995,7 +998,7 @@ Metrics score validation:  0.7126865671641791
         <a class="right-next" href="nb-05-01-matrix-regression-gradient-decent-python.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">25. </span>Linear Regression</p>
+                <p class="prevnext-title"><span class="section-number">24. </span>Linear Regression</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
