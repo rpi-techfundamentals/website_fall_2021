@@ -14,7 +14,7 @@ parts:
   numbered: True
   start_numbering_at: 1
   chapters:
-  - glob: assignments/h*
+  - glob: assignments/hw*
 - caption: Resources
   numbered: False
   chapters:
