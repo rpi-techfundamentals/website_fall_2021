@@ -467,21 +467,21 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#challenge-compare-results">
-   28.4. Challenge: Compare Results
+  <a class="reference internal nav-link" href="#alternate-syntax">
+   28.4. Alternate Syntax
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-preprocessing">
-     28.4.1. Data preprocessing:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#models">
-     28.4.2. Models
+    <a class="reference internal nav-link" href="#use-stargazer">
+     28.4.1. Use Stargazer
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenge-compare-results">
+   28.5. Challenge: Compare Results
+  </a>
  </li>
 </ul>
 
@@ -501,6 +501,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
 </pre></div>
@@ -517,12 +518,6 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Get a sample dataset</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_rdataset</span><span class="p">(</span><span class="s2">&quot;Guerry&quot;</span><span class="p">,</span> <span class="s2">&quot;HistData&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/jasonkuruzovich/anaconda3/lib/python3.7/site-packages/statsmodels/datasets/utils.py:192: FutureWarning: `item` has been deprecated and will be removed in a future version
-  return dataset_meta[&quot;Title&quot;].item()
 </pre></div>
 </div>
 </div>
@@ -557,6 +552,341 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dept</th>
+      <th>Region</th>
+      <th>Department</th>
+      <th>Crime_pers</th>
+      <th>Crime_prop</th>
+      <th>Literacy</th>
+      <th>Donations</th>
+      <th>Infants</th>
+      <th>Suicides</th>
+      <th>MainCity</th>
+      <th>Wealth</th>
+      <th>Commerce</th>
+      <th>Clergy</th>
+      <th>Crime_parents</th>
+      <th>Infanticide</th>
+      <th>Donation_clergy</th>
+      <th>Lottery</th>
+      <th>Desertion</th>
+      <th>Instruction</th>
+      <th>Prostitutes</th>
+      <th>Distance</th>
+      <th>Area</th>
+      <th>Pop1831</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>E</td>
+      <td>Ain</td>
+      <td>28870</td>
+      <td>15890</td>
+      <td>37</td>
+      <td>5098</td>
+      <td>33120</td>
+      <td>35039</td>
+      <td>2:Med</td>
+      <td>73</td>
+      <td>58</td>
+      <td>11</td>
+      <td>71</td>
+      <td>60</td>
+      <td>69</td>
+      <td>41</td>
+      <td>55</td>
+      <td>46</td>
+      <td>13</td>
+      <td>218.372</td>
+      <td>5762</td>
+      <td>346.03</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>N</td>
+      <td>Aisne</td>
+      <td>26226</td>
+      <td>5521</td>
+      <td>51</td>
+      <td>8901</td>
+      <td>14572</td>
+      <td>12831</td>
+      <td>2:Med</td>
+      <td>22</td>
+      <td>10</td>
+      <td>82</td>
+      <td>4</td>
+      <td>82</td>
+      <td>36</td>
+      <td>38</td>
+      <td>82</td>
+      <td>24</td>
+      <td>327</td>
+      <td>65.945</td>
+      <td>7369</td>
+      <td>513.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>C</td>
+      <td>Allier</td>
+      <td>26747</td>
+      <td>7925</td>
+      <td>13</td>
+      <td>10973</td>
+      <td>17044</td>
+      <td>114121</td>
+      <td>2:Med</td>
+      <td>61</td>
+      <td>66</td>
+      <td>68</td>
+      <td>46</td>
+      <td>42</td>
+      <td>76</td>
+      <td>66</td>
+      <td>16</td>
+      <td>85</td>
+      <td>34</td>
+      <td>161.927</td>
+      <td>7340</td>
+      <td>298.26</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>E</td>
+      <td>Basses-Alpes</td>
+      <td>12935</td>
+      <td>7289</td>
+      <td>46</td>
+      <td>2733</td>
+      <td>23018</td>
+      <td>14238</td>
+      <td>1:Sm</td>
+      <td>76</td>
+      <td>49</td>
+      <td>5</td>
+      <td>70</td>
+      <td>12</td>
+      <td>37</td>
+      <td>80</td>
+      <td>32</td>
+      <td>29</td>
+      <td>2</td>
+      <td>351.399</td>
+      <td>6925</td>
+      <td>155.90</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>E</td>
+      <td>Hautes-Alpes</td>
+      <td>17488</td>
+      <td>8174</td>
+      <td>69</td>
+      <td>6962</td>
+      <td>23076</td>
+      <td>16171</td>
+      <td>1:Sm</td>
+      <td>83</td>
+      <td>65</td>
+      <td>10</td>
+      <td>22</td>
+      <td>23</td>
+      <td>64</td>
+      <td>79</td>
+      <td>35</td>
+      <td>7</td>
+      <td>1</td>
+      <td>320.280</td>
+      <td>5549</td>
+      <td>129.10</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>86</td>
+      <td>W</td>
+      <td>Vienne</td>
+      <td>15010</td>
+      <td>4710</td>
+      <td>25</td>
+      <td>8922</td>
+      <td>35224</td>
+      <td>21851</td>
+      <td>2:Med</td>
+      <td>68</td>
+      <td>43</td>
+      <td>71</td>
+      <td>20</td>
+      <td>1</td>
+      <td>44</td>
+      <td>40</td>
+      <td>38</td>
+      <td>65</td>
+      <td>18</td>
+      <td>170.523</td>
+      <td>6990</td>
+      <td>282.73</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>87</td>
+      <td>C</td>
+      <td>Haute-Vienne</td>
+      <td>16256</td>
+      <td>6402</td>
+      <td>13</td>
+      <td>13817</td>
+      <td>19940</td>
+      <td>33497</td>
+      <td>2:Med</td>
+      <td>67</td>
+      <td>63</td>
+      <td>76</td>
+      <td>68</td>
+      <td>6</td>
+      <td>78</td>
+      <td>55</td>
+      <td>11</td>
+      <td>84</td>
+      <td>7</td>
+      <td>198.874</td>
+      <td>5520</td>
+      <td>285.13</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>88</td>
+      <td>E</td>
+      <td>Vosges</td>
+      <td>18835</td>
+      <td>9044</td>
+      <td>62</td>
+      <td>4040</td>
+      <td>14978</td>
+      <td>33029</td>
+      <td>2:Med</td>
+      <td>82</td>
+      <td>42</td>
+      <td>51</td>
+      <td>58</td>
+      <td>34</td>
+      <td>5</td>
+      <td>14</td>
+      <td>85</td>
+      <td>11</td>
+      <td>43</td>
+      <td>174.477</td>
+      <td>5874</td>
+      <td>397.99</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>89</td>
+      <td>C</td>
+      <td>Yonne</td>
+      <td>18006</td>
+      <td>6516</td>
+      <td>47</td>
+      <td>4276</td>
+      <td>16616</td>
+      <td>12789</td>
+      <td>2:Med</td>
+      <td>30</td>
+      <td>15</td>
+      <td>55</td>
+      <td>32</td>
+      <td>22</td>
+      <td>35</td>
+      <td>51</td>
+      <td>66</td>
+      <td>27</td>
+      <td>272</td>
+      <td>81.797</td>
+      <td>7427</td>
+      <td>352.49</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>200</td>
+      <td>NaN</td>
+      <td>Corse</td>
+      <td>2199</td>
+      <td>4589</td>
+      <td>49</td>
+      <td>37015</td>
+      <td>24743</td>
+      <td>37016</td>
+      <td>2:Med</td>
+      <td>37</td>
+      <td>83</td>
+      <td>1</td>
+      <td>81</td>
+      <td>2</td>
+      <td>84</td>
+      <td>83</td>
+      <td>9</td>
+      <td>25</td>
+      <td>1</td>
+      <td>539.213</td>
+      <td>8680</td>
+      <td>195.41</td>
+    </tr>
+  </tbody>
+</table>
+<p>86 rows × 23 columns</p>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="predicting-gambling">
@@ -587,8 +917,8 @@ tique de la Population francais, in 1000s.</p></li>
 Dep. Variable:                Lottery   R-squared:                       0.348
 Model:                            OLS   Adj. R-squared:                  0.333
 Method:                 Least Squares   F-statistic:                     22.20
-Date:                Mon, 07 Oct 2019   Prob (F-statistic):           1.90e-08
-Time:                        14:14:28   Log-Likelihood:                -379.82
+Date:                Mon, 04 Oct 2021   Prob (F-statistic):           1.90e-08
+Time:                        18:55:31   Log-Likelihood:                -379.82
 No. Observations:                  86   AIC:                             765.6
 Df Residuals:                      83   BIC:                             773.0
 Df Model:                           2                                         
@@ -612,309 +942,107 @@ Warnings:
 </div>
 </div>
 </div>
-<p>Key Metrics</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://www.statsmodels.org/devel/generated/statsmodels.regression.linear_model.OLSResults.html">Link</a> for summary of results.</p></li>
-<li></li>
-</ul>
+</div>
+<div class="section" id="alternate-syntax">
+<h2><span class="section-number">28.4. </span>Alternate Syntax<a class="headerlink" href="#alternate-syntax" title="Permalink to this headline">¶</a></h2>
+<p>This is a more pure way of</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ln_Pop1831&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Pop1831&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Literacy&#39;</span><span class="p">,</span> <span class="s1">&#39;ln_Pop1831&#39;</span><span class="p">]]</span> <span class="c1"># here we have 2 variables for the multiple linear regression. </span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Lottery&#39;</span><span class="p">]</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="c1"># adding a constant</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> 
+<span class="n">print_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">print_model</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                Lottery   R-squared:                       0.348
+Model:                            OLS   Adj. R-squared:                  0.333
+Method:                 Least Squares   F-statistic:                     22.20
+Date:                Mon, 04 Oct 2021   Prob (F-statistic):           1.90e-08
+Time:                        18:55:32   Log-Likelihood:                -379.82
+No. Observations:                  86   AIC:                             765.6
+Df Residuals:                      83   BIC:                             773.0
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const        246.4341     35.233      6.995      0.000     176.358     316.510
+Literacy      -0.4889      0.128     -3.832      0.000      -0.743      -0.235
+ln_Pop1831   -31.3114      5.977     -5.239      0.000     -43.199     -19.424
+==============================================================================
+Omnibus:                        3.713   Durbin-Watson:                   2.019
+Prob(Omnibus):                  0.156   Jarque-Bera (JB):                3.394
+Skew:                          -0.487   Prob(JB):                        0.183
+Kurtosis:                       3.003   Cond. No.                         702.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="use-stargazer">
+<h3><span class="section-number">28.4.1. </span>Use Stargazer<a class="headerlink" href="#use-stargazer" title="Permalink to this headline">¶</a></h3>
+<p>Show multiple different models easily using <a class="reference external" href="https://github.com/mwburke/stargazer">Stargazer</a>, a Python implementation of an R-package for implementing stepwise regression.</p>
+<p>Let’s add a different model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install Stargazer
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Stargazer in /usr/local/lib/python3.7/dist-packages (0.0.5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">stargazer.stargazer</span> <span class="kn">import</span> <span class="n">Stargazer</span><span class="p">,</span> <span class="n">LineLocation</span>
+
+<span class="n">X2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Literacy&#39;</span><span class="p">,</span> <span class="s1">&#39;ln_Pop1831&#39;</span><span class="p">,</span><span class="s1">&#39;Crime_pers&#39;</span><span class="p">,</span>	<span class="s1">&#39;Crime_prop&#39;</span><span class="p">]]</span>
+<span class="n">X2</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X2</span><span class="p">)</span> <span class="c1"># adding a constant</span>
+<span class="n">model2</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">stargazer</span> <span class="o">=</span> <span class="n">Stargazer</span><span class="p">([</span><span class="n">model</span><span class="p">,</span><span class="n">model2</span><span class="p">])</span>
+<span class="n">stargazer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table style="text-align:center"><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="2"><em>Dependent variable:Lottery</em></td></tr><tr><td style="text-align:left"></td><tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Crime_pers</td><td></td><td>0.000<sup></sup></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.000)</td></tr><tr><td style="text-align:left">Crime_prop</td><td></td><td>0.002<sup>**</sup></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.001)</td></tr><tr><td style="text-align:left">Literacy</td><td>-0.489<sup>***</sup></td><td>-0.365<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.128)</td><td>(0.133)</td></tr><tr><td style="text-align:left">const</td><td>246.434<sup>***</sup></td><td>215.240<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(35.233)</td><td>(38.890)</td></tr><tr><td style="text-align:left">ln_Pop1831</td><td>-31.311<sup>***</sup></td><td>-30.191<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(5.977)</td><td>(6.441)</td></tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Observations</td><td>86</td><td>86</td></tr><tr><td style="text-align: left">R<sup>2</sup></td><td>0.348</td><td>0.409</td></tr><tr><td style="text-align: left">Adjusted R<sup>2</sup></td><td>0.333</td><td>0.380</td></tr><tr><td style="text-align: left">Residual Std. Error</td><td>20.397 (df=83)</td><td>19.667 (df=81)</td></tr><tr><td style="text-align: left">F Statistic</td><td>22.196<sup>***</sup> (df=2; 83)</td><td>14.003<sup>***</sup> (df=4; 81)</td></tr><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Note:</td>
+ <td colspan="2" style="text-align: right">
+  <sup>*</sup>p&lt;0.1;
+  <sup>**</sup>p&lt;0.05;
+  <sup>***</sup>p&lt;0.01
+ </td></tr></table></div></div>
+</div>
+</div>
 </div>
 <div class="section" id="challenge-compare-results">
-<h2><span class="section-number">28.4. </span>Challenge: Compare Results<a class="headerlink" href="#challenge-compare-results" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">28.5. </span>Challenge: Compare Results<a class="headerlink" href="#challenge-compare-results" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Explore another predictor of <code class="docutils literal notranslate"><span class="pre">Lottery</span></code>, was it significant in influecing.</p></li>
-<li><p>Add a train test split to the above analysis and assess overfitting.</p></li>
-<li><p>Use scikit learn regression to replicate the above analysis.</p></li>
-<li><p>Then use Stats-models to replicate Boston Housing example below.</p></li>
+<li><p>Explore another model of <code class="docutils literal notranslate"><span class="pre">Lottery</span></code> and add it to the Stargazer results.</p></li>
+<li><p>Explore the stargazer documentation and customize the order of the variables, putting the constant and then the variables in all models on top (as is typically done).</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/boston_test.csv <span class="o">&amp;&amp;</span> wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/boston_train.csv
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2019-02-25 16:07:12--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/boston_test.csv
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 451405 (441K) [text/plain]
-Saving to: ‘boston_test.csv.1’
-
-boston_test.csv.1   100%[===================&gt;] 440.83K  --.-KB/s    in 0.06s   
-
-2019-02-25 16:07:12 (7.19 MB/s) - ‘boston_test.csv.1’ saved [451405/451405]
-
---2019-02-25 16:07:12--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/boston_train.csv
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 460676 (450K) [text/plain]
-Saving to: ‘boston_train.csv.1’
-
-boston_train.csv.1  100%[===================&gt;] 449.88K  --.-KB/s    in 0.06s   
-
-2019-02-25 16:07:12 (7.29 MB/s) - ‘boston_train.csv.1’ saved [460676/460676]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;boston_train.csv&quot;</span><span class="p">)</span>
-<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;boston_test.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Id</th>
-      <th>MSSubClass</th>
-      <th>MSZoning</th>
-      <th>LotFrontage</th>
-      <th>LotArea</th>
-      <th>Street</th>
-      <th>Alley</th>
-      <th>LotShape</th>
-      <th>LandContour</th>
-      <th>Utilities</th>
-      <th>...</th>
-      <th>PoolArea</th>
-      <th>PoolQC</th>
-      <th>Fence</th>
-      <th>MiscFeature</th>
-      <th>MiscVal</th>
-      <th>MoSold</th>
-      <th>YrSold</th>
-      <th>SaleType</th>
-      <th>SaleCondition</th>
-      <th>SalePrice</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>60</td>
-      <td>RL</td>
-      <td>65.0</td>
-      <td>8450</td>
-      <td>Pave</td>
-      <td>NaN</td>
-      <td>Reg</td>
-      <td>Lvl</td>
-      <td>AllPub</td>
-      <td>...</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2008</td>
-      <td>WD</td>
-      <td>Normal</td>
-      <td>208500</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>20</td>
-      <td>RL</td>
-      <td>80.0</td>
-      <td>9600</td>
-      <td>Pave</td>
-      <td>NaN</td>
-      <td>Reg</td>
-      <td>Lvl</td>
-      <td>AllPub</td>
-      <td>...</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>5</td>
-      <td>2007</td>
-      <td>WD</td>
-      <td>Normal</td>
-      <td>181500</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>60</td>
-      <td>RL</td>
-      <td>68.0</td>
-      <td>11250</td>
-      <td>Pave</td>
-      <td>NaN</td>
-      <td>IR1</td>
-      <td>Lvl</td>
-      <td>AllPub</td>
-      <td>...</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>9</td>
-      <td>2008</td>
-      <td>WD</td>
-      <td>Normal</td>
-      <td>223500</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>70</td>
-      <td>RL</td>
-      <td>60.0</td>
-      <td>9550</td>
-      <td>Pave</td>
-      <td>NaN</td>
-      <td>IR1</td>
-      <td>Lvl</td>
-      <td>AllPub</td>
-      <td>...</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2006</td>
-      <td>WD</td>
-      <td>Abnorml</td>
-      <td>140000</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>60</td>
-      <td>RL</td>
-      <td>84.0</td>
-      <td>14260</td>
-      <td>Pave</td>
-      <td>NaN</td>
-      <td>IR1</td>
-      <td>Lvl</td>
-      <td>AllPub</td>
-      <td>...</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>12</td>
-      <td>2008</td>
-      <td>WD</td>
-      <td>Normal</td>
-      <td>250000</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 81 columns</p>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;MSSubClass&#39;</span><span class="p">:</span><span class="s1">&#39;SaleCondition&#39;</span><span class="p">],</span>
-                      <span class="n">test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;MSSubClass&#39;</span><span class="p">:</span><span class="s1">&#39;SaleCondition&#39;</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="data-preprocessing">
-<h3><span class="section-number">28.4.1. </span>Data preprocessing:<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">¶</a></h3>
-<p>We’re not going to do anything fancy here:</p>
-<ul class="simple">
-<li><p>First I’ll transform the skewed numeric features by taking log(feature + 1) - this will make the features more normal</p></li>
-<li><p>Create Dummy variables for the categorical features</p></li>
-<li><p>Replace the numeric missing values (NaN’s) with the mean of their respective columns</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#log transform the target:</span>
-<span class="n">train</span><span class="p">[</span><span class="s2">&quot;SalePrice&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s2">&quot;SalePrice&quot;</span><span class="p">])</span>
-
-<span class="c1">#log transform skewed numeric features:</span>
-<span class="n">numeric_feats</span> <span class="o">=</span> <span class="n">all_data</span><span class="o">.</span><span class="n">dtypes</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">dtypes</span> <span class="o">!=</span> <span class="s2">&quot;object&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
-
-<span class="n">skewed_feats</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">numeric_feats</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">skew</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()))</span> <span class="c1">#compute skewness</span>
-<span class="n">skewed_feats</span> <span class="o">=</span> <span class="n">skewed_feats</span><span class="p">[</span><span class="n">skewed_feats</span> <span class="o">&gt;</span> <span class="mf">0.75</span><span class="p">]</span>
-<span class="n">skewed_feats</span> <span class="o">=</span> <span class="n">skewed_feats</span><span class="o">.</span><span class="n">index</span>
-
-<span class="n">all_data</span><span class="p">[</span><span class="n">skewed_feats</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">all_data</span><span class="p">[</span><span class="n">skewed_feats</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#filling NA&#39;s with the mean of the column:</span>
-<span class="n">all_data</span> <span class="o">=</span> <span class="n">all_data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#creating matrices for sklearn:</span>
-<span class="n">X_train</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[:</span><span class="n">train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-<span class="n">X_test</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">SalePrice</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1460, 288)
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="models">
-<h3><span class="section-number">28.4.2. </span>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h3>
-<p>Now we are going to use regularized linear regression models from the scikit learn module. I’m going to try both l_1(Lasso) and l_2(Ridge) regularization. I’ll also define a function that returns the cross-validation rmse error so we can evaluate our models and pick the best tuning par</p>
-</div>
 </div>
 </div>
 
