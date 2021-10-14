@@ -558,10 +558,20 @@
 </ul>
 </li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This is a fix for some of the tests. </span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">log10</span><span class="p">,</span> <span class="n">floor</span>
+<span class="k">def</span> <span class="nf">round_sig</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sig</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sig</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">log10</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="q1-10-points-folds-for-cross-validation">
 <h1><span class="section-number">58. </span>Q1 [10 points]. Folds for cross validation.<a class="headerlink" href="#q1-10-points-folds-for-cross-validation" title="Permalink to this headline">¶</a></h1>
-<p>Use the <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html">KFold()</a> function from scikit-learn to generate folds for cross validation.</p>
+<p>Use the <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html">KFold()</a> function from scikit-learn to generate 4 folds for cross validation.</p>
 <p>For each fold – append the mean of training data to <code class="docutils literal notranslate"><span class="pre">traindata_means</span></code>
 and the mean of testing data to <code class="docutils literal notranslate"><span class="pre">testdata_means</span></code></p>
 <p>#Hint – Use np.mean() to compute the mean values.</p>
@@ -678,12 +688,8 @@ and the mean of testing data to <code class="docutils literal notranslate"><span
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">preprocess</span><span class="p">(</span><span class="n">df_boston_train</span><span class="p">,</span> <span class="n">num_features</span><span class="p">,</span> <span class="n">cat_features</span><span class="p">,</span> <span class="n">dv</span><span class="p">)</span>
-<span class="n">X2</span><span class="o">=</span><span class="n">preprocess</span><span class="p">(</span><span class="n">df_boston_train</span><span class="p">,</span> <span class="n">num_features</span><span class="p">,</span> <span class="n">cat_features</span><span class="p">)</span>
-
-
 <span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">reg_r2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="mf">0.931</span>
-<span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">reg_mse</span><span class="p">)</span><span class="o">==</span><span class="mi">438286412</span>
+<span class="k">assert</span> <span class="n">round_sig</span><span class="p">(</span><span class="n">reg_mse</span><span class="p">)</span><span class="o">==</span><span class="n">round_sig</span><span class="p">(</span><span class="mi">438286412</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -745,7 +751,7 @@ and the mean of testing data to <code class="docutils literal notranslate"><span
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">reg_r2_train</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="mf">0.943</span>
 <span class="k">assert</span> <span class="n">reg_r2_test</span> <span class="o">&lt;</span><span class="mi">0</span>
-<span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">reg_mse_train</span><span class="p">)</span><span class="o">==</span> <span class="mi">358143388</span>
+<span class="k">assert</span> <span class="n">round_sig</span><span class="p">(</span><span class="n">reg_mse_train</span><span class="p">)</span><span class="o">==</span><span class="n">round_sig</span><span class="p">(</span><span class="mi">358143388</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -774,7 +780,7 @@ and the mean of testing data to <code class="docutils literal notranslate"><span
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">X_pca</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">5</span>
 <span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">reg_r2_train</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span><span class="mf">0.622</span>
-<span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">reg_mse_train</span><span class="p">)</span><span class="o">==</span> <span class="mi">2369212459</span>
+<span class="k">assert</span> <span class="n">round_sig</span><span class="p">(</span><span class="n">reg_mse_train</span><span class="p">)</span><span class="o">==</span> <span class="n">round_sig</span><span class="p">(</span><span class="mi">2369212459</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -834,9 +840,9 @@ and the mean of testing data to <code class="docutils literal notranslate"><span
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
 <span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;r2-train&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="mf">0.976</span>
-<span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;mse-train&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">==</span> <span class="mi">147830303</span>
+<span class="k">assert</span> <span class="n">round_sig</span><span class="p">(</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;mse-train&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">==</span> <span class="n">round_sig</span><span class="p">(</span><span class="mi">147830303</span><span class="p">)</span>
 <span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;r2-test&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="mf">0.876</span>
-<span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;mse-test&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">==</span> <span class="mi">795442670</span>
+<span class="k">assert</span> <span class="n">round_sig</span><span class="p">(</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;mse-test&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">==</span> <span class="n">round_sig</span><span class="p">(</span><span class="mi">795442670</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
