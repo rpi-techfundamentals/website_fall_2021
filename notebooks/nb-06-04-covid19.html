@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>32. Coronavirus Data Modeling &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>33. Coronavirus Data Modeling &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Homework-1" href="../assignments/hw-1.html" />
-    <link rel="prev" title="31. k-Means Clustering" href="nb-06-03-kmeans.html" />
+    <link rel="next" title="34. Introduction to Text Mining in Python" href="nb-07-00-corpus-simple.html" />
+    <link rel="prev" title="32. k-Means Clustering" href="nb-06-03-kmeans.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   OVERVIEW
  </span>
@@ -105,7 +105,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   NOTEBOOKS
  </span>
@@ -227,47 +227,97 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-07-titanic-features.html">
+   25. Basic Text Feature Creation in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="nb-05-01-matrix-regression-gradient-decent-python.html">
-   25. Linear Regression
+   26. Linear Regression
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-02-regression-boston-housing-python.html">
-   26. Boston Housing
+   27. Boston Housing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-03-ridge-lasso-python.html">
-   27. Lasso Ridge Regression
+   28. Lasso Ridge Regression
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-04-stats-models.html">
-   28. Regression with Stats-Models
+   29. Regression with Stats-Models
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-01-introduction-pca.html">
-   29. Introduction to Principal Component Analysis
+   30. Introduction to Principal Component Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-02-pca2.html">
-   30. In Depth: Principal Component Analysis
+   31. In Depth: Principal Component Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-03-kmeans.html">
-   31. k-Means Clustering
+   32. k-Means Clustering
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   32. Coronavirus Data Modeling
+   33. Coronavirus Data Modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-00-corpus-simple.html">
+   34. Introduction to Text Mining in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-01-intro-nlp.html">
+   35. Natural Language Toolkit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-02-scikit-learn-text.html">
+   36. Bag-of-Words Using Scikit Learn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-03-what-cooking-python.html">
+   37. What’s Cooking in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-05-bag-popcorn-bag-words.html">
+   38. Bag of Words
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-06-sentiment.html">
+   39. Sentiment Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-07-sentimentB.html">
+   41. Lecture-21: Introduction to Natural Language Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-08-fastai-imdb.html">
+   43. IMDB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-09-intro2.html">
+   44. Introduction to Natural Language Processing
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   ASSIGNMENTS
  </span>
@@ -299,7 +349,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Resources
  </span>
@@ -458,42 +508,42 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#background">
-   32.1. Background
+   33.1. Background
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-assignment">
-   32.2. The Assignment
+   33.2. The Assignment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#preprocessing">
-   32.3. Preprocessing
+   33.3. Preprocessing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#missing-values-and-data">
-   32.4. Missing Values and data
+   33.4. Missing Values and data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clustering">
-   32.5. Clustering
+   33.5. Clustering
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-elbow-method">
-   32.6. The Elbow Method
+   33.6. The Elbow Method
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#looks-like-we-can-justify-5-clusters">
-   32.7. Looks like we can justify 5 clusters.
+   33.7. Looks like we can justify 5 clusters.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#looks-like-they-are-mostly-0s-let-s-merge-our-data-back-together-so-we-could-get-a-clearer-picture">
-   32.8. Looks like they are mostly 0s.  Let’s merge our data back together so we could get a clearer picture.
+   33.8. Looks like they are mostly 0s.  Let’s merge our data back together so we could get a clearer picture.
   </a>
  </li>
 </ul>
@@ -507,10 +557,10 @@
         
               <div>
                 
-  <div class="section" id="coronavirus-data-modeling">
-<h1><span class="section-number">32. </span>Coronavirus Data Modeling<a class="headerlink" href="#coronavirus-data-modeling" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="coronavirus-data-modeling">
+<h1><span class="section-number">33. </span>Coronavirus Data Modeling<a class="headerlink" href="#coronavirus-data-modeling" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="background">
-<h2><span class="section-number">32.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p>From Wikipedia…</p>
 <p>“The 2019–20 coronavirus pandemic is an ongoing global pandemic of coronavirus disease 2019 (COVID-19) caused by the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The virus was first reported in Wuhan, Hubei, China, in December 2019.[5][6] On March 11, 2020, the World Health Organization declared the outbreak a pandemic.[7] As of March 12, 2020, over 134,000 cases have been confirmed in more than 120 countries and territories, with major outbreaks in mainland China, Italy, South Korea, and Iran.[3] Around 5,000 people, with about 3200 from China, have died from the disease. More than 69,000 have recovered.[4]</p>
 <p>The virus spreads between people in a way similar to influenza, via respiratory droplets from coughing.[8][9][10] The time between exposure and symptom onset is typically five days, but may range from two to fourteen days.[10][11] Symptoms are most often fever, cough, and shortness of breath.[10][11] Complications may include pneumonia and acute respiratory distress syndrome. There is currently no vaccine or specific antiviral treatment, but research is ongoing. Efforts are aimed at managing symptoms and supportive therapy. Recommended preventive measures include handwashing, maintaining distance from other people (particularly those who are sick), and monitoring and self-isolation for fourteen days for people who suspect they are infected.[9][10][12]</p>
@@ -523,7 +573,7 @@
 <p><a class="reference external" href="https://idea.rpi.edu/covid-19-resources">https://idea.rpi.edu/covid-19-resources</a></p>
 </div>
 <div class="section" id="the-assignment">
-<h2><span class="section-number">32.2. </span>The Assignment<a class="headerlink" href="#the-assignment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.2. </span>The Assignment<a class="headerlink" href="#the-assignment" title="Permalink to this headline">¶</a></h2>
 <p>Our lives have been seriously disrupted by the coronavirus pandemic, and there is every indication that this is going to be a global event which requires colloration in a global community to solve.  Studying the data provides an opportunity to connect the pandemic to the variety of themes from the class.</p>
 <p>A number of folks have already been examining this data.
 <a class="reference external" href="https://ourworldindata.org/coronavirus-source-data">https://ourworldindata.org/coronavirus-source-data</a></p>
@@ -774,7 +824,7 @@
 </div>
 </div>
 <div class="section" id="preprocessing">
-<h2><span class="section-number">32.3. </span>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.3. </span>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
 <p>We have to deal with missing values first.</p>
 <p>First let’s check the missing values for each column.</p>
 <div class="cell docutils container">
@@ -1273,7 +1323,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="missing-values-and-data">
-<h2><span class="section-number">32.4. </span>Missing Values and data<a class="headerlink" href="#missing-values-and-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.4. </span>Missing Values and data<a class="headerlink" href="#missing-values-and-data" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>How might we deal with missing values? How is the data structured such that aggregation might be relevant.</p></li>
 </ol>
@@ -1395,7 +1445,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="clustering">
-<h2><span class="section-number">32.5. </span>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.5. </span>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h2>
 <p>Here is and example of the elbow method, which is used to understand the number of clusters.</p>
 <p><a class="reference external" href="https://scikit-learn.org/stable/modules/clustering.html#k-means">https://scikit-learn.org/stable/modules/clustering.html#k-means</a></p>
 <p>The K-means algorithm aims to choose centroids that minimise the inertia, or within-cluster sum-of-squares criterion.</p>
@@ -1459,7 +1509,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="the-elbow-method">
-<h2><span class="section-number">32.6. </span>The Elbow Method<a class="headerlink" href="#the-elbow-method" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.6. </span>The Elbow Method<a class="headerlink" href="#the-elbow-method" title="Permalink to this headline">¶</a></h2>
 <p>Not a type of criteria like p&lt;0.05, but the elbow method you look for where the change in the variance explained from adding more clusters drops extensively.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1484,7 +1534,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="looks-like-we-can-justify-5-clusters">
-<h2><span class="section-number">32.7. </span>Looks like we can justify 5 clusters.<a class="headerlink" href="#looks-like-we-can-justify-5-clusters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.7. </span>Looks like we can justify 5 clusters.<a class="headerlink" href="#looks-like-we-can-justify-5-clusters" title="Permalink to this headline">¶</a></h2>
 <p>See how adding the 5th doesn’t really impact the total variance as much?  It might be interesting to do the analysis both at 4 and 5 and try to interpret.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1497,7 +1547,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="looks-like-they-are-mostly-0s-let-s-merge-our-data-back-together-so-we-could-get-a-clearer-picture">
-<h2><span class="section-number">32.8. </span>Looks like they are mostly 0s.  Let’s merge our data back together so we could get a clearer picture.<a class="headerlink" href="#looks-like-they-are-mostly-0s-let-s-merge-our-data-back-together-so-we-could-get-a-clearer-picture" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.8. </span>Looks like they are mostly 0s.  Let’s merge our data back together so we could get a clearer picture.<a class="headerlink" href="#looks-like-they-are-mostly-0s-let-s-merge-our-data-back-together-so-we-could-get-a-clearer-picture" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Long_&#39;</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;Country_Region&#39;</span><span class="p">,</span>  <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
@@ -3561,15 +3611,15 @@ dtype: int64
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">31. </span>k-Means Clustering</p>
+                <p class="prevnext-title"><span class="section-number">32. </span>k-Means Clustering</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../assignments/hw-1.html" title="next page">
+        <a class="right-next" href="nb-07-00-corpus-simple.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">1. </span>Homework-1</p>
+                <p class="prevnext-title"><span class="section-number">34. </span>Introduction to Text Mining in Python</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

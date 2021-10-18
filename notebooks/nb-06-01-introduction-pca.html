@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>29. Introduction to Principal Component Analysis &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>30. Introduction to Principal Component Analysis &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,19 +33,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="30. In Depth: Principal Component Analysis" href="nb-06-02-pca2.html" />
-    <link rel="prev" title="28. Regression with Stats-Models" href="nb-05-04-stats-models.html" />
+    <link rel="next" title="31. In Depth: Principal Component Analysis" href="nb-06-02-pca2.html" />
+    <link rel="prev" title="29. Regression with Stats-Models" href="nb-05-04-stats-models.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,7 +95,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   OVERVIEW
  </span>
@@ -107,7 +107,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   NOTEBOOKS
  </span>
@@ -229,47 +229,97 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-07-titanic-features.html">
+   25. Basic Text Feature Creation in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="nb-05-01-matrix-regression-gradient-decent-python.html">
-   25. Linear Regression
+   26. Linear Regression
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-02-regression-boston-housing-python.html">
-   26. Boston Housing
+   27. Boston Housing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-03-ridge-lasso-python.html">
-   27. Lasso Ridge Regression
+   28. Lasso Ridge Regression
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-05-04-stats-models.html">
-   28. Regression with Stats-Models
+   29. Regression with Stats-Models
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   29. Introduction to Principal Component Analysis
+   30. Introduction to Principal Component Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-02-pca2.html">
-   30. In Depth: Principal Component Analysis
+   31. In Depth: Principal Component Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-03-kmeans.html">
-   31. k-Means Clustering
+   32. k-Means Clustering
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nb-06-04-covid19.html">
-   32. Coronavirus Data Modeling
+   33. Coronavirus Data Modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-00-corpus-simple.html">
+   34. Introduction to Text Mining in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-01-intro-nlp.html">
+   35. Natural Language Toolkit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-02-scikit-learn-text.html">
+   36. Bag-of-Words Using Scikit Learn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-03-what-cooking-python.html">
+   37. What’s Cooking in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-05-bag-popcorn-bag-words.html">
+   38. Bag of Words
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-06-sentiment.html">
+   39. Sentiment Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-07-sentimentB.html">
+   41. Lecture-21: Introduction to Natural Language Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-08-fastai-imdb.html">
+   43. IMDB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-09-intro2.html">
+   44. Introduction to Natural Language Processing
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   ASSIGNMENTS
  </span>
@@ -301,7 +351,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Resources
  </span>
@@ -460,52 +510,52 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sections">
-   29.1. Sections:
+   30.1. Sections:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#origin">
-   29.2. Origin
+   30.2. Origin
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#learning-objective">
-   29.3. Learning Objective
+   30.3. Learning Objective
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pca">
-   29.4. PCA
+   30.4. PCA
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eigenvectors">
-   29.5. Eigenvectors
+   30.5. Eigenvectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generating-data">
-   29.6. Generating Data
+   30.6. Generating Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#running-pca">
-   29.7. Running PCA
+   30.7. Running PCA
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#high-dimensional-data">
-   29.8. High-Dimensional Data
+   30.8. High-Dimensional Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dimension-reduction-with-pca">
-   29.9. Dimension Reduction with PCA
+   30.9. Dimension Reduction with PCA
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#homework">
-   29.10. Homework
+   30.10. Homework
   </a>
  </li>
 </ul>
@@ -519,11 +569,11 @@
         
               <div>
                 
-  <div class="section" id="introduction-to-principal-component-analysis">
-<h1><span class="section-number">29. </span>Introduction to Principal Component Analysis<a class="headerlink" href="#introduction-to-principal-component-analysis" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-principal-component-analysis">
+<h1><span class="section-number">30. </span>Introduction to Principal Component Analysis<a class="headerlink" href="#introduction-to-principal-component-analysis" title="Permalink to this headline">¶</a></h1>
 <p>Contributers: Linghao Dong, Josh Beck, Jose Figueroa, Yuvraj Chopra</p>
 <div class="section" id="sections">
-<h2><span class="section-number">29.1. </span>Sections:<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.1. </span>Sections:<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="#PCA-(Principal-Component-Analysis)">PCA (Principal Component Analysis)</a></p></li>
 <li><p><a class="reference external" href="#Origin">Origin</a></p></li>
@@ -535,13 +585,13 @@
 </ul>
 </div>
 <div class="section" id="origin">
-<h2><span class="section-number">29.2. </span>Origin<a class="headerlink" href="#origin" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.2. </span>Origin<a class="headerlink" href="#origin" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p>This notebook was adapted from amueller’s notebook, “<em>1 - PCA</em>”. Here is the link to his repository <a class="reference external" href="https://github.com/amueller/tutorial_ml_gkbionics.git">https://github.com/amueller/tutorial_ml_gkbionics.git</a> .</p>
 <p>This notebook provides examples for eigenvalues and eigenvectors in LaTeX and python.</p>
 </div>
 <div class="section" id="learning-objective">
-<h2><span class="section-number">29.3. </span>Learning Objective<a class="headerlink" href="#learning-objective" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.3. </span>Learning Objective<a class="headerlink" href="#learning-objective" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <ol class="simple">
 <li><p>How the Principal Componenet Analysis (PCA) works.</p></li>
@@ -550,12 +600,12 @@
 </ol>
 </div>
 <div class="section" id="pca">
-<h2><span class="section-number">29.4. </span>PCA<a class="headerlink" href="#pca" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.4. </span>PCA<a class="headerlink" href="#pca" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p>PCA can always be used to simplify the data with high dimensions (larger than 2) into 2-dimensional data by eliminating the least influntial features on the data. However, we should know the elimination of data makes the independent variable less interpretable. Before we start to deal with the PCA, we need to first learn how PCA utilizes eigenvectors to gain a diagonalization covariance matrix.</p>
 </div>
 <div class="section" id="eigenvectors">
-<h2><span class="section-number">29.5. </span>Eigenvectors<a class="headerlink" href="#eigenvectors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.5. </span>Eigenvectors<a class="headerlink" href="#eigenvectors" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p>Eigenvectors and eigenvalues are the main tools used by PCA to obtain a diagnolization covariance matrix. The eigenvector is a vector whos direction will not be affected by the linear transformation, hence eigenvectors represents the direction of largest variance of data while the eigenvalue decides the magnitude of this variance in those directions.</p>
 <p>Here we using a simple (2x2) matrix <span class="math notranslate nohighlight">\(A\)</span> to explain it.
@@ -720,7 +770,7 @@ $<span class="math notranslate nohighlight">\(
 Luckily, PCA can do all of this by applyng the function <code class="docutils literal notranslate"><span class="pre">pca.fit_transform(x)</span></code> and <code class="docutils literal notranslate"><span class="pre">np.cov()</span></code></p>
 </div>
 <div class="section" id="generating-data">
-<h2><span class="section-number">29.6. </span>Generating Data<a class="headerlink" href="#generating-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.6. </span>Generating Data<a class="headerlink" href="#generating-data" title="Permalink to this headline">¶</a></h2>
 <p>To talking about PCA, we first create 200 random two-dimensional data points and have a look at the raw data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -995,7 +1045,7 @@ Luckily, PCA can do all of this by applyng the function <code class="docutils li
 </div>
 </div>
 <div class="section" id="running-pca">
-<h2><span class="section-number">29.7. </span>Running PCA<a class="headerlink" href="#running-pca" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.7. </span>Running PCA<a class="headerlink" href="#running-pca" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <p>We would now like to analyze the directions in which the data varies most. For that, we</p>
 <ol class="simple">
@@ -1073,7 +1123,7 @@ Luckily, PCA can do all of this by applyng the function <code class="docutils li
 </div>
 </div>
 <div class="section" id="high-dimensional-data">
-<h2><span class="section-number">29.8. </span>High-Dimensional Data<a class="headerlink" href="#high-dimensional-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.8. </span>High-Dimensional Data<a class="headerlink" href="#high-dimensional-data" title="Permalink to this headline">¶</a></h2>
 <p>Our small example above was very easy, since we could get insight into the data by simply plotting it. This approach will not work once you have more than 3 dimensions, Let’s use the famous iris dataset, which has the following 4 dimensions:</p>
 <ul class="simple">
 <li><p>Sepal Length</p></li>
@@ -1410,7 +1460,7 @@ bezdekIris.data.1   100%[===================&gt;]   4.44K  --.-KB/s    in 0s
 <p>It is easy to see that the correlation between other dimensions (other than first two) was ambiguous and highly concentrated in either horizontal or vertical line. This fact suggests that there are large difference between the dimension we select so that <strong>the weak dimension cant change too much on the shape of graph</strong>.</p>
 </div>
 <div class="section" id="dimension-reduction-with-pca">
-<h2><span class="section-number">29.9. </span>Dimension Reduction with PCA<a class="headerlink" href="#dimension-reduction-with-pca" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.9. </span>Dimension Reduction with PCA<a class="headerlink" href="#dimension-reduction-with-pca" title="Permalink to this headline">¶</a></h2>
 <p>We can see that there are actually only two dimensions in the dataset.</p>
 <p>Let’s throw away even more data – the second dimension – and reconstruct the original data in <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
 <div class="cell docutils container">
@@ -1456,7 +1506,7 @@ bezdekIris.data.1   100%[===================&gt;]   4.44K  --.-KB/s    in 0s
 </div>
 </div>
 <div class="section" id="homework">
-<h2><span class="section-number">29.10. </span>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">30.10. </span>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <ol class="simple">
 <li><p>Do the PCA reduction on the ramdon 6-dimension data and plot it out.</p></li>
@@ -1539,7 +1589,7 @@ bezdekIris.data.1   100%[===================&gt;]   4.44K  --.-KB/s    in 0s
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">28. </span>Regression with Stats-Models</p>
+                <p class="prevnext-title"><span class="section-number">29. </span>Regression with Stats-Models</p>
             </div>
         </a>
     </div>
@@ -1547,7 +1597,7 @@ bezdekIris.data.1   100%[===================&gt;]   4.44K  --.-KB/s    in 0s
         <a class="right-next" href="nb-06-02-pca2.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">30. </span>In Depth: Principal Component Analysis</p>
+                <p class="prevnext-title"><span class="section-number">31. </span>In Depth: Principal Component Analysis</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
