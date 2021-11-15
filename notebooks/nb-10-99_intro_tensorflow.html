@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>66. Tensorflow Graph Creation &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>68. Tensorflow Graph Creation &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Homework-1" href="../assignments/hw-1.html" />
-    <link rel="prev" title="65. Ludwig" href="nb-10-08-ludwig.html" />
+    <link rel="prev" title="66. Transfer Learning - NLP" href="nb-10-09-vectorization-transfer.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -414,9 +414,14 @@
    65. Ludwig
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-09-vectorization-transfer.html">
+   66. Transfer Learning - NLP
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   66. Tensorflow Graph Creation
+   68. Tensorflow Graph Creation
   </a>
  </li>
 </ul>
@@ -611,34 +616,34 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   66. Tensorflow Graph Creation
+   68. Tensorflow Graph Creation
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tensorflow-graph-computation">
-   67. Tensorflow Graph Computation
+   69. Tensorflow Graph Computation
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#managing-default-graphs">
-   68. Managing Default Graphs
+   70. Managing Default Graphs
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-graph-knows-what-variables-are-related">
-     68.1. The Graph Knows What Variables Are Related
+     70.1. The Graph Knows What Variables Are Related
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linear-regression">
-   69. Linear Regression
+   71. Linear Regression
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#regression-using-the-normal-equation">
-     69.1. Regression Using the Normal Equation
+     71.1. Regression Using the Normal Equation
     </a>
    </li>
   </ul>
@@ -701,7 +706,7 @@ Requirement already satisfied: setuptools in /anaconda3/envs/carme/lib/python3.6
 </div>
 </div>
 <div class="section" id="tensorflow-graph-creation">
-<h1><span class="section-number">66. </span>Tensorflow Graph Creation<a class="headerlink" href="#tensorflow-graph-creation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">68. </span>Tensorflow Graph Creation<a class="headerlink" href="#tensorflow-graph-creation" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>Tensorflow at it’s base is trying to enable computation.</p></li>
 <li><p>Google designed tensorflow to scale, working with CPU, GPU, TPU</p></li>
@@ -726,7 +731,7 @@ Requirement already satisfied: setuptools in /anaconda3/envs/carme/lib/python3.6
 </div>
 </div>
 <div class="section" id="tensorflow-graph-computation">
-<h1><span class="section-number">67. </span>Tensorflow Graph Computation<a class="headerlink" href="#tensorflow-graph-computation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">69. </span>Tensorflow Graph Computation<a class="headerlink" href="#tensorflow-graph-computation" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>Two different syntax</p></li>
 <li><p>Similar to other roles.</p></li>
@@ -785,7 +790,7 @@ Requirement already satisfied: setuptools in /anaconda3/envs/carme/lib/python3.6
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="managing-default-graphs">
-<h1><span class="section-number">68. </span>Managing Default Graphs<a class="headerlink" href="#managing-default-graphs" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">70. </span>Managing Default Graphs<a class="headerlink" href="#managing-default-graphs" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>The default graph is the one that will be computed.</p></li>
 </ul>
@@ -833,7 +838,7 @@ Requirement already satisfied: setuptools in /anaconda3/envs/carme/lib/python3.6
 </div>
 </div>
 <div class="section" id="the-graph-knows-what-variables-are-related">
-<h2><span class="section-number">68.1. </span>The Graph Knows What Variables Are Related<a class="headerlink" href="#the-graph-knows-what-variables-are-related" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">70.1. </span>The Graph Knows What Variables Are Related<a class="headerlink" href="#the-graph-knows-what-variables-are-related" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -873,9 +878,9 @@ Requirement already satisfied: setuptools in /anaconda3/envs/carme/lib/python3.6
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="linear-regression">
-<h1><span class="section-number">69. </span>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">71. </span>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="regression-using-the-normal-equation">
-<h2><span class="section-number">69.1. </span>Regression Using the Normal Equation<a class="headerlink" href="#regression-using-the-normal-equation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">71.1. </span>Regression Using the Normal Equation<a class="headerlink" href="#regression-using-the-normal-equation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>The bias node in a neural network is a node that is always ‘on’. That is, its value is set to 1 without regard for the data in a given pattern. It is analogous to the intercept in a regression model, and serves the same function.</p></li>
 <li><p>You can read more about the normal equation <span class="xref myst">here</span>.</p></li>
@@ -1023,11 +1028,11 @@ Requirement already satisfied: setuptools in /anaconda3/envs/carme/lib/python3.6
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="nb-10-08-ludwig.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="nb-10-09-vectorization-transfer.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">65. </span>Ludwig</p>
+            <p class="prev-next-title"><span class="section-number">66. </span>Transfer Learning - NLP</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../assignments/hw-1.html" title="next page">

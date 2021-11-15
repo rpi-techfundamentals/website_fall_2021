@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>45. Vectorizors &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>66. Transfer Learning - NLP &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="47. Sample Coding Midterm." href="nb-08-01-midterm_sample.html" />
-    <link rel="prev" title="44. Introduction to Natural Language Processing" href="nb-07-09-intro2.html" />
+    <link rel="next" title="68. Tensorflow Graph Creation" href="nb-10-99_intro_tensorflow.html" />
+    <link rel="prev" title="65. Ludwig" href="nb-10-08-ludwig.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -329,8 +329,8 @@
    44. Introduction to Natural Language Processing
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-10-vectorization.html">
    45. Vectorizors
   </a>
  </li>
@@ -414,8 +414,8 @@
    65. Ludwig
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="nb-10-09-vectorization-transfer.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    66. Transfer Learning - NLP
   </a>
  </li>
@@ -546,7 +546,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/nb-07-10-vectorization.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebooks/nb-10-09-vectorization-transfer.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -566,7 +566,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-07-10-vectorization.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-10-09-vectorization-transfer.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -587,7 +587,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-07-10-vectorization.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-10-09-vectorization-transfer.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -595,7 +595,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-07-10-vectorization.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-10-09-vectorization-transfer.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -616,20 +616,13 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   45. Vectorizors
+   66. Transfer Learning - NLP
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bag-of-words">
-   46. Bag of Words
+   67. Bag of Words
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#common-preprocessing">
-     46.1. Common Preprocessing
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -643,15 +636,15 @@
               <div>
                 
   <p><a class="reference external" href="http://rpi.analyticsdojo.com"><img alt="AnalyticsDojo" src="https://github.com/rpi-techfundamentals/spring2019-materials/blob/master/fig/final-logo.png?raw=1" /></a></p>
-<center><h1> Vectorization Options</h1></center>
+<center><h1> Transfer Learning - NLP</h1></center>
 <center><h3><a href = 'http://rpi.analyticsdojo.com'>rpi.analyticsdojo.com</a></h3></center><p>This is adopted from: <a class="reference external" href="https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words">Bag of Words Meets Bags of Popcorn</a>
 <a class="reference external" href="https://github.com/wendykan/DeepLearningMovies">https://github.com/wendykan/DeepLearningMovies</a></p>
-<div class="section" id="vectorizors">
-<h1><span class="section-number">45. </span>Vectorizors<a class="headerlink" href="#vectorizors" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="transfer-learning-nlp">
+<h1><span class="section-number">66. </span>Transfer Learning - NLP<a class="headerlink" href="#transfer-learning-nlp" title="Permalink to this headline">¶</a></h1>
 <p>To be meaningfully modeled, words must be turned into Vectors.  This covers a number of the approaches for text vectorazation 1.0.</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="bag-of-words">
-<h1><span class="section-number">46. </span>Bag of Words<a class="headerlink" href="#bag-of-words" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">67. </span>Bag of Words<a class="headerlink" href="#bag-of-words" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
@@ -696,53 +689,53 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2021-10-25 19:37:39--  https://github.com/rpi-techfundamentals/spring2019-materials/raw/master/input/labeledTrainData.tsv
-Resolving github.com (github.com)... 140.82.113.4
-Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2021-11-15 18:35:32--  https://github.com/rpi-techfundamentals/spring2019-materials/raw/master/input/labeledTrainData.tsv
+Resolving github.com (github.com)... 140.82.114.3
+Connecting to github.com (github.com)|140.82.114.3|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/labeledTrainData.tsv [following]
---2021-10-25 19:37:39--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/labeledTrainData.tsv
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+--2021-11-15 18:35:32--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/labeledTrainData.tsv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.111.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 33556378 (32M) [text/plain]
-Saving to: ‘labeledTrainData.tsv.1’
+Saving to: ‘labeledTrainData.tsv.4’
 
-labeledTrainData.ts 100%[===================&gt;]  32.00M   158MB/s    in 0.2s    
+labeledTrainData.ts 100%[===================&gt;]  32.00M   171MB/s    in 0.2s    
 
-2021-10-25 19:37:39 (158 MB/s) - ‘labeledTrainData.tsv.1’ saved [33556378/33556378]
+2021-11-15 18:35:32 (171 MB/s) - ‘labeledTrainData.tsv.4’ saved [33556378/33556378]
 
---2021-10-25 19:37:39--  https://github.com/rpi-techfundamentals/spring2019-materials/raw/master/input/unlabeledTrainData.tsv
-Resolving github.com (github.com)... 140.82.113.4
-Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+--2021-11-15 18:35:32--  https://github.com/rpi-techfundamentals/spring2019-materials/raw/master/input/unlabeledTrainData.tsv
+Resolving github.com (github.com)... 140.82.114.3
+Connecting to github.com (github.com)|140.82.114.3|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/unlabeledTrainData.tsv [following]
---2021-10-25 19:37:39--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/unlabeledTrainData.tsv
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+--2021-11-15 18:35:33--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/unlabeledTrainData.tsv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.108.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 67281491 (64M) [text/plain]
-Saving to: ‘unlabeledTrainData.tsv.1’
+Saving to: ‘unlabeledTrainData.tsv.4’
 
-unlabeledTrainData. 100%[===================&gt;]  64.16M   204MB/s    in 0.3s    
+unlabeledTrainData. 100%[===================&gt;]  64.16M   199MB/s    in 0.3s    
 
-2021-10-25 19:37:40 (204 MB/s) - ‘unlabeledTrainData.tsv.1’ saved [67281491/67281491]
+2021-11-15 18:35:33 (199 MB/s) - ‘unlabeledTrainData.tsv.4’ saved [67281491/67281491]
 
---2021-10-25 19:37:40--  https://github.com/rpi-techfundamentals/spring2019-materials/raw/master/input/testData.tsv
-Resolving github.com (github.com)... 140.82.113.4
-Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+--2021-11-15 18:35:33--  https://github.com/rpi-techfundamentals/spring2019-materials/raw/master/input/testData.tsv
+Resolving github.com (github.com)... 140.82.114.3
+Connecting to github.com (github.com)|140.82.114.3|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/testData.tsv [following]
---2021-10-25 19:37:40--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/testData.tsv
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+--2021-11-15 18:35:33--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/testData.tsv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.108.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 32724746 (31M) [text/plain]
-Saving to: ‘testData.tsv.1’
+Saving to: ‘testData.tsv.4’
 
-testData.tsv.1      100%[===================&gt;]  31.21M   163MB/s    in 0.2s    
+testData.tsv.4      100%[===================&gt;]  31.21M   161MB/s    in 0.2s    
 
-2021-10-25 19:37:40 (163 MB/s) - ‘testData.tsv.1’ saved [32724746/32724746]
+2021-11-15 18:35:34 (161 MB/s) - ‘testData.tsv.4’ saved [32724746/32724746]
 </pre></div>
 </div>
 </div>
@@ -875,140 +868,381 @@ The train shape is:  (25000, 2)
 </div>
 </div>
 </div>
-<div class="section" id="common-preprocessing">
-<h2><span class="section-number">46.1. </span>Common Preprocessing<a class="headerlink" href="#common-preprocessing" title="Permalink to this headline">¶</a></h2>
-<p>Packages provide a variety of preprocessing routines. This results in a Tokenized set of data.</p>
-<p><a class="reference external" href="https://radimrehurek.com/gensim/parsing/preprocessing.html">https://radimrehurek.com/gensim/parsing/preprocessing.html</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gensim.parsing.preprocessing</span> <span class="kn">import</span> <span class="n">preprocess_string</span>
-<span class="kn">from</span> <span class="nn">gensim.parsing.preprocessing</span> <span class="kn">import</span> <span class="n">strip_tags</span><span class="p">,</span> <span class="n">strip_punctuation</span><span class="p">,</span> <span class="n">strip_numeric</span><span class="p">,</span> <span class="n">stem_text</span><span class="p">,</span>  <span class="n">preprocess_string</span>
-<span class="kn">from</span> <span class="nn">gensim.parsing.preprocessing</span> <span class="kn">import</span> <span class="n">strip_multiple_whitespaces</span><span class="p">,</span> <span class="n">strip_non_alphanum</span><span class="p">,</span> <span class="n">remove_stopwords</span><span class="p">,</span> <span class="n">strip_short</span>
-
-<span class="c1"># define custom filters</span>
-<span class="n">text_col</span><span class="o">=</span><span class="s1">&#39;review&#39;</span>
-<span class="n">CUSTOM_FILTERS</span> <span class="o">=</span> <span class="p">[</span>
-                  <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
-                  <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="c1">#lowercase</span>
-                  <span class="n">strip_multiple_whitespaces</span><span class="p">,</span><span class="c1"># remove repeating whitespaces</span>
-                  <span class="n">strip_numeric</span><span class="p">,</span> <span class="c1"># remove numbers</span>
-                  <span class="n">strip_punctuation</span><span class="p">,</span> <span class="c1">#remove punctuation</span>
-                  <span class="n">remove_stopwords</span><span class="p">,</span><span class="c1"># remove stopwordsß</span>
-                  <span class="n">stem_text</span> <span class="c1"># return porter-stemmed text,</span>
-                 <span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">filters</span><span class="p">):</span>
-    <span class="n">results</span><span class="o">=</span><span class="n">preprocess_string</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">filters</span> <span class="p">)</span>
-    <span class="k">return</span> <span class="n">results</span>
-
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_pro&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">filters</span><span class="o">=</span><span class="n">CUSTOM_FILTERS</span><span class="p">)</span>
-<span class="n">train</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gensim</span> <span class="kn">import</span> <span class="n">corpora</span>
-<span class="kn">from</span> <span class="nn">gensim.test.utils</span> <span class="kn">import</span> <span class="n">common_corpus</span><span class="p">,</span> <span class="n">common_dictionary</span>
-
-<span class="k">def</span> <span class="nf">bow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="c1">#Create a Dictionary.</span>
-<span class="n">cdict</span> <span class="o">=</span> <span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_pro&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span>
-
-
-<span class="c1">#Create a Bag of Words Model</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_bow&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_pro&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">bow</span><span class="p">,</span> <span class="n">dictionary</span><span class="o">=</span>  <span class="n">cdict</span><span class="p">)</span>
-<span class="n">train</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">model</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
-    
-<span class="n">tfidf_bow</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TfidfModel</span><span class="p">(</span> <span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span>  <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_tfidf_bow&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">tfidf_bow</span> <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Word to Vec</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_tag&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">TaggedDocument</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">doc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_pro&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()))</span>
-<span class="n">doc2vec</span> <span class="o">=</span> <span class="n">Doc2Vec</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_tag&#39;</span><span class="p">]</span> <span class="p">,</span> <span class="n">vector_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">workers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_docvecs&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">doc2vec</span><span class="o">.</span><span class="n">docvecs</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="p">))])</span>
-<span class="n">train</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_dense</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">vlen</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">x</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">output</span><span class="o">=</span><span class="p">[]</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">vlen</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">output</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lsi_model_bow</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LsiModel</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span> <span class="n">id2word</span><span class="o">=</span><span class="n">cdict</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lsi_bow&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">lsi_model_bow</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lsi_bow_d&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lsi_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">create_dense</span><span class="p">,</span> <span class="n">vlen</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lsi_model_tfidf</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LsiModel</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_tfidf_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span> <span class="n">id2word</span><span class="o">=</span><span class="n">cdict</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lsi_tfidf&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_tfidf_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">lsi_model_tfidf</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lsi_tfidf_d&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lsi_tfidf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">create_dense</span><span class="p">,</span> <span class="n">vlen</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lda_model_bow</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span> <span class="n">id2word</span><span class="o">=</span><span class="n">cdict</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">minimum_probability</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lda_bow&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">lda_model_bow</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lda_bow_d&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lda_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">create_dense</span><span class="p">,</span> <span class="n">vlen</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lda_model_tfidf</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_tfidf_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span> <span class="n">id2word</span><span class="o">=</span><span class="n">cdict</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">minimum_probability</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>      
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lda_tfidf&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_tfidf_bow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">lda_model_tfidf</span><span class="p">)</span>
-<span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lda_tfidf_d&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="n">text_col</span><span class="o">+</span><span class="s1">&#39;_lda_tfidf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">create_dense</span><span class="p">,</span> <span class="n">vlen</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>sentiment</th>
+      <th>review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>"5814_8"</td>
+      <td>1</td>
+      <td>"With all this stuff going down at the moment ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>"2381_9"</td>
+      <td>1</td>
+      <td>"\"The Classic War of the Worlds\" by Timothy ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>"7759_3"</td>
+      <td>0</td>
+      <td>"The film starts with a manager (Nicholas Bell...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>"3630_4"</td>
+      <td>0</td>
+      <td>"It must be assumed that those who praised thi...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>"9495_8"</td>
+      <td>1</td>
+      <td>"Superbly trashy and wondrously unpretentious ...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>24995</th>
+      <td>"3453_3"</td>
+      <td>0</td>
+      <td>"It seems like more consideration has gone int...</td>
+    </tr>
+    <tr>
+      <th>24996</th>
+      <td>"5064_1"</td>
+      <td>0</td>
+      <td>"I don't believe they made this film. Complete...</td>
+    </tr>
+    <tr>
+      <th>24997</th>
+      <td>"10905_3"</td>
+      <td>0</td>
+      <td>"Guy is a loser. Can't get girls, needs to bui...</td>
+    </tr>
+    <tr>
+      <th>24998</th>
+      <td>"10194_3"</td>
+      <td>0</td>
+      <td>"This 30 minute documentary Buñuel made in the...</td>
+    </tr>
+    <tr>
+      <th>24999</th>
+      <td>"8478_8"</td>
+      <td>1</td>
+      <td>"I saw this movie as a child and it broke my h...</td>
+    </tr>
+  </tbody>
+</table>
+<p>25000 rows × 3 columns</p>
+</div></div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">tensorflow_hub</span> <span class="k">as</span> <span class="nn">hub</span>
+<span class="kn">import</span> <span class="nn">tensorflow_text</span> <span class="k">as</span> <span class="nn">text</span>
+
+<span class="k">def</span> <span class="nf">embed_univ</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">column</span><span class="p">):</span>
+    <span class="n">encoder_lib_url</span> <span class="o">=</span> <span class="s2">&quot;https://tfhub.dev/google/universal-sentence-encoder/4&quot;</span>
+    <span class="n">embed</span> <span class="o">=</span> <span class="n">hub</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">encoder_lib_url</span><span class="p">)</span> <span class="c1"># current encoder as at May 20th, 2021 - url &quot;https://tfhub.dev/google/universal-sentence-encoder/4&quot;</span>
+    <span class="n">message_embeddings</span> <span class="o">=</span> <span class="n">embed</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="o">+</span><span class="s1">&#39;_universal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">message_embeddings</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">df</span>
+<span class="n">train2</span><span class="o">=</span><span class="n">embed_univ</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,:],</span> <span class="s1">&#39;review&#39;</span><span class="p">)</span>
+<span class="n">train2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:9: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  if __name__ == &#39;__main__&#39;:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>sentiment</th>
+      <th>review</th>
+      <th>review_universal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>"5814_8"</td>
+      <td>1</td>
+      <td>"With all this stuff going down at the moment ...</td>
+      <td>[0.030300239101052284, 0.0033060263376682997, ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>"2381_9"</td>
+      <td>1</td>
+      <td>"\"The Classic War of the Worlds\" by Timothy ...</td>
+      <td>[-0.04255800321698189, -0.04781642183661461, -...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>"7759_3"</td>
+      <td>0</td>
+      <td>"The film starts with a manager (Nicholas Bell...</td>
+      <td>[-0.05121680349111557, 0.030820466578006744, 0...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>"3630_4"</td>
+      <td>0</td>
+      <td>"It must be assumed that those who praised thi...</td>
+      <td>[-0.025275127962231636, 0.051208171993494034, ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>"9495_8"</td>
+      <td>1</td>
+      <td>"Superbly trashy and wondrously unpretentious ...</td>
+      <td>[-0.01964237168431282, 0.052018746733665466, -...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>"8196_8"</td>
+      <td>1</td>
+      <td>"I dont know why people think this is such a b...</td>
+      <td>[-0.009250563569366932, 0.0061204154044389725,...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>"7166_2"</td>
+      <td>0</td>
+      <td>"This movie could have been very good, but com...</td>
+      <td>[-0.02197437360882759, -0.02234342321753502, 0...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>"10633_1"</td>
+      <td>0</td>
+      <td>"I watched this video at a friend's house. I'm...</td>
+      <td>[-0.008400843478739262, 0.06209466978907585, 0...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>"319_1"</td>
+      <td>0</td>
+      <td>"A friend of mine bought this film for £1, and...</td>
+      <td>[-0.025548789650201797, 0.01659647934138775, 0...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>"8713_10"</td>
+      <td>1</td>
+      <td>"&lt;br /&gt;&lt;br /&gt;This movie is full of references....</td>
+      <td>[0.038312334567308426, 0.019368555396795273, 0...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#title Configure the model { run: &quot;auto&quot; }</span>
+<span class="n">BERT_MODEL</span> <span class="o">=</span> <span class="s2">&quot;https://tfhub.dev/google/experts/bert/wiki_books/2&quot;</span> <span class="c1">#</span>
+<span class="c1"># Preprocessing must match the model, but all the above use the same.</span>
+<span class="n">PREPROCESS_MODEL</span> <span class="o">=</span> <span class="s2">&quot;https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3&quot;</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">tensorflow_hub</span> <span class="k">as</span> <span class="nn">hub</span>
+<span class="kn">import</span> <span class="nn">tensorflow_text</span> <span class="k">as</span> <span class="nn">text</span>
+
+<span class="k">def</span> <span class="nf">embed_bert</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">column</span> <span class="p">):</span>
+    <span class="n">preprocess</span> <span class="o">=</span> <span class="n">hub</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">PREPROCESS_MODEL</span><span class="p">)</span>
+    <span class="n">bert</span> <span class="o">=</span> <span class="n">hub</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">BERT_MODEL</span><span class="p">)</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">preprocess</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+    <span class="n">outputs</span> <span class="o">=</span> <span class="n">bert</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="o">+</span><span class="s1">&#39;_bert&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">outputs</span><span class="p">[</span><span class="s2">&quot;pooled_output&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">df</span>
+<span class="n">train2</span><span class="o">=</span><span class="n">embed_bert</span><span class="p">(</span><span class="n">train2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,:],</span> <span class="s1">&#39;review&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:14: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>sentiment</th>
+      <th>review</th>
+      <th>review_universal</th>
+      <th>review_bert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>"5814_8"</td>
+      <td>1</td>
+      <td>"With all this stuff going down at the moment ...</td>
+      <td>[0.030300239101052284, 0.0033060263376682997, ...</td>
+      <td>[0.9035062193870544, -0.21512015163898468, 0.6...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>"2381_9"</td>
+      <td>1</td>
+      <td>"\"The Classic War of the Worlds\" by Timothy ...</td>
+      <td>[-0.04255800321698189, -0.04781642183661461, -...</td>
+      <td>[0.9060668349266052, 0.08904127031564713, 0.78...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>"7759_3"</td>
+      <td>0</td>
+      <td>"The film starts with a manager (Nicholas Bell...</td>
+      <td>[-0.05121680349111557, 0.030820466578006744, 0...</td>
+      <td>[0.9220373630523682, -0.6700941324234009, 0.80...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>"3630_4"</td>
+      <td>0</td>
+      <td>"It must be assumed that those who praised thi...</td>
+      <td>[-0.025275127962231636, 0.051208171993494034, ...</td>
+      <td>[0.8882725834846497, -0.07439149171113968, 0.6...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>"9495_8"</td>
+      <td>1</td>
+      <td>"Superbly trashy and wondrously unpretentious ...</td>
+      <td>[-0.01964237168431282, 0.052018746733665466, -...</td>
+      <td>[0.8837865591049194, 0.17711809277534485, 0.55...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>"8196_8"</td>
+      <td>1</td>
+      <td>"I dont know why people think this is such a b...</td>
+      <td>[-0.009250563569366932, 0.0061204154044389725,...</td>
+      <td>[0.903205394744873, 0.24590986967086792, 0.663...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>"7166_2"</td>
+      <td>0</td>
+      <td>"This movie could have been very good, but com...</td>
+      <td>[-0.02197437360882759, -0.02234342321753502, 0...</td>
+      <td>[0.8890115022659302, 0.18718616664409637, 0.62...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>"10633_1"</td>
+      <td>0</td>
+      <td>"I watched this video at a friend's house. I'm...</td>
+      <td>[-0.008400843478739262, 0.06209466978907585, 0...</td>
+      <td>[0.904928982257843, -0.4985009431838989, 0.647...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>"319_1"</td>
+      <td>0</td>
+      <td>"A friend of mine bought this film for £1, and...</td>
+      <td>[-0.025548789650201797, 0.01659647934138775, 0...</td>
+      <td>[0.8822431564331055, -0.29646652936935425, 0.2...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>"8713_10"</td>
+      <td>1</td>
+      <td>"&lt;br /&gt;&lt;br /&gt;This movie is full of references....</td>
+      <td>[0.038312334567308426, 0.019368555396795273, 0...</td>
+      <td>[0.9010588526725769, -0.0026878498028963804, 0...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 
@@ -1037,17 +1271,17 @@ The train shape is:  (25000, 2)
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="nb-07-09-intro2.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="nb-10-08-ludwig.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">44. </span>Introduction to Natural Language Processing</p>
+            <p class="prev-next-title"><span class="section-number">65. </span>Ludwig</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="nb-08-01-midterm_sample.html" title="next page">
+    <a class='right-next' id="next-link" href="nb-10-99_intro_tensorflow.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">47. </span>Sample Coding Midterm.</p>
+        <p class="prev-next-title"><span class="section-number">68. </span>Tensorflow Graph Creation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
