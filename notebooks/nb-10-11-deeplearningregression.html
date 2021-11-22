@@ -1,0 +1,2114 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>70. Regression with Tensorflow/Keras &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="71. Tensorflow Graph Creation" href="nb-10-99_intro_tensorflow.html" />
+    <link rel="prev" title="68. Titanic Classification - Deep Learning Tensorflow" href="nb-10-10-deeplearningtitanic.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-32817743-6', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Introduction to Machine Learning Applications
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OVERVIEW
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/schedule.html">
+   Schedule
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  NOTEBOOKS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-01-01-python-overview.html">
+   1. Overview of Python Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-01-02-datastructures.html">
+   2. Introduction Datastructures (Varibles, Lists, Dictionaries, and Sets)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-01-03-numpy.html">
+   3. Overview of Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-01-04-pandas.html">
+   4. Introduction to Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-01-conditionals-loops.html">
+   5. Conditional Statements and Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-02-functions.html">
+   6. Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-02a-pandas-functions.html">
+   7. Introduction to Apply Function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-03-null-values.html">
+   8. Null Values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-04-groupby.html">
+   9. Groupby and Pivot Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-04-pivottable.html">
+   10. More Pivottables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-05-kaggle-baseline.html">
+   11. Kaggle Baseline
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-02-EX-Exercise1.html">
+   12. Exercise 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-03-01-features-dummies.html">
+   13. Feature Extraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-03-02-strings-regular-expressions.html">
+   15. String Manipulation and Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-03-03-visualization-python-seaborn.html">
+   16. Introduction to Seaborn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-03-04-intro-python-webmining.html">
+   17. Web Mining
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-03-06-matplotlib.html">
+   18. MatplotLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-01-neural-networks.html">
+   19. Neural Networks and the Simplist XOR Problem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-02-train-test-split.html">
+   20. Train Test Splits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-03-intro-logistic-knn.html">
+   21. Classification with Scikit-learn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-04-knn.html">
+   22. KNN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-05-revisit-titanic0.html">
+   23. Titanic Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-06-revisit-titanic.html">
+   24. Titanic Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-04-07-titanic-features.html">
+   25. Basic Text Feature Creation in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-05-01-matrix-regression-gradient-decent-python.html">
+   26. Linear Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-05-02-regression-boston-housing-python.html">
+   27. Boston Housing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-05-03-ridge-lasso-python.html">
+   28. Lasso Ridge Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-05-04-stats-models.html">
+   29. Regression with Stats-Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-06-01-introduction-pca.html">
+   30. Introduction to Principal Component Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-06-02-pca2.html">
+   31. In Depth: Principal Component Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-06-03-kmeans.html">
+   32. k-Means Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-06-04-covid19.html">
+   33. Coronavirus Data Modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-00-corpus-simple.html">
+   34. Introduction to Text Mining in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-01-intro-nlp.html">
+   35. Natural Language Toolkit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-02-scikit-learn-text.html">
+   36. Bag-of-Words Using Scikit Learn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-03-what-cooking-python.html">
+   37. What’s Cooking in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-05-bag-popcorn-bag-words.html">
+   38. Bag of Words
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-06-sentiment.html">
+   39. Sentiment Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-07-sentimentB.html">
+   41. Lecture-21: Introduction to Natural Language Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-08-fastai-imdb.html">
+   43. IMDB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-09-intro2.html">
+   44. Introduction to Natural Language Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-07-10-vectorization.html">
+   45. Vectorizors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-08-01-midterm_sample.html">
+   47. Sample Coding Midterm.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-09-01-time-series.html">
+   48. Time Series Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-09-02-forcasting-rossman.html">
+   49. Panel Data vs Time Series Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-00-evaluation.html">
+   51. Evaluation of Classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-00-neural-networks.html">
+   52. Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-01-tensorflow.html">
+   53. Tensorflow Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-02-tensor-tutorial.html">
+   56. Pytorch Tensors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-03-pytorch-iris.html">
+   57. Revisiting IRIS with PyTorch
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-04-covnet-tutorial.html">
+   58. Convolutional Neural Network with Pytorch
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-04-pytorch-explainer.html">
+   59. PyTorch Deep Explainer MNIST example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-04_pytorch_mnist1.html">
+   60. Pytorch Advantages vs Tensorflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-05-pytorch-mnist.html">
+   61. PyTorch Deep Explainer MNIST example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-06-regression-bh-pytorch.html">
+   62. Revisting Boston Housing with Pytorch
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-06_tensorflow_minst.html">
+   63. Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-07-titanic-fastai.html">
+   64. Titanic Fastai
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-08-ludwig.html">
+   65. Ludwig
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-09-vectorization-transfer.html">
+   66. Transfer Learning - NLP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-10-deeplearningtitanic.html">
+   68. Titanic Classification - Deep Learning Tensorflow
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   70. Regression with Tensorflow/Keras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nb-10-99_intro_tensorflow.html">
+   71. Tensorflow Graph Creation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ASSIGNMENTS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/hw-1.html">
+   1. Homework-1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/hw-2.html">
+   14. Homework-2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/hw-3.html">
+   31. Homework-3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/hw-4.html">
+   42. Homework-4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/hw-5.html">
+   54. Homework-5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://rpi.box.com/s/2rivfabp5r2sc224nwgv3en1cmks3cec">
+   Box Link
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/ageron/handson-ml2">
+   Hands On Machine Learning with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/ageron/handson-ml2">
+   Hands On Machine Learning with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fastai/fastbook">
+   Fast.ai Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://www.tensorflow.org/tutorials">
+   Tensorflow Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://pytorch.org/tutorials/">
+   Pytorch Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://www.kaggle.com/learn/intro-to-deep-learning">
+   Kaggle Introduction to Deep Learning Course
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/capstone.html">
+   <strong>
+    The MS Business Analytics Capstone Course
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/nb-10-11-deeplearningregression.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rpi-techfundamentals/website_fall_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fnotebooks/nb-10-11-deeplearningregression.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/notebooks/nb-10-11-deeplearningregression.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/notebooks/nb-10-11-deeplearningregression.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-preprocessing">
+   70.1. Data preprocessing:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#models-deep-learning-models">
+   70.2. Models Deep Learning Models
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><a class="reference external" href="http://rpi.analyticsdojo.com"><img alt="AnalyticsDojo" src="https://github.com/rpi-techfundamentals/spring2019-materials/blob/master/fig/final-logo.png?raw=1" /></a></p>
+<center><h1>Regression with Tensorflow/Keras </h1></center>
+<center><h3><a href = 'http://rpi.analyticsdojo.com'>rpi.analyticsdojo.com</a></h3></center><div class="tex2jax_ignore mathjax_ignore section" id="regression-with-tensorflow-keras">
+<h1><span class="section-number">70. </span>Regression with Tensorflow/Keras<a class="headerlink" href="#regression-with-tensorflow-keras" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">skew</span>
+<span class="kn">from</span> <span class="nn">scipy.stats.stats</span> <span class="kn">import</span> <span class="n">pearsonr</span>
+
+
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39; #set &#39;png&#39; here when working on notebook
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/boston_test.csv <span class="o">&amp;&amp;</span> wget https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/boston_train.csv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2021-11-22 20:13:00--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/boston_test.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 451405 (441K) [text/plain]
+Saving to: ‘boston_test.csv.1’
+
+
+boston_test.csv.1     0%[                    ]       0  --.-KB/s               
+boston_test.csv.1   100%[===================&gt;] 440.83K  --.-KB/s    in 0.03s   
+
+2021-11-22 20:13:00 (16.0 MB/s) - ‘boston_test.csv.1’ saved [451405/451405]
+
+--2021-11-22 20:13:00--  https://raw.githubusercontent.com/rpi-techfundamentals/spring2019-materials/master/input/boston_train.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 460676 (450K) [text/plain]
+Saving to: ‘boston_train.csv.1’
+
+boston_train.csv.1  100%[===================&gt;] 449.88K  --.-KB/s    in 0.03s   
+
+2021-11-22 20:13:00 (15.7 MB/s) - ‘boston_train.csv.1’ saved [460676/460676]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;boston_train.csv&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;boston_test.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>MSSubClass</th>
+      <th>MSZoning</th>
+      <th>LotFrontage</th>
+      <th>LotArea</th>
+      <th>Street</th>
+      <th>Alley</th>
+      <th>LotShape</th>
+      <th>LandContour</th>
+      <th>Utilities</th>
+      <th>LotConfig</th>
+      <th>LandSlope</th>
+      <th>Neighborhood</th>
+      <th>Condition1</th>
+      <th>Condition2</th>
+      <th>BldgType</th>
+      <th>HouseStyle</th>
+      <th>OverallQual</th>
+      <th>OverallCond</th>
+      <th>YearBuilt</th>
+      <th>YearRemodAdd</th>
+      <th>RoofStyle</th>
+      <th>RoofMatl</th>
+      <th>Exterior1st</th>
+      <th>Exterior2nd</th>
+      <th>MasVnrType</th>
+      <th>MasVnrArea</th>
+      <th>ExterQual</th>
+      <th>ExterCond</th>
+      <th>Foundation</th>
+      <th>BsmtQual</th>
+      <th>BsmtCond</th>
+      <th>BsmtExposure</th>
+      <th>BsmtFinType1</th>
+      <th>BsmtFinSF1</th>
+      <th>BsmtFinType2</th>
+      <th>BsmtFinSF2</th>
+      <th>BsmtUnfSF</th>
+      <th>TotalBsmtSF</th>
+      <th>Heating</th>
+      <th>...</th>
+      <th>CentralAir</th>
+      <th>Electrical</th>
+      <th>1stFlrSF</th>
+      <th>2ndFlrSF</th>
+      <th>LowQualFinSF</th>
+      <th>GrLivArea</th>
+      <th>BsmtFullBath</th>
+      <th>BsmtHalfBath</th>
+      <th>FullBath</th>
+      <th>HalfBath</th>
+      <th>BedroomAbvGr</th>
+      <th>KitchenAbvGr</th>
+      <th>KitchenQual</th>
+      <th>TotRmsAbvGrd</th>
+      <th>Functional</th>
+      <th>Fireplaces</th>
+      <th>FireplaceQu</th>
+      <th>GarageType</th>
+      <th>GarageYrBlt</th>
+      <th>GarageFinish</th>
+      <th>GarageCars</th>
+      <th>GarageArea</th>
+      <th>GarageQual</th>
+      <th>GarageCond</th>
+      <th>PavedDrive</th>
+      <th>WoodDeckSF</th>
+      <th>OpenPorchSF</th>
+      <th>EnclosedPorch</th>
+      <th>3SsnPorch</th>
+      <th>ScreenPorch</th>
+      <th>PoolArea</th>
+      <th>PoolQC</th>
+      <th>Fence</th>
+      <th>MiscFeature</th>
+      <th>MiscVal</th>
+      <th>MoSold</th>
+      <th>YrSold</th>
+      <th>SaleType</th>
+      <th>SaleCondition</th>
+      <th>SalePrice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>60</td>
+      <td>RL</td>
+      <td>65.0</td>
+      <td>8450</td>
+      <td>Pave</td>
+      <td>NaN</td>
+      <td>Reg</td>
+      <td>Lvl</td>
+      <td>AllPub</td>
+      <td>Inside</td>
+      <td>Gtl</td>
+      <td>CollgCr</td>
+      <td>Norm</td>
+      <td>Norm</td>
+      <td>1Fam</td>
+      <td>2Story</td>
+      <td>7</td>
+      <td>5</td>
+      <td>2003</td>
+      <td>2003</td>
+      <td>Gable</td>
+      <td>CompShg</td>
+      <td>VinylSd</td>
+      <td>VinylSd</td>
+      <td>BrkFace</td>
+      <td>196.0</td>
+      <td>Gd</td>
+      <td>TA</td>
+      <td>PConc</td>
+      <td>Gd</td>
+      <td>TA</td>
+      <td>No</td>
+      <td>GLQ</td>
+      <td>706</td>
+      <td>Unf</td>
+      <td>0</td>
+      <td>150</td>
+      <td>856</td>
+      <td>GasA</td>
+      <td>...</td>
+      <td>Y</td>
+      <td>SBrkr</td>
+      <td>856</td>
+      <td>854</td>
+      <td>0</td>
+      <td>1710</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>Gd</td>
+      <td>8</td>
+      <td>Typ</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>Attchd</td>
+      <td>2003.0</td>
+      <td>RFn</td>
+      <td>2</td>
+      <td>548</td>
+      <td>TA</td>
+      <td>TA</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>61</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2008</td>
+      <td>WD</td>
+      <td>Normal</td>
+      <td>208500</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>20</td>
+      <td>RL</td>
+      <td>80.0</td>
+      <td>9600</td>
+      <td>Pave</td>
+      <td>NaN</td>
+      <td>Reg</td>
+      <td>Lvl</td>
+      <td>AllPub</td>
+      <td>FR2</td>
+      <td>Gtl</td>
+      <td>Veenker</td>
+      <td>Feedr</td>
+      <td>Norm</td>
+      <td>1Fam</td>
+      <td>1Story</td>
+      <td>6</td>
+      <td>8</td>
+      <td>1976</td>
+      <td>1976</td>
+      <td>Gable</td>
+      <td>CompShg</td>
+      <td>MetalSd</td>
+      <td>MetalSd</td>
+      <td>None</td>
+      <td>0.0</td>
+      <td>TA</td>
+      <td>TA</td>
+      <td>CBlock</td>
+      <td>Gd</td>
+      <td>TA</td>
+      <td>Gd</td>
+      <td>ALQ</td>
+      <td>978</td>
+      <td>Unf</td>
+      <td>0</td>
+      <td>284</td>
+      <td>1262</td>
+      <td>GasA</td>
+      <td>...</td>
+      <td>Y</td>
+      <td>SBrkr</td>
+      <td>1262</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1262</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>TA</td>
+      <td>6</td>
+      <td>Typ</td>
+      <td>1</td>
+      <td>TA</td>
+      <td>Attchd</td>
+      <td>1976.0</td>
+      <td>RFn</td>
+      <td>2</td>
+      <td>460</td>
+      <td>TA</td>
+      <td>TA</td>
+      <td>Y</td>
+      <td>298</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>5</td>
+      <td>2007</td>
+      <td>WD</td>
+      <td>Normal</td>
+      <td>181500</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>60</td>
+      <td>RL</td>
+      <td>68.0</td>
+      <td>11250</td>
+      <td>Pave</td>
+      <td>NaN</td>
+      <td>IR1</td>
+      <td>Lvl</td>
+      <td>AllPub</td>
+      <td>Inside</td>
+      <td>Gtl</td>
+      <td>CollgCr</td>
+      <td>Norm</td>
+      <td>Norm</td>
+      <td>1Fam</td>
+      <td>2Story</td>
+      <td>7</td>
+      <td>5</td>
+      <td>2001</td>
+      <td>2002</td>
+      <td>Gable</td>
+      <td>CompShg</td>
+      <td>VinylSd</td>
+      <td>VinylSd</td>
+      <td>BrkFace</td>
+      <td>162.0</td>
+      <td>Gd</td>
+      <td>TA</td>
+      <td>PConc</td>
+      <td>Gd</td>
+      <td>TA</td>
+      <td>Mn</td>
+      <td>GLQ</td>
+      <td>486</td>
+      <td>Unf</td>
+      <td>0</td>
+      <td>434</td>
+      <td>920</td>
+      <td>GasA</td>
+      <td>...</td>
+      <td>Y</td>
+      <td>SBrkr</td>
+      <td>920</td>
+      <td>866</td>
+      <td>0</td>
+      <td>1786</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>Gd</td>
+      <td>6</td>
+      <td>Typ</td>
+      <td>1</td>
+      <td>TA</td>
+      <td>Attchd</td>
+      <td>2001.0</td>
+      <td>RFn</td>
+      <td>2</td>
+      <td>608</td>
+      <td>TA</td>
+      <td>TA</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>42</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>9</td>
+      <td>2008</td>
+      <td>WD</td>
+      <td>Normal</td>
+      <td>223500</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>70</td>
+      <td>RL</td>
+      <td>60.0</td>
+      <td>9550</td>
+      <td>Pave</td>
+      <td>NaN</td>
+      <td>IR1</td>
+      <td>Lvl</td>
+      <td>AllPub</td>
+      <td>Corner</td>
+      <td>Gtl</td>
+      <td>Crawfor</td>
+      <td>Norm</td>
+      <td>Norm</td>
+      <td>1Fam</td>
+      <td>2Story</td>
+      <td>7</td>
+      <td>5</td>
+      <td>1915</td>
+      <td>1970</td>
+      <td>Gable</td>
+      <td>CompShg</td>
+      <td>Wd Sdng</td>
+      <td>Wd Shng</td>
+      <td>None</td>
+      <td>0.0</td>
+      <td>TA</td>
+      <td>TA</td>
+      <td>BrkTil</td>
+      <td>TA</td>
+      <td>Gd</td>
+      <td>No</td>
+      <td>ALQ</td>
+      <td>216</td>
+      <td>Unf</td>
+      <td>0</td>
+      <td>540</td>
+      <td>756</td>
+      <td>GasA</td>
+      <td>...</td>
+      <td>Y</td>
+      <td>SBrkr</td>
+      <td>961</td>
+      <td>756</td>
+      <td>0</td>
+      <td>1717</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>Gd</td>
+      <td>7</td>
+      <td>Typ</td>
+      <td>1</td>
+      <td>Gd</td>
+      <td>Detchd</td>
+      <td>1998.0</td>
+      <td>Unf</td>
+      <td>3</td>
+      <td>642</td>
+      <td>TA</td>
+      <td>TA</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>35</td>
+      <td>272</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2006</td>
+      <td>WD</td>
+      <td>Abnorml</td>
+      <td>140000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>60</td>
+      <td>RL</td>
+      <td>84.0</td>
+      <td>14260</td>
+      <td>Pave</td>
+      <td>NaN</td>
+      <td>IR1</td>
+      <td>Lvl</td>
+      <td>AllPub</td>
+      <td>FR2</td>
+      <td>Gtl</td>
+      <td>NoRidge</td>
+      <td>Norm</td>
+      <td>Norm</td>
+      <td>1Fam</td>
+      <td>2Story</td>
+      <td>8</td>
+      <td>5</td>
+      <td>2000</td>
+      <td>2000</td>
+      <td>Gable</td>
+      <td>CompShg</td>
+      <td>VinylSd</td>
+      <td>VinylSd</td>
+      <td>BrkFace</td>
+      <td>350.0</td>
+      <td>Gd</td>
+      <td>TA</td>
+      <td>PConc</td>
+      <td>Gd</td>
+      <td>TA</td>
+      <td>Av</td>
+      <td>GLQ</td>
+      <td>655</td>
+      <td>Unf</td>
+      <td>0</td>
+      <td>490</td>
+      <td>1145</td>
+      <td>GasA</td>
+      <td>...</td>
+      <td>Y</td>
+      <td>SBrkr</td>
+      <td>1145</td>
+      <td>1053</td>
+      <td>0</td>
+      <td>2198</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>Gd</td>
+      <td>9</td>
+      <td>Typ</td>
+      <td>1</td>
+      <td>TA</td>
+      <td>Attchd</td>
+      <td>2000.0</td>
+      <td>RFn</td>
+      <td>3</td>
+      <td>836</td>
+      <td>TA</td>
+      <td>TA</td>
+      <td>Y</td>
+      <td>192</td>
+      <td>84</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>12</td>
+      <td>2008</td>
+      <td>WD</td>
+      <td>Normal</td>
+      <td>250000</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 81 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;MSSubClass&#39;</span><span class="p">:</span><span class="s1">&#39;SaleCondition&#39;</span><span class="p">],</span>
+                      <span class="n">test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;MSSubClass&#39;</span><span class="p">:</span><span class="s1">&#39;SaleCondition&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="data-preprocessing">
+<h2><span class="section-number">70.1. </span>Data preprocessing:<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">¶</a></h2>
+<p>We’re not going to do anything fancy here:</p>
+<ul class="simple">
+<li><p>First I’ll transform the skewed numeric features by taking log(feature + 1) - this will make the features more normal</p></li>
+<li><p>Create Dummy variables for the categorical features</p></li>
+<li><p>Replace the numeric missing values (NaN’s) with the mean of their respective columns</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">12.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">)</span>
+<span class="n">prices</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;price&quot;</span><span class="p">:</span><span class="n">train</span><span class="p">[</span><span class="s2">&quot;SalePrice&quot;</span><span class="p">],</span> <span class="s2">&quot;log(price + 1)&quot;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s2">&quot;SalePrice&quot;</span><span class="p">])})</span>
+<span class="n">prices</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fd493f5f810&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fd491323790&gt;]],
+      dtype=object)
+</pre></div>
+</div>
+<img alt="../_images/nb-10-11-deeplearningregression_8_1.png" src="../_images/nb-10-11-deeplearningregression_8_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#log transform the target:</span>
+<span class="n">train</span><span class="p">[</span><span class="s2">&quot;SalePrice&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s2">&quot;SalePrice&quot;</span><span class="p">])</span>
+
+<span class="c1">#log transform skewed numeric features:</span>
+<span class="n">numeric_feats</span> <span class="o">=</span> <span class="n">all_data</span><span class="o">.</span><span class="n">dtypes</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">dtypes</span> <span class="o">!=</span> <span class="s2">&quot;object&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+
+<span class="n">skewed_feats</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">numeric_feats</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">skew</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()))</span> <span class="c1">#compute skewness</span>
+<span class="n">skewed_feats</span> <span class="o">=</span> <span class="n">skewed_feats</span><span class="p">[</span><span class="n">skewed_feats</span> <span class="o">&gt;</span> <span class="mf">0.75</span><span class="p">]</span>
+<span class="n">skewed_feats</span> <span class="o">=</span> <span class="n">skewed_feats</span><span class="o">.</span><span class="n">index</span>
+
+<span class="n">all_data</span><span class="p">[</span><span class="n">skewed_feats</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">all_data</span><span class="p">[</span><span class="n">skewed_feats</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#filling NA&#39;s with the mean of the column:</span>
+<span class="n">all_data</span> <span class="o">=</span> <span class="n">all_data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#creating matrices for sklearn:</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[:</span><span class="n">train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">SalePrice</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="models-deep-learning-models">
+<h2><span class="section-number">70.2. </span>Models Deep Learning Models<a class="headerlink" href="#models-deep-learning-models" title="Permalink to this headline">¶</a></h2>
+<p>Now we are going to use Deep Learning models</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
+<span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="c1">#Create our model using sequential mode</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Normalization</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span>
+    <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mean_absolute_error&#39;</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">validation_split</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/100
+37/37 - 1s - loss: 84.2431 - val_loss: 58.3623 - 578ms/epoch - 16ms/step
+Epoch 2/100
+37/37 - 0s - loss: 45.1115 - val_loss: 50.3736 - 67ms/epoch - 2ms/step
+Epoch 3/100
+37/37 - 0s - loss: 71.6103 - val_loss: 75.6726 - 72ms/epoch - 2ms/step
+Epoch 4/100
+37/37 - 0s - loss: 76.4996 - val_loss: 123.4437 - 67ms/epoch - 2ms/step
+Epoch 5/100
+37/37 - 0s - loss: 84.0996 - val_loss: 109.7441 - 89ms/epoch - 2ms/step
+Epoch 6/100
+37/37 - 0s - loss: 81.2439 - val_loss: 62.5581 - 87ms/epoch - 2ms/step
+Epoch 7/100
+37/37 - 0s - loss: 81.4034 - val_loss: 118.9964 - 83ms/epoch - 2ms/step
+Epoch 8/100
+37/37 - 0s - loss: 70.3809 - val_loss: 32.2555 - 83ms/epoch - 2ms/step
+Epoch 9/100
+37/37 - 0s - loss: 77.6283 - val_loss: 4.6546 - 78ms/epoch - 2ms/step
+Epoch 10/100
+37/37 - 0s - loss: 74.2797 - val_loss: 4.2387 - 88ms/epoch - 2ms/step
+Epoch 11/100
+37/37 - 0s - loss: 53.4591 - val_loss: 55.8753 - 81ms/epoch - 2ms/step
+Epoch 12/100
+37/37 - 0s - loss: 80.6842 - val_loss: 21.7650 - 81ms/epoch - 2ms/step
+Epoch 13/100
+37/37 - 0s - loss: 71.8949 - val_loss: 7.4509 - 77ms/epoch - 2ms/step
+Epoch 14/100
+37/37 - 0s - loss: 48.8394 - val_loss: 9.3763 - 83ms/epoch - 2ms/step
+Epoch 15/100
+37/37 - 0s - loss: 52.2890 - val_loss: 253.1457 - 84ms/epoch - 2ms/step
+Epoch 16/100
+37/37 - 0s - loss: 140.2539 - val_loss: 277.3879 - 81ms/epoch - 2ms/step
+Epoch 17/100
+37/37 - 0s - loss: 202.7519 - val_loss: 14.3598 - 88ms/epoch - 2ms/step
+Epoch 18/100
+37/37 - 0s - loss: 110.0143 - val_loss: 32.5072 - 72ms/epoch - 2ms/step
+Epoch 19/100
+37/37 - 0s - loss: 55.2516 - val_loss: 3.4497 - 75ms/epoch - 2ms/step
+Epoch 20/100
+37/37 - 0s - loss: 56.4441 - val_loss: 60.8625 - 71ms/epoch - 2ms/step
+Epoch 21/100
+37/37 - 0s - loss: 44.5958 - val_loss: 43.0210 - 81ms/epoch - 2ms/step
+Epoch 22/100
+37/37 - 0s - loss: 46.1292 - val_loss: 54.0062 - 82ms/epoch - 2ms/step
+Epoch 23/100
+37/37 - 0s - loss: 46.6134 - val_loss: 43.8807 - 87ms/epoch - 2ms/step
+Epoch 24/100
+37/37 - 0s - loss: 46.1803 - val_loss: 67.4524 - 86ms/epoch - 2ms/step
+Epoch 25/100
+37/37 - 0s - loss: 46.5437 - val_loss: 52.5363 - 64ms/epoch - 2ms/step
+Epoch 26/100
+37/37 - 0s - loss: 45.9795 - val_loss: 40.5274 - 85ms/epoch - 2ms/step
+Epoch 27/100
+37/37 - 0s - loss: 45.3396 - val_loss: 60.0042 - 82ms/epoch - 2ms/step
+Epoch 28/100
+37/37 - 0s - loss: 44.2870 - val_loss: 67.3503 - 71ms/epoch - 2ms/step
+Epoch 29/100
+37/37 - 0s - loss: 46.4604 - val_loss: 55.0356 - 77ms/epoch - 2ms/step
+Epoch 30/100
+37/37 - 0s - loss: 45.5965 - val_loss: 62.6709 - 86ms/epoch - 2ms/step
+Epoch 31/100
+37/37 - 0s - loss: 51.8275 - val_loss: 88.4470 - 83ms/epoch - 2ms/step
+Epoch 32/100
+37/37 - 0s - loss: 83.3852 - val_loss: 20.0836 - 75ms/epoch - 2ms/step
+Epoch 33/100
+37/37 - 0s - loss: 85.1442 - val_loss: 51.2624 - 80ms/epoch - 2ms/step
+Epoch 34/100
+37/37 - 0s - loss: 82.3832 - val_loss: 119.6812 - 80ms/epoch - 2ms/step
+Epoch 35/100
+37/37 - 0s - loss: 83.1641 - val_loss: 68.1622 - 67ms/epoch - 2ms/step
+Epoch 36/100
+37/37 - 0s - loss: 82.7897 - val_loss: 94.5865 - 65ms/epoch - 2ms/step
+Epoch 37/100
+37/37 - 0s - loss: 82.7199 - val_loss: 151.6142 - 72ms/epoch - 2ms/step
+Epoch 38/100
+37/37 - 0s - loss: 83.9534 - val_loss: 76.6480 - 91ms/epoch - 2ms/step
+Epoch 39/100
+37/37 - 0s - loss: 83.0616 - val_loss: 71.1423 - 73ms/epoch - 2ms/step
+Epoch 40/100
+37/37 - 0s - loss: 83.2443 - val_loss: 100.1224 - 82ms/epoch - 2ms/step
+Epoch 41/100
+37/37 - 0s - loss: 82.9500 - val_loss: 54.7644 - 83ms/epoch - 2ms/step
+Epoch 42/100
+37/37 - 0s - loss: 71.2684 - val_loss: 34.7120 - 91ms/epoch - 2ms/step
+Epoch 43/100
+37/37 - 0s - loss: 50.5750 - val_loss: 52.6076 - 90ms/epoch - 2ms/step
+Epoch 44/100
+37/37 - 0s - loss: 48.5305 - val_loss: 108.7909 - 82ms/epoch - 2ms/step
+Epoch 45/100
+37/37 - 0s - loss: 89.2552 - val_loss: 60.1469 - 86ms/epoch - 2ms/step
+Epoch 46/100
+37/37 - 0s - loss: 47.6301 - val_loss: 22.9102 - 83ms/epoch - 2ms/step
+Epoch 47/100
+37/37 - 0s - loss: 76.0443 - val_loss: 20.0041 - 84ms/epoch - 2ms/step
+Epoch 48/100
+37/37 - 0s - loss: 59.7279 - val_loss: 62.9485 - 79ms/epoch - 2ms/step
+Epoch 49/100
+37/37 - 0s - loss: 75.6776 - val_loss: 12.3563 - 80ms/epoch - 2ms/step
+Epoch 50/100
+37/37 - 0s - loss: 74.4389 - val_loss: 43.6936 - 84ms/epoch - 2ms/step
+Epoch 51/100
+37/37 - 0s - loss: 43.3955 - val_loss: 109.7630 - 75ms/epoch - 2ms/step
+Epoch 52/100
+37/37 - 0s - loss: 71.3741 - val_loss: 203.7600 - 84ms/epoch - 2ms/step
+Epoch 53/100
+37/37 - 0s - loss: 96.6458 - val_loss: 55.9115 - 84ms/epoch - 2ms/step
+Epoch 54/100
+37/37 - 0s - loss: 80.2632 - val_loss: 47.7162 - 78ms/epoch - 2ms/step
+Epoch 55/100
+37/37 - 0s - loss: 45.4542 - val_loss: 16.4603 - 84ms/epoch - 2ms/step
+Epoch 56/100
+37/37 - 0s - loss: 91.4536 - val_loss: 133.2697 - 76ms/epoch - 2ms/step
+Epoch 57/100
+37/37 - 0s - loss: 78.6322 - val_loss: 124.0144 - 80ms/epoch - 2ms/step
+Epoch 58/100
+37/37 - 0s - loss: 79.9842 - val_loss: 138.5764 - 86ms/epoch - 2ms/step
+Epoch 59/100
+37/37 - 0s - loss: 60.1559 - val_loss: 17.2166 - 84ms/epoch - 2ms/step
+Epoch 60/100
+37/37 - 0s - loss: 42.2461 - val_loss: 35.9273 - 84ms/epoch - 2ms/step
+Epoch 61/100
+37/37 - 0s - loss: 153.2944 - val_loss: 331.1835 - 83ms/epoch - 2ms/step
+Epoch 62/100
+37/37 - 0s - loss: 205.4144 - val_loss: 67.5958 - 73ms/epoch - 2ms/step
+Epoch 63/100
+37/37 - 0s - loss: 194.1342 - val_loss: 278.8300 - 70ms/epoch - 2ms/step
+Epoch 64/100
+37/37 - 0s - loss: 206.3127 - val_loss: 217.9300 - 80ms/epoch - 2ms/step
+Epoch 65/100
+37/37 - 0s - loss: 201.7286 - val_loss: 148.1219 - 80ms/epoch - 2ms/step
+Epoch 66/100
+37/37 - 0s - loss: 201.8030 - val_loss: 253.5108 - 80ms/epoch - 2ms/step
+Epoch 67/100
+37/37 - 0s - loss: 82.1467 - val_loss: 66.9786 - 80ms/epoch - 2ms/step
+Epoch 68/100
+37/37 - 0s - loss: 94.8233 - val_loss: 121.9589 - 83ms/epoch - 2ms/step
+Epoch 69/100
+37/37 - 0s - loss: 84.2407 - val_loss: 102.7626 - 83ms/epoch - 2ms/step
+Epoch 70/100
+37/37 - 0s - loss: 69.5893 - val_loss: 53.0275 - 85ms/epoch - 2ms/step
+Epoch 71/100
+37/37 - 0s - loss: 49.2994 - val_loss: 13.1675 - 80ms/epoch - 2ms/step
+Epoch 72/100
+37/37 - 0s - loss: 135.9282 - val_loss: 126.1129 - 79ms/epoch - 2ms/step
+Epoch 73/100
+37/37 - 0s - loss: 89.2394 - val_loss: 8.6903 - 71ms/epoch - 2ms/step
+Epoch 74/100
+37/37 - 0s - loss: 119.7310 - val_loss: 196.3316 - 82ms/epoch - 2ms/step
+Epoch 75/100
+37/37 - 0s - loss: 136.3714 - val_loss: 27.2673 - 90ms/epoch - 2ms/step
+Epoch 76/100
+37/37 - 0s - loss: 137.3177 - val_loss: 52.1479 - 83ms/epoch - 2ms/step
+Epoch 77/100
+37/37 - 0s - loss: 64.2785 - val_loss: 5.9071 - 75ms/epoch - 2ms/step
+Epoch 78/100
+37/37 - 0s - loss: 82.1890 - val_loss: 122.1646 - 68ms/epoch - 2ms/step
+Epoch 79/100
+37/37 - 0s - loss: 79.2888 - val_loss: 76.5782 - 67ms/epoch - 2ms/step
+Epoch 80/100
+37/37 - 0s - loss: 44.3104 - val_loss: 76.7614 - 80ms/epoch - 2ms/step
+Epoch 81/100
+37/37 - 0s - loss: 46.5958 - val_loss: 30.5490 - 87ms/epoch - 2ms/step
+Epoch 82/100
+37/37 - 0s - loss: 45.3505 - val_loss: 46.2609 - 70ms/epoch - 2ms/step
+Epoch 83/100
+37/37 - 0s - loss: 57.7416 - val_loss: 255.9925 - 77ms/epoch - 2ms/step
+Epoch 84/100
+37/37 - 0s - loss: 69.0700 - val_loss: 127.9935 - 83ms/epoch - 2ms/step
+Epoch 85/100
+37/37 - 0s - loss: 136.2530 - val_loss: 204.7058 - 89ms/epoch - 2ms/step
+Epoch 86/100
+37/37 - 0s - loss: 138.0343 - val_loss: 158.7296 - 78ms/epoch - 2ms/step
+Epoch 87/100
+37/37 - 0s - loss: 136.8587 - val_loss: 57.0424 - 65ms/epoch - 2ms/step
+Epoch 88/100
+37/37 - 0s - loss: 134.7005 - val_loss: 135.3646 - 87ms/epoch - 2ms/step
+Epoch 89/100
+37/37 - 0s - loss: 138.1213 - val_loss: 173.8022 - 74ms/epoch - 2ms/step
+Epoch 90/100
+37/37 - 0s - loss: 135.8543 - val_loss: 195.3078 - 81ms/epoch - 2ms/step
+Epoch 91/100
+37/37 - 0s - loss: 136.7210 - val_loss: 97.9723 - 78ms/epoch - 2ms/step
+Epoch 92/100
+37/37 - 0s - loss: 134.7419 - val_loss: 90.2060 - 79ms/epoch - 2ms/step
+Epoch 93/100
+37/37 - 0s - loss: 132.7180 - val_loss: 214.3745 - 79ms/epoch - 2ms/step
+Epoch 94/100
+37/37 - 0s - loss: 137.5142 - val_loss: 124.5046 - 83ms/epoch - 2ms/step
+Epoch 95/100
+37/37 - 0s - loss: 78.4872 - val_loss: 53.3035 - 74ms/epoch - 2ms/step
+Epoch 96/100
+37/37 - 0s - loss: 84.2869 - val_loss: 40.5012 - 78ms/epoch - 2ms/step
+Epoch 97/100
+37/37 - 0s - loss: 80.3055 - val_loss: 98.9377 - 69ms/epoch - 2ms/step
+Epoch 98/100
+37/37 - 0s - loss: 62.7194 - val_loss: 21.1854 - 84ms/epoch - 2ms/step
+Epoch 99/100
+37/37 - 0s - loss: 142.7082 - val_loss: 64.1733 - 68ms/epoch - 2ms/step
+Epoch 100/100
+37/37 - 0s - loss: 133.3049 - val_loss: 134.5524 - 81ms/epoch - 2ms/step
+Model: &quot;sequential_8&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ normalization_8 (Normalizat  (None, 288)              577       
+ ion)                                                            
+                                                                 
+ dense_10 (Dense)            (None, 1)                 289       
+                                                                 
+=================================================================
+Total params: 866
+Trainable params: 289
+Non-trainable params: 577
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
+<span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="k">def</span> <span class="nf">r2</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">backend</span> <span class="k">as</span> <span class="n">K</span>
+    <span class="n">SS_res</span> <span class="o">=</span>  <span class="n">K</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">K</span><span class="o">.</span><span class="n">square</span><span class="p">(</span> <span class="n">y_true</span><span class="o">-</span><span class="n">y_pred</span> <span class="p">))</span>
+    <span class="n">SS_tot</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">K</span><span class="o">.</span><span class="n">square</span><span class="p">(</span> <span class="n">y_true</span> <span class="o">-</span> <span class="n">K</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_true</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">SS_res</span><span class="o">/</span><span class="p">(</span><span class="n">SS_tot</span> <span class="o">+</span> <span class="n">K</span><span class="o">.</span><span class="n">epsilon</span><span class="p">())</span> <span class="p">)</span>
+
+<span class="c1">#Create our model using sequential mode</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Normalization</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mean_absolute_error&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">r2</span><span class="p">])</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">validation_split</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/100
+37/37 - 1s - loss: 15.3670 - r2: -2.5609e+03 - val_loss: 11.4084 - val_r2: -1.4557e+03 - 634ms/epoch - 17ms/step
+Epoch 2/100
+37/37 - 0s - loss: 8.8434 - r2: -8.9788e+02 - val_loss: 7.5931 - val_r2: -7.7564e+02 - 83ms/epoch - 2ms/step
+Epoch 3/100
+37/37 - 0s - loss: 5.3753 - r2: -3.6261e+02 - val_loss: 3.4270 - val_r2: -1.5167e+02 - 77ms/epoch - 2ms/step
+Epoch 4/100
+37/37 - 0s - loss: 1.8804 - r2: -4.7014e+01 - val_loss: 0.6656 - val_r2: -5.1043e+00 - 86ms/epoch - 2ms/step
+Epoch 5/100
+37/37 - 0s - loss: 0.7335 - r2: -5.6660e+00 - val_loss: 0.9058 - val_r2: -7.2742e+00 - 71ms/epoch - 2ms/step
+Epoch 6/100
+37/37 - 0s - loss: 0.9984 - r2: -9.7985e+00 - val_loss: 0.8362 - val_r2: -6.6092e+00 - 78ms/epoch - 2ms/step
+Epoch 7/100
+37/37 - 0s - loss: 0.7161 - r2: -5.0511e+00 - val_loss: 0.5398 - val_r2: -2.8835e+00 - 72ms/epoch - 2ms/step
+Epoch 8/100
+37/37 - 0s - loss: 0.7434 - r2: -5.6320e+00 - val_loss: 1.3700 - val_r2: -1.7203e+01 - 70ms/epoch - 2ms/step
+Epoch 9/100
+37/37 - 0s - loss: 1.0458 - r2: -1.1404e+01 - val_loss: 0.8005 - val_r2: -6.7437e+00 - 73ms/epoch - 2ms/step
+Epoch 10/100
+37/37 - 0s - loss: 0.8314 - r2: -6.2708e+00 - val_loss: 0.4869 - val_r2: -2.1306e+00 - 77ms/epoch - 2ms/step
+Epoch 11/100
+37/37 - 0s - loss: 0.8960 - r2: -7.2787e+00 - val_loss: 1.5857 - val_r2: -2.1552e+01 - 88ms/epoch - 2ms/step
+Epoch 12/100
+37/37 - 0s - loss: 0.7158 - r2: -5.1107e+00 - val_loss: 0.4847 - val_r2: -1.9745e+00 - 85ms/epoch - 2ms/step
+Epoch 13/100
+37/37 - 0s - loss: 0.5201 - r2: -2.3285e+00 - val_loss: 0.7330 - val_r2: -5.4055e+00 - 79ms/epoch - 2ms/step
+Epoch 14/100
+37/37 - 0s - loss: 0.7200 - r2: -4.5640e+00 - val_loss: 0.4574 - val_r2: -2.0746e+00 - 77ms/epoch - 2ms/step
+Epoch 15/100
+37/37 - 0s - loss: 0.5310 - r2: -2.2309e+00 - val_loss: 0.7810 - val_r2: -5.8300e+00 - 82ms/epoch - 2ms/step
+Epoch 16/100
+37/37 - 0s - loss: 0.7369 - r2: -4.8493e+00 - val_loss: 0.6776 - val_r2: -3.5260e+00 - 90ms/epoch - 2ms/step
+Epoch 17/100
+37/37 - 0s - loss: 0.6779 - r2: -4.2552e+00 - val_loss: 1.1895 - val_r2: -1.2889e+01 - 82ms/epoch - 2ms/step
+Epoch 18/100
+37/37 - 0s - loss: 0.8322 - r2: -5.7602e+00 - val_loss: 0.8889 - val_r2: -6.0049e+00 - 89ms/epoch - 2ms/step
+Epoch 19/100
+37/37 - 0s - loss: 1.0634 - r2: -9.7647e+00 - val_loss: 0.5939 - val_r2: -3.1582e+00 - 80ms/epoch - 2ms/step
+Epoch 20/100
+37/37 - 0s - loss: 0.8492 - r2: -5.9537e+00 - val_loss: 0.5371 - val_r2: -2.5874e+00 - 84ms/epoch - 2ms/step
+Epoch 21/100
+37/37 - 0s - loss: 0.5908 - r2: -2.8875e+00 - val_loss: 0.4080 - val_r2: -1.3621e+00 - 79ms/epoch - 2ms/step
+Epoch 22/100
+37/37 - 0s - loss: 0.5476 - r2: -2.4652e+00 - val_loss: 0.5670 - val_r2: -3.0898e+00 - 88ms/epoch - 2ms/step
+Epoch 23/100
+37/37 - 0s - loss: 0.5283 - r2: -2.1635e+00 - val_loss: 0.4109 - val_r2: -1.4237e+00 - 74ms/epoch - 2ms/step
+Epoch 24/100
+37/37 - 0s - loss: 0.9236 - r2: -7.7262e+00 - val_loss: 0.5208 - val_r2: -1.9930e+00 - 80ms/epoch - 2ms/step
+Epoch 25/100
+37/37 - 0s - loss: 0.5551 - r2: -2.3088e+00 - val_loss: 0.6395 - val_r2: -3.9351e+00 - 72ms/epoch - 2ms/step
+Epoch 26/100
+37/37 - 0s - loss: 0.4751 - r2: -1.6073e+00 - val_loss: 0.5534 - val_r2: -2.1598e+00 - 81ms/epoch - 2ms/step
+Epoch 27/100
+37/37 - 0s - loss: 0.6314 - r2: -3.1374e+00 - val_loss: 1.0002 - val_r2: -8.7674e+00 - 78ms/epoch - 2ms/step
+Epoch 28/100
+37/37 - 0s - loss: 0.5740 - r2: -2.8382e+00 - val_loss: 0.8578 - val_r2: -5.5297e+00 - 84ms/epoch - 2ms/step
+Epoch 29/100
+37/37 - 0s - loss: 1.0327 - r2: -9.6828e+00 - val_loss: 0.8092 - val_r2: -5.9284e+00 - 78ms/epoch - 2ms/step
+Epoch 30/100
+37/37 - 0s - loss: 0.6648 - r2: -3.5386e+00 - val_loss: 0.4399 - val_r2: -1.2525e+00 - 89ms/epoch - 2ms/step
+Epoch 31/100
+37/37 - 0s - loss: 0.4858 - r2: -1.6984e+00 - val_loss: 0.3817 - val_r2: -9.9413e-01 - 66ms/epoch - 2ms/step
+Epoch 32/100
+37/37 - 0s - loss: 0.4368 - r2: -1.4959e+00 - val_loss: 0.3724 - val_r2: -9.7300e-01 - 72ms/epoch - 2ms/step
+Epoch 33/100
+37/37 - 0s - loss: 0.4704 - r2: -1.7530e+00 - val_loss: 0.4541 - val_r2: -1.9338e+00 - 80ms/epoch - 2ms/step
+Epoch 34/100
+37/37 - 0s - loss: 0.4952 - r2: -1.9835e+00 - val_loss: 0.3781 - val_r2: -9.2706e-01 - 92ms/epoch - 2ms/step
+Epoch 35/100
+37/37 - 0s - loss: 0.4973 - r2: -1.8942e+00 - val_loss: 0.4155 - val_r2: -1.3185e+00 - 90ms/epoch - 2ms/step
+Epoch 36/100
+37/37 - 0s - loss: 0.5535 - r2: -2.2843e+00 - val_loss: 0.7643 - val_r2: -4.3393e+00 - 89ms/epoch - 2ms/step
+Epoch 37/100
+37/37 - 0s - loss: 0.6121 - r2: -2.5176e+00 - val_loss: 0.4577 - val_r2: -1.7729e+00 - 82ms/epoch - 2ms/step
+Epoch 38/100
+37/37 - 0s - loss: 0.5104 - r2: -1.7343e+00 - val_loss: 1.0437 - val_r2: -9.4548e+00 - 77ms/epoch - 2ms/step
+Epoch 39/100
+37/37 - 0s - loss: 0.4326 - r2: -1.2299e+00 - val_loss: 0.7800 - val_r2: -4.5026e+00 - 72ms/epoch - 2ms/step
+Epoch 40/100
+37/37 - 0s - loss: 0.5697 - r2: -2.4752e+00 - val_loss: 0.3615 - val_r2: -8.5577e-01 - 69ms/epoch - 2ms/step
+Epoch 41/100
+37/37 - 0s - loss: 0.4733 - r2: -1.8385e+00 - val_loss: 0.5115 - val_r2: -1.6406e+00 - 82ms/epoch - 2ms/step
+Epoch 42/100
+37/37 - 0s - loss: 0.4325 - r2: -1.3145e+00 - val_loss: 0.4995 - val_r2: -1.5499e+00 - 85ms/epoch - 2ms/step
+Epoch 43/100
+37/37 - 0s - loss: 1.0308 - r2: -8.8987e+00 - val_loss: 1.3536 - val_r2: -1.5057e+01 - 77ms/epoch - 2ms/step
+Epoch 44/100
+37/37 - 0s - loss: 1.1415 - r2: -1.0439e+01 - val_loss: 1.2008 - val_r2: -1.1746e+01 - 85ms/epoch - 2ms/step
+Epoch 45/100
+37/37 - 0s - loss: 0.8330 - r2: -6.4454e+00 - val_loss: 0.6881 - val_r2: -3.3092e+00 - 67ms/epoch - 2ms/step
+Epoch 46/100
+37/37 - 0s - loss: 0.5391 - r2: -2.2409e+00 - val_loss: 0.4194 - val_r2: -1.0347e+00 - 78ms/epoch - 2ms/step
+Epoch 47/100
+37/37 - 0s - loss: 0.4483 - r2: -1.2134e+00 - val_loss: 0.5477 - val_r2: -2.0135e+00 - 87ms/epoch - 2ms/step
+Epoch 48/100
+37/37 - 0s - loss: 0.5938 - r2: -2.6526e+00 - val_loss: 0.5964 - val_r2: -2.9102e+00 - 70ms/epoch - 2ms/step
+Epoch 49/100
+37/37 - 0s - loss: 0.4683 - r2: -1.5245e+00 - val_loss: 0.5721 - val_r2: -2.6351e+00 - 85ms/epoch - 2ms/step
+Epoch 50/100
+37/37 - 0s - loss: 1.0172 - r2: -8.8977e+00 - val_loss: 1.2973 - val_r2: -1.3435e+01 - 76ms/epoch - 2ms/step
+Epoch 51/100
+37/37 - 0s - loss: 1.0789 - r2: -1.0414e+01 - val_loss: 2.2341 - val_r2: -3.9592e+01 - 72ms/epoch - 2ms/step
+Epoch 52/100
+37/37 - 0s - loss: 0.9469 - r2: -1.1604e+01 - val_loss: 0.5326 - val_r2: -1.9342e+00 - 80ms/epoch - 2ms/step
+Epoch 53/100
+37/37 - 0s - loss: 0.5379 - r2: -1.9343e+00 - val_loss: 0.8081 - val_r2: -4.9788e+00 - 79ms/epoch - 2ms/step
+Epoch 54/100
+37/37 - 0s - loss: 0.4406 - r2: -1.3788e+00 - val_loss: 1.1247 - val_r2: -1.0255e+01 - 80ms/epoch - 2ms/step
+Epoch 55/100
+37/37 - 0s - loss: 0.8397 - r2: -5.4196e+00 - val_loss: 1.1160 - val_r2: -1.0281e+01 - 84ms/epoch - 2ms/step
+Epoch 56/100
+37/37 - 0s - loss: 0.5189 - r2: -1.8508e+00 - val_loss: 0.3544 - val_r2: -6.8704e-01 - 72ms/epoch - 2ms/step
+Epoch 57/100
+37/37 - 0s - loss: 0.5345 - r2: -2.1192e+00 - val_loss: 0.5879 - val_r2: -2.4034e+00 - 77ms/epoch - 2ms/step
+Epoch 58/100
+37/37 - 0s - loss: 0.4813 - r2: -1.4441e+00 - val_loss: 0.4166 - val_r2: -1.2343e+00 - 85ms/epoch - 2ms/step
+Epoch 59/100
+37/37 - 0s - loss: 0.5022 - r2: -1.7715e+00 - val_loss: 0.6012 - val_r2: -3.0167e+00 - 74ms/epoch - 2ms/step
+Epoch 60/100
+37/37 - 0s - loss: 0.5857 - r2: -2.6046e+00 - val_loss: 0.4660 - val_r2: -1.6739e+00 - 77ms/epoch - 2ms/step
+Epoch 61/100
+37/37 - 0s - loss: 0.4661 - r2: -1.4180e+00 - val_loss: 0.3491 - val_r2: -6.5541e-01 - 85ms/epoch - 2ms/step
+Epoch 62/100
+37/37 - 0s - loss: 0.5213 - r2: -2.1643e+00 - val_loss: 0.7818 - val_r2: -4.6223e+00 - 81ms/epoch - 2ms/step
+Epoch 63/100
+37/37 - 0s - loss: 0.5255 - r2: -1.8732e+00 - val_loss: 0.4127 - val_r2: -1.0262e+00 - 77ms/epoch - 2ms/step
+Epoch 64/100
+37/37 - 0s - loss: 0.4079 - r2: -1.0499e+00 - val_loss: 0.5712 - val_r2: -2.2061e+00 - 79ms/epoch - 2ms/step
+Epoch 65/100
+37/37 - 0s - loss: 0.6294 - r2: -3.6849e+00 - val_loss: 0.7565 - val_r2: -4.6475e+00 - 68ms/epoch - 2ms/step
+Epoch 66/100
+37/37 - 0s - loss: 0.8324 - r2: -5.9528e+00 - val_loss: 0.3475 - val_r2: -6.1240e-01 - 80ms/epoch - 2ms/step
+Epoch 67/100
+37/37 - 0s - loss: 0.6516 - r2: -3.2630e+00 - val_loss: 0.9918 - val_r2: -7.4620e+00 - 67ms/epoch - 2ms/step
+Epoch 68/100
+37/37 - 0s - loss: 0.8127 - r2: -5.8216e+00 - val_loss: 0.9051 - val_r2: -6.3373e+00 - 84ms/epoch - 2ms/step
+Epoch 69/100
+37/37 - 0s - loss: 0.5242 - r2: -1.8144e+00 - val_loss: 0.3983 - val_r2: -8.9885e-01 - 82ms/epoch - 2ms/step
+Epoch 70/100
+37/37 - 0s - loss: 0.5504 - r2: -1.9895e+00 - val_loss: 0.9146 - val_r2: -6.2029e+00 - 84ms/epoch - 2ms/step
+Epoch 71/100
+37/37 - 0s - loss: 0.7257 - r2: -4.7512e+00 - val_loss: 0.5718 - val_r2: -2.3250e+00 - 79ms/epoch - 2ms/step
+Epoch 72/100
+37/37 - 0s - loss: 0.5782 - r2: -2.7044e+00 - val_loss: 0.5319 - val_r2: -2.3698e+00 - 85ms/epoch - 2ms/step
+Epoch 73/100
+37/37 - 0s - loss: 0.4408 - r2: -1.1831e+00 - val_loss: 1.2684 - val_r2: -1.2371e+01 - 74ms/epoch - 2ms/step
+Epoch 74/100
+37/37 - 0s - loss: 0.6627 - r2: -3.7868e+00 - val_loss: 0.3622 - val_r2: -6.8761e-01 - 74ms/epoch - 2ms/step
+Epoch 75/100
+37/37 - 0s - loss: 0.9629 - r2: -8.2311e+00 - val_loss: 0.4380 - val_r2: -1.4845e+00 - 68ms/epoch - 2ms/step
+Epoch 76/100
+37/37 - 0s - loss: 0.9110 - r2: -6.8407e+00 - val_loss: 0.3530 - val_r2: -6.3515e-01 - 79ms/epoch - 2ms/step
+Epoch 77/100
+37/37 - 0s - loss: 0.4103 - r2: -9.5907e-01 - val_loss: 0.3383 - val_r2: -5.9402e-01 - 71ms/epoch - 2ms/step
+Epoch 78/100
+37/37 - 0s - loss: 0.3153 - r2: -3.0174e-01 - val_loss: 0.4223 - val_r2: -9.8336e-01 - 81ms/epoch - 2ms/step
+Epoch 79/100
+37/37 - 0s - loss: 0.4253 - r2: -1.0336e+00 - val_loss: 0.8142 - val_r2: -4.8409e+00 - 84ms/epoch - 2ms/step
+Epoch 80/100
+37/37 - 0s - loss: 0.5153 - r2: -1.6423e+00 - val_loss: 0.4477 - val_r2: -1.1505e+00 - 83ms/epoch - 2ms/step
+Epoch 81/100
+37/37 - 0s - loss: 0.4359 - r2: -1.5495e+00 - val_loss: 1.2419 - val_r2: -1.1856e+01 - 80ms/epoch - 2ms/step
+Epoch 82/100
+37/37 - 0s - loss: 0.8806 - r2: -6.7842e+00 - val_loss: 0.4922 - val_r2: -1.5641e+00 - 78ms/epoch - 2ms/step
+Epoch 83/100
+37/37 - 0s - loss: 0.5505 - r2: -2.0379e+00 - val_loss: 0.3507 - val_r2: -6.1707e-01 - 75ms/epoch - 2ms/step
+Epoch 84/100
+37/37 - 0s - loss: 0.5446 - r2: -2.1226e+00 - val_loss: 0.5404 - val_r2: -2.2408e+00 - 80ms/epoch - 2ms/step
+Epoch 85/100
+37/37 - 0s - loss: 0.4208 - r2: -9.9591e-01 - val_loss: 0.5474 - val_r2: -1.9622e+00 - 91ms/epoch - 2ms/step
+Epoch 86/100
+37/37 - 0s - loss: 0.4905 - r2: -1.4788e+00 - val_loss: 0.3716 - val_r2: -7.9266e-01 - 77ms/epoch - 2ms/step
+Epoch 87/100
+37/37 - 0s - loss: 0.5157 - r2: -1.6250e+00 - val_loss: 0.5871 - val_r2: -2.2469e+00 - 82ms/epoch - 2ms/step
+Epoch 88/100
+37/37 - 0s - loss: 0.5290 - r2: -1.6406e+00 - val_loss: 0.7997 - val_r2: -4.5836e+00 - 83ms/epoch - 2ms/step
+Epoch 89/100
+37/37 - 0s - loss: 0.4755 - r2: -1.3637e+00 - val_loss: 0.5477 - val_r2: -1.8252e+00 - 79ms/epoch - 2ms/step
+Epoch 90/100
+37/37 - 0s - loss: 0.4954 - r2: -1.5932e+00 - val_loss: 0.3423 - val_r2: -5.2122e-01 - 74ms/epoch - 2ms/step
+Epoch 91/100
+37/37 - 0s - loss: 0.6193 - r2: -3.0728e+00 - val_loss: 1.2743 - val_r2: -1.2953e+01 - 81ms/epoch - 2ms/step
+Epoch 92/100
+37/37 - 0s - loss: 0.6914 - r2: -4.3808e+00 - val_loss: 0.3339 - val_r2: -5.1080e-01 - 83ms/epoch - 2ms/step
+Epoch 93/100
+37/37 - 0s - loss: 0.3441 - r2: -4.4771e-01 - val_loss: 0.4534 - val_r2: -1.4320e+00 - 72ms/epoch - 2ms/step
+Epoch 94/100
+37/37 - 0s - loss: 0.4750 - r2: -1.4407e+00 - val_loss: 0.7012 - val_r2: -3.5530e+00 - 86ms/epoch - 2ms/step
+Epoch 95/100
+37/37 - 0s - loss: 0.6674 - r2: -4.4718e+00 - val_loss: 0.7795 - val_r2: -4.5695e+00 - 78ms/epoch - 2ms/step
+Epoch 96/100
+37/37 - 0s - loss: 1.0408 - r2: -8.9058e+00 - val_loss: 1.2405 - val_r2: -1.2407e+01 - 79ms/epoch - 2ms/step
+Epoch 97/100
+37/37 - 0s - loss: 0.9156 - r2: -6.6338e+00 - val_loss: 0.3915 - val_r2: -9.5402e-01 - 87ms/epoch - 2ms/step
+Epoch 98/100
+37/37 - 0s - loss: 0.4779 - r2: -1.6223e+00 - val_loss: 0.9122 - val_r2: -6.4033e+00 - 70ms/epoch - 2ms/step
+Epoch 99/100
+37/37 - 0s - loss: 0.3689 - r2: -6.3701e-01 - val_loss: 0.3528 - val_r2: -7.4155e-01 - 80ms/epoch - 2ms/step
+Epoch 100/100
+37/37 - 0s - loss: 0.4092 - r2: -1.0655e+00 - val_loss: 0.5729 - val_r2: -2.1985e+00 - 84ms/epoch - 2ms/step
+Model: &quot;sequential_9&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ normalization_9 (Normalizat  (None, 288)              577       
+ ion)                                                            
+                                                                 
+ dense_11 (Dense)            (None, 1)                 289       
+                                                                 
+=================================================================
+Total params: 866
+Trainable params: 289
+Non-trainable params: 577
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alternate Sequential syntax, with some additional data</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="n">altmodel</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Normalization</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">.2</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">])</span>
+<span class="n">altmodel</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mean_absolute_error&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">r2</span><span class="p">])</span>
+<span class="n">altmodel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">validation_split</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">altmodel</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/100
+37/37 - 1s - loss: 84.8092 - r2: -1.1173e+05 - val_loss: 11.4135 - val_r2: -1.2811e+03 - 836ms/epoch - 23ms/step
+Epoch 2/100
+37/37 - 0s - loss: 20.3638 - r2: -4.6148e+03 - val_loss: 5.4903 - val_r2: -2.8657e+02 - 93ms/epoch - 3ms/step
+Epoch 3/100
+37/37 - 0s - loss: 8.0143 - r2: -8.2053e+02 - val_loss: 1.5941 - val_r2: -3.9266e+01 - 114ms/epoch - 3ms/step
+Epoch 4/100
+37/37 - 0s - loss: 3.2177 - r2: -1.1656e+02 - val_loss: 1.3196 - val_r2: -1.5622e+01 - 104ms/epoch - 3ms/step
+Epoch 5/100
+37/37 - 0s - loss: 2.2120 - r2: -5.3163e+01 - val_loss: 0.4359 - val_r2: -1.2574e+00 - 110ms/epoch - 3ms/step
+Epoch 6/100
+37/37 - 0s - loss: 2.0493 - r2: -4.9036e+01 - val_loss: 1.5053 - val_r2: -2.0572e+01 - 99ms/epoch - 3ms/step
+Epoch 7/100
+37/37 - 0s - loss: 2.0006 - r2: -4.4688e+01 - val_loss: 0.8407 - val_r2: -6.0450e+00 - 102ms/epoch - 3ms/step
+Epoch 8/100
+37/37 - 0s - loss: 1.9508 - r2: -4.2347e+01 - val_loss: 0.7611 - val_r2: -4.5411e+00 - 100ms/epoch - 3ms/step
+Epoch 9/100
+37/37 - 0s - loss: 1.7100 - r2: -3.3111e+01 - val_loss: 0.6741 - val_r2: -3.2697e+00 - 127ms/epoch - 3ms/step
+Epoch 10/100
+37/37 - 0s - loss: 1.7496 - r2: -3.2964e+01 - val_loss: 0.6941 - val_r2: -3.5233e+00 - 111ms/epoch - 3ms/step
+Epoch 11/100
+37/37 - 0s - loss: 1.7415 - r2: -3.2037e+01 - val_loss: 0.3917 - val_r2: -7.7316e-01 - 102ms/epoch - 3ms/step
+Epoch 12/100
+37/37 - 0s - loss: 1.6035 - r2: -2.8149e+01 - val_loss: 1.1445 - val_r2: -1.0507e+01 - 108ms/epoch - 3ms/step
+Epoch 13/100
+37/37 - 0s - loss: 1.7616 - r2: -3.3043e+01 - val_loss: 0.4364 - val_r2: -1.9764e+00 - 100ms/epoch - 3ms/step
+Epoch 14/100
+37/37 - 0s - loss: 1.6913 - r2: -3.0157e+01 - val_loss: 0.2193 - val_r2: 0.2691 - 108ms/epoch - 3ms/step
+Epoch 15/100
+37/37 - 0s - loss: 1.6209 - r2: -2.8263e+01 - val_loss: 0.7878 - val_r2: -5.2459e+00 - 101ms/epoch - 3ms/step
+Epoch 16/100
+37/37 - 0s - loss: 1.6923 - r2: -3.1432e+01 - val_loss: 0.7416 - val_r2: -4.4344e+00 - 97ms/epoch - 3ms/step
+Epoch 17/100
+37/37 - 0s - loss: 1.6458 - r2: -2.7399e+01 - val_loss: 1.2083 - val_r2: -1.2355e+01 - 106ms/epoch - 3ms/step
+Epoch 18/100
+37/37 - 0s - loss: 1.6666 - r2: -2.9957e+01 - val_loss: 0.6391 - val_r2: -3.5473e+00 - 97ms/epoch - 3ms/step
+Epoch 19/100
+37/37 - 0s - loss: 1.7383 - r2: -3.2125e+01 - val_loss: 0.4870 - val_r2: -1.1211e+00 - 108ms/epoch - 3ms/step
+Epoch 20/100
+37/37 - 0s - loss: 1.7634 - r2: -3.0674e+01 - val_loss: 0.3029 - val_r2: -3.0452e-01 - 110ms/epoch - 3ms/step
+Epoch 21/100
+37/37 - 0s - loss: 1.6001 - r2: -2.5575e+01 - val_loss: 0.2093 - val_r2: 0.4663 - 98ms/epoch - 3ms/step
+Epoch 22/100
+37/37 - 0s - loss: 1.5872 - r2: -2.8009e+01 - val_loss: 0.7304 - val_r2: -3.9614e+00 - 104ms/epoch - 3ms/step
+Epoch 23/100
+37/37 - 0s - loss: 1.6151 - r2: -2.8533e+01 - val_loss: 0.5388 - val_r2: -2.2578e+00 - 96ms/epoch - 3ms/step
+Epoch 24/100
+37/37 - 0s - loss: 1.6773 - r2: -3.0222e+01 - val_loss: 0.3009 - val_r2: -5.0449e-01 - 107ms/epoch - 3ms/step
+Epoch 25/100
+37/37 - 0s - loss: 1.6534 - r2: -2.8820e+01 - val_loss: 0.5565 - val_r2: -2.9243e+00 - 105ms/epoch - 3ms/step
+Epoch 26/100
+37/37 - 0s - loss: 1.6593 - r2: -3.0069e+01 - val_loss: 0.5604 - val_r2: -3.1920e+00 - 110ms/epoch - 3ms/step
+Epoch 27/100
+37/37 - 0s - loss: 1.6914 - r2: -3.1441e+01 - val_loss: 0.3100 - val_r2: -3.9932e-01 - 101ms/epoch - 3ms/step
+Epoch 28/100
+37/37 - 0s - loss: 1.9152 - r2: -3.8359e+01 - val_loss: 1.4772 - val_r2: -1.7417e+01 - 105ms/epoch - 3ms/step
+Epoch 29/100
+37/37 - 0s - loss: 1.6485 - r2: -2.9910e+01 - val_loss: 0.6908 - val_r2: -4.4380e+00 - 97ms/epoch - 3ms/step
+Epoch 30/100
+37/37 - 0s - loss: 1.6760 - r2: -3.0759e+01 - val_loss: 0.7520 - val_r2: -4.3768e+00 - 89ms/epoch - 2ms/step
+Epoch 31/100
+37/37 - 0s - loss: 1.6489 - r2: -3.0570e+01 - val_loss: 1.5790 - val_r2: -1.9779e+01 - 112ms/epoch - 3ms/step
+Epoch 32/100
+37/37 - 0s - loss: 1.6043 - r2: -2.7555e+01 - val_loss: 0.4704 - val_r2: -9.1759e-01 - 111ms/epoch - 3ms/step
+Epoch 33/100
+37/37 - 0s - loss: 1.6115 - r2: -2.9795e+01 - val_loss: 1.4101 - val_r2: -1.6027e+01 - 100ms/epoch - 3ms/step
+Epoch 34/100
+37/37 - 0s - loss: 1.6462 - r2: -2.8476e+01 - val_loss: 0.2139 - val_r2: 0.4287 - 93ms/epoch - 3ms/step
+Epoch 35/100
+37/37 - 0s - loss: 1.6315 - r2: -2.6357e+01 - val_loss: 0.6676 - val_r2: -3.3500e+00 - 108ms/epoch - 3ms/step
+Epoch 36/100
+37/37 - 0s - loss: 1.6515 - r2: -2.8899e+01 - val_loss: 1.0514 - val_r2: -8.7468e+00 - 100ms/epoch - 3ms/step
+Epoch 37/100
+37/37 - 0s - loss: 1.5880 - r2: -2.6927e+01 - val_loss: 0.3054 - val_r2: -2.8879e-01 - 92ms/epoch - 2ms/step
+Epoch 38/100
+37/37 - 0s - loss: 1.6356 - r2: -2.7878e+01 - val_loss: 0.5387 - val_r2: -2.0878e+00 - 106ms/epoch - 3ms/step
+Epoch 39/100
+37/37 - 0s - loss: 1.5996 - r2: -2.7010e+01 - val_loss: 0.7525 - val_r2: -4.3786e+00 - 100ms/epoch - 3ms/step
+Epoch 40/100
+37/37 - 0s - loss: 1.5871 - r2: -2.7928e+01 - val_loss: 0.5593 - val_r2: -2.3059e+00 - 93ms/epoch - 3ms/step
+Epoch 41/100
+37/37 - 0s - loss: 1.5584 - r2: -2.7394e+01 - val_loss: 0.8821 - val_r2: -6.2489e+00 - 109ms/epoch - 3ms/step
+Epoch 42/100
+37/37 - 0s - loss: 1.5032 - r2: -2.6278e+01 - val_loss: 0.1963 - val_r2: 0.3726 - 126ms/epoch - 3ms/step
+Epoch 43/100
+37/37 - 0s - loss: 1.5563 - r2: -2.5857e+01 - val_loss: 0.7332 - val_r2: -4.2504e+00 - 102ms/epoch - 3ms/step
+Epoch 44/100
+37/37 - 0s - loss: 1.5395 - r2: -2.4612e+01 - val_loss: 0.2720 - val_r2: -1.4942e-01 - 109ms/epoch - 3ms/step
+Epoch 45/100
+37/37 - 0s - loss: 1.5358 - r2: -2.5349e+01 - val_loss: 0.5981 - val_r2: -2.7937e+00 - 99ms/epoch - 3ms/step
+Epoch 46/100
+37/37 - 0s - loss: 1.5190 - r2: -2.3687e+01 - val_loss: 0.4744 - val_r2: -1.5500e+00 - 101ms/epoch - 3ms/step
+Epoch 47/100
+37/37 - 0s - loss: 1.5370 - r2: -2.6151e+01 - val_loss: 0.1969 - val_r2: 0.4793 - 99ms/epoch - 3ms/step
+Epoch 48/100
+37/37 - 0s - loss: 1.5706 - r2: -2.6479e+01 - val_loss: 0.6853 - val_r2: -3.6390e+00 - 102ms/epoch - 3ms/step
+Epoch 49/100
+37/37 - 0s - loss: 1.6672 - r2: -2.9833e+01 - val_loss: 0.4380 - val_r2: -1.2218e+00 - 101ms/epoch - 3ms/step
+Epoch 50/100
+37/37 - 0s - loss: 1.5102 - r2: -2.3827e+01 - val_loss: 0.5681 - val_r2: -2.2675e+00 - 109ms/epoch - 3ms/step
+Epoch 51/100
+37/37 - 0s - loss: 1.5687 - r2: -2.5562e+01 - val_loss: 0.3989 - val_r2: -9.6195e-01 - 105ms/epoch - 3ms/step
+Epoch 52/100
+37/37 - 0s - loss: 1.6058 - r2: -2.9328e+01 - val_loss: 0.5464 - val_r2: -1.4387e+00 - 101ms/epoch - 3ms/step
+Epoch 53/100
+37/37 - 0s - loss: 1.5672 - r2: -2.6786e+01 - val_loss: 0.8824 - val_r2: -6.1534e+00 - 90ms/epoch - 2ms/step
+Epoch 54/100
+37/37 - 0s - loss: 1.5728 - r2: -2.6068e+01 - val_loss: 0.3068 - val_r2: -3.3431e-01 - 115ms/epoch - 3ms/step
+Epoch 55/100
+37/37 - 0s - loss: 1.5473 - r2: -2.5943e+01 - val_loss: 1.1290 - val_r2: -1.0553e+01 - 107ms/epoch - 3ms/step
+Epoch 56/100
+37/37 - 0s - loss: 1.6017 - r2: -2.7900e+01 - val_loss: 0.4017 - val_r2: -8.1892e-01 - 98ms/epoch - 3ms/step
+Epoch 57/100
+37/37 - 0s - loss: 1.5475 - r2: -2.6142e+01 - val_loss: 0.5792 - val_r2: -2.4896e+00 - 105ms/epoch - 3ms/step
+Epoch 58/100
+37/37 - 0s - loss: 1.5295 - r2: -2.5617e+01 - val_loss: 0.1902 - val_r2: 0.4802 - 109ms/epoch - 3ms/step
+Epoch 59/100
+37/37 - 0s - loss: 1.5223 - r2: -2.5558e+01 - val_loss: 0.3401 - val_r2: -5.1998e-01 - 122ms/epoch - 3ms/step
+Epoch 60/100
+37/37 - 0s - loss: 1.4887 - r2: -2.3352e+01 - val_loss: 0.8500 - val_r2: -5.8873e+00 - 100ms/epoch - 3ms/step
+Epoch 61/100
+37/37 - 0s - loss: 1.5514 - r2: -2.6821e+01 - val_loss: 0.7703 - val_r2: -4.7733e+00 - 100ms/epoch - 3ms/step
+Epoch 62/100
+37/37 - 0s - loss: 1.5599 - r2: -2.6194e+01 - val_loss: 1.3565 - val_r2: -1.4871e+01 - 100ms/epoch - 3ms/step
+Epoch 63/100
+37/37 - 0s - loss: 1.5416 - r2: -2.4701e+01 - val_loss: 0.5434 - val_r2: -2.2818e+00 - 116ms/epoch - 3ms/step
+Epoch 64/100
+37/37 - 0s - loss: 1.5359 - r2: -2.6339e+01 - val_loss: 0.2101 - val_r2: 0.2269 - 102ms/epoch - 3ms/step
+Epoch 65/100
+37/37 - 0s - loss: 1.5159 - r2: -2.4190e+01 - val_loss: 0.6888 - val_r2: -3.8078e+00 - 111ms/epoch - 3ms/step
+Epoch 66/100
+37/37 - 0s - loss: 1.5100 - r2: -2.4184e+01 - val_loss: 0.7294 - val_r2: -4.2969e+00 - 96ms/epoch - 3ms/step
+Epoch 67/100
+37/37 - 0s - loss: 1.5341 - r2: -2.5277e+01 - val_loss: 0.5790 - val_r2: -2.5224e+00 - 111ms/epoch - 3ms/step
+Epoch 68/100
+37/37 - 0s - loss: 1.4779 - r2: -2.1961e+01 - val_loss: 0.5364 - val_r2: -2.1497e+00 - 107ms/epoch - 3ms/step
+Epoch 69/100
+37/37 - 0s - loss: 1.5253 - r2: -2.4639e+01 - val_loss: 0.8817 - val_r2: -6.2098e+00 - 107ms/epoch - 3ms/step
+Epoch 70/100
+37/37 - 0s - loss: 1.5023 - r2: -2.4196e+01 - val_loss: 0.5398 - val_r2: -2.1773e+00 - 102ms/epoch - 3ms/step
+Epoch 71/100
+37/37 - 0s - loss: 1.4976 - r2: -2.4534e+01 - val_loss: 0.3009 - val_r2: -3.0887e-01 - 101ms/epoch - 3ms/step
+Epoch 72/100
+37/37 - 0s - loss: 1.4725 - r2: -2.2852e+01 - val_loss: 0.9564 - val_r2: -7.4457e+00 - 103ms/epoch - 3ms/step
+Epoch 73/100
+37/37 - 0s - loss: 1.5257 - r2: -2.5471e+01 - val_loss: 0.4397 - val_r2: -1.3027e+00 - 97ms/epoch - 3ms/step
+Epoch 74/100
+37/37 - 0s - loss: 1.5167 - r2: -2.5518e+01 - val_loss: 0.5228 - val_r2: -1.1986e+00 - 107ms/epoch - 3ms/step
+Epoch 75/100
+37/37 - 0s - loss: 1.5308 - r2: -2.5515e+01 - val_loss: 0.3399 - val_r2: -4.8563e-02 - 115ms/epoch - 3ms/step
+Epoch 76/100
+37/37 - 0s - loss: 1.5448 - r2: -2.6829e+01 - val_loss: 0.9177 - val_r2: -6.9208e+00 - 94ms/epoch - 3ms/step
+Epoch 77/100
+37/37 - 0s - loss: 1.4729 - r2: -2.4352e+01 - val_loss: 0.6275 - val_r2: -3.1913e+00 - 112ms/epoch - 3ms/step
+Epoch 78/100
+37/37 - 0s - loss: 1.5356 - r2: -2.6701e+01 - val_loss: 0.7857 - val_r2: -5.0842e+00 - 102ms/epoch - 3ms/step
+Epoch 79/100
+37/37 - 0s - loss: 1.3859 - r2: -2.0133e+01 - val_loss: 0.2754 - val_r2: -2.1330e-01 - 98ms/epoch - 3ms/step
+Epoch 80/100
+37/37 - 0s - loss: 1.5090 - r2: -2.4264e+01 - val_loss: 1.0154 - val_r2: -8.6250e+00 - 115ms/epoch - 3ms/step
+Epoch 81/100
+37/37 - 0s - loss: 1.5095 - r2: -2.4538e+01 - val_loss: 0.6940 - val_r2: -3.9402e+00 - 99ms/epoch - 3ms/step
+Epoch 82/100
+37/37 - 0s - loss: 1.5308 - r2: -2.5842e+01 - val_loss: 0.2080 - val_r2: 0.2344 - 104ms/epoch - 3ms/step
+Epoch 83/100
+37/37 - 0s - loss: 1.5193 - r2: -2.3671e+01 - val_loss: 0.4420 - val_r2: -1.3548e+00 - 110ms/epoch - 3ms/step
+Epoch 84/100
+37/37 - 0s - loss: 1.5316 - r2: -2.5329e+01 - val_loss: 0.9751 - val_r2: -7.8205e+00 - 107ms/epoch - 3ms/step
+Epoch 85/100
+37/37 - 0s - loss: 1.4539 - r2: -2.3970e+01 - val_loss: 0.3492 - val_r2: -6.9710e-02 - 102ms/epoch - 3ms/step
+Epoch 86/100
+37/37 - 0s - loss: 1.5590 - r2: -2.6310e+01 - val_loss: 1.0953 - val_r2: -9.7284e+00 - 108ms/epoch - 3ms/step
+Epoch 87/100
+37/37 - 0s - loss: 1.5031 - r2: -2.4058e+01 - val_loss: 0.3310 - val_r2: -4.7767e-01 - 105ms/epoch - 3ms/step
+Epoch 88/100
+37/37 - 0s - loss: 1.4081 - r2: -2.2561e+01 - val_loss: 0.1878 - val_r2: 0.3961 - 100ms/epoch - 3ms/step
+Epoch 89/100
+37/37 - 0s - loss: 1.4497 - r2: -2.4868e+01 - val_loss: 0.5674 - val_r2: -2.4082e+00 - 103ms/epoch - 3ms/step
+Epoch 90/100
+37/37 - 0s - loss: 1.3882 - r2: -2.1294e+01 - val_loss: 0.1804 - val_r2: 0.4212 - 108ms/epoch - 3ms/step
+Epoch 91/100
+37/37 - 0s - loss: 1.4657 - r2: -2.3028e+01 - val_loss: 1.1905 - val_r2: -1.1328e+01 - 143ms/epoch - 4ms/step
+Epoch 92/100
+37/37 - 0s - loss: 1.4703 - r2: -2.3188e+01 - val_loss: 0.8980 - val_r2: -5.8567e+00 - 117ms/epoch - 3ms/step
+Epoch 93/100
+37/37 - 0s - loss: 1.5140 - r2: -2.4366e+01 - val_loss: 0.7255 - val_r2: -4.1309e+00 - 109ms/epoch - 3ms/step
+Epoch 94/100
+37/37 - 0s - loss: 1.4135 - r2: -2.2027e+01 - val_loss: 0.5441 - val_r2: -2.2282e+00 - 103ms/epoch - 3ms/step
+Epoch 95/100
+37/37 - 0s - loss: 1.4347 - r2: -2.2479e+01 - val_loss: 1.1148 - val_r2: -9.9903e+00 - 91ms/epoch - 2ms/step
+Epoch 96/100
+37/37 - 0s - loss: 1.4369 - r2: -2.2951e+01 - val_loss: 0.9944 - val_r2: -7.7909e+00 - 121ms/epoch - 3ms/step
+Epoch 97/100
+37/37 - 0s - loss: 1.4439 - r2: -2.3132e+01 - val_loss: 0.1790 - val_r2: 0.5067 - 102ms/epoch - 3ms/step
+Epoch 98/100
+37/37 - 0s - loss: 1.4573 - r2: -2.2019e+01 - val_loss: 0.1767 - val_r2: 0.5161 - 99ms/epoch - 3ms/step
+Epoch 99/100
+37/37 - 0s - loss: 1.5178 - r2: -2.3612e+01 - val_loss: 0.7854 - val_r2: -4.8891e+00 - 108ms/epoch - 3ms/step
+Epoch 100/100
+37/37 - 0s - loss: 1.4209 - r2: -2.1412e+01 - val_loss: 0.4952 - val_r2: -1.7359e+00 - 99ms/epoch - 3ms/step
+Model: &quot;sequential_10&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ normalization_10 (Normaliza  (None, 288)              577       
+ tion)                                                           
+                                                                 
+ dense_12 (Dense)            (None, 100)               28900     
+                                                                 
+ dense_13 (Dense)            (None, 100)               10100     
+                                                                 
+ dropout_1 (Dropout)         (None, 100)               0         
+                                                                 
+ dense_14 (Dense)            (None, 1)                 101       
+                                                                 
+=================================================================
+Total params: 39,678
+Trainable params: 39,101
+Non-trainable params: 577
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="nb-10-10-deeplearningtitanic.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">68. </span>Titanic Classification - Deep Learning Tensorflow</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="nb-10-99_intro_tensorflow.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">71. </span>Tensorflow Graph Creation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Jason Kuruzovich<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
