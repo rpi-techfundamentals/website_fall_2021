@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Midterm Resubmit &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
+    <title>77. Final Exam &#8212; MGMT 4190/6560 Introduction to Machine Learning Applications @Rensselaer</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,6 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The MS Business Analytics Capstone Course" href="../content/capstone.html" />
+    <link rel="prev" title="62. Homework-7" href="hw-7.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -438,7 +440,7 @@
   ASSIGNMENTS
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="hw-1.html">
    1. Homework-1
@@ -469,8 +471,8 @@
    62. Homework-7
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="hw-final.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    77. Final Exam
   </a>
  </li>
@@ -564,7 +566,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/assignments/midtermresubmit.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/assignments/hw-final.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -584,7 +586,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fassignments/midtermresubmit.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rpi-techfundamentals/website_fall_2021/issues/new?title=Issue%20on%20page%20%2Fassignments/hw-final.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -605,7 +607,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/assignments/midtermresubmit.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rpi-techfundamentals/website_fall_2021/master?urlpath=tree/site/assignments/hw-final.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -613,7 +615,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/assignments/midtermresubmit.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/rpi-techfundamentals/website_fall_2021/blob/master/site/assignments/hw-final.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -632,39 +634,51 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#total-number-of-points-60">
-   Total number of points: 60
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   77. Final Exam
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#points">
+     77.1. 81 Points
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#due-date-dec-17-7-30-pm">
+     77.2. Due date: Dec 17 7:30 PM
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#please-note-that-for-any-question-in-this-assignment-you-will-receive-points-only-if-your-solution-passes-all-the-test-cases-including-hidden-testcases-as-well-so-please-make-sure-you-try-to-think-all-possible-scenarios-before-submitting-your-answers">
+     77.3. Please note that for any question in this assignment you will receive points ONLY if your solution passes all the test cases including hidden testcases as well. So please make sure you try to think all possible scenarios before submitting your answers.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q1-20-points-cluster-analysis">
+     77.4. Q1 [20 points]. Cluster Analysis
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#due-date-nov-11-2021-11-59-pm">
-   Due date: Nov 11 2021 11:59  PM
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q2-21-points-gbm-regressor">
+   78. Q2 [21 points]. GBM Regressor
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#please-note-that-for-any-question-in-this-assignment-you-will-receive-points-only-if-your-solution-passes-all-the-test-cases-including-hidden-testcases-as-well-so-please-make-sure-you-try-to-think-all-possible-scenarios-before-submitting-your-answers">
-   Please note that for any question in this assignment you will receive points ONLY if your solution passes all the test cases including hidden testcases as well. So please make sure you try to think all possible scenarios before submitting your answers.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q1-20-points-load-and-preprocess-the-data">
-   Q1 [20 points]. Load and preprocess the data.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q2-20-points-feature-creation">
-   Q2 [20 points]. Feature Creation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#q3-10-points-train-test-split">
-     Q3 [10 points] Train Test Split
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q3-15-points-regression">
+     78.1. Q3 [15 points] Regression
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q4-10-points-classification">
-       Q4 [10 points]. Classification
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q4-15-points-deep-learning">
+       78.1.1. Q4[15 points]. Deep Learning.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q5-17-5-points-comparison">
+       78.1.2. Q5 [17.5 points]. Comparison
       </a>
      </li>
     </ul>
@@ -682,14 +696,13 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="midterm-resubmit">
-<h1>Midterm Resubmit<a class="headerlink" href="#midterm-resubmit" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="total-number-of-points-60">
-<h2>Total number of points: 60<a class="headerlink" href="#total-number-of-points-60" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="final-exam">
+<h1><span class="section-number">77. </span>Final Exam<a class="headerlink" href="#final-exam" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="points">
+<h2><span class="section-number">77.1. </span>81 Points<a class="headerlink" href="#points" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="due-date-nov-11-2021-11-59-pm">
-<h2>Due date: Nov 11 2021 11:59  PM<a class="headerlink" href="#due-date-nov-11-2021-11-59-pm" title="Permalink to this headline">¶</a></h2>
-<p>This will be used to give credit back on the midterm exam.</p>
+<div class="section" id="due-date-dec-17-7-30-pm">
+<h2><span class="section-number">77.2. </span>Due date: Dec 17 7:30 PM<a class="headerlink" href="#due-date-dec-17-7-30-pm" title="Permalink to this headline">¶</a></h2>
 <p>Before you submit this homework, make sure everything runs as expected. First, restart the kernel (in the menu, select Kernel → Restart) and then run all cells (in the menubar, select Cell → Run All). You can discuss with others regarding the homework but all work must be your own.</p>
 <p>Steps to evaluate your solutions:</p>
 <p>Step-1: Try on Colab or Anaconda (Windows: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">https://docs.anaconda.com/anaconda/install/windows/</a> ; Mac:<a class="reference external" href="https://docs.anaconda.com/anaconda/install/mac-os/">https://docs.anaconda.com/anaconda/install/mac-os/</a> ; Linux: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">https://docs.anaconda.com/anaconda/install/linux/</a>)</p>
@@ -700,7 +713,7 @@
 <p>Step-6: Go to <a class="reference external" href="http://lms.rpi.edu">lms.rpi.edu</a> and upload your homework at the appropriate link to submit this homework.</p>
 </div>
 <div class="section" id="please-note-that-for-any-question-in-this-assignment-you-will-receive-points-only-if-your-solution-passes-all-the-test-cases-including-hidden-testcases-as-well-so-please-make-sure-you-try-to-think-all-possible-scenarios-before-submitting-your-answers">
-<h2>Please note that for any question in this assignment you will receive points ONLY if your solution passes all the test cases including hidden testcases as well. So please make sure you try to think all possible scenarios before submitting your answers.<a class="headerlink" href="#please-note-that-for-any-question-in-this-assignment-you-will-receive-points-only-if-your-solution-passes-all-the-test-cases-including-hidden-testcases-as-well-so-please-make-sure-you-try-to-think-all-possible-scenarios-before-submitting-your-answers" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">77.3. </span>Please note that for any question in this assignment you will receive points ONLY if your solution passes all the test cases including hidden testcases as well. So please make sure you try to think all possible scenarios before submitting your answers.<a class="headerlink" href="#please-note-that-for-any-question-in-this-assignment-you-will-receive-points-only-if-your-solution-passes-all-the-test-cases-including-hidden-testcases-as-well-so-please-make-sure-you-try-to-think-all-possible-scenarios-before-submitting-your-answers" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Note that hidden tests are present to ensure you are not hardcoding.</p></li>
 <li><p>If caught cheating:</p>
@@ -712,35 +725,33 @@
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="c1">#Numerical or binary attributes</span>
-<span class="n">num_or_bin</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Income&#39;</span><span class="p">,</span> <span class="s1">&#39;Kidhome&#39;</span><span class="p">,</span><span class="s1">&#39;Recency&#39;</span><span class="p">,</span> <span class="s1">&#39;MntWines&#39;</span><span class="p">,</span> <span class="s1">&#39;MntFruits&#39;</span><span class="p">,</span> <span class="s1">&#39;MntMeatProducts&#39;</span><span class="p">,</span> <span class="s1">&#39;MntFishProducts&#39;</span><span class="p">,</span> <span class="s1">&#39;MntSweetProducts&#39;</span><span class="p">,</span><span class="s1">&#39;MntGoldProds&#39;</span><span class="p">,</span> <span class="s1">&#39;NumDealsPurchases&#39;</span><span class="p">,</span> <span class="s1">&#39;NumWebPurchases&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;NumCatalogPurchases&#39;</span><span class="p">,</span> <span class="s1">&#39;NumStorePurchases&#39;</span><span class="p">,</span> <span class="s1">&#39;NumWebVisitsMonth&#39;</span><span class="p">,</span><span class="s1">&#39;AcceptedCmp3&#39;</span><span class="p">,</span> <span class="s1">&#39;AcceptedCmp4&#39;</span><span class="p">,</span> <span class="s1">&#39;AcceptedCmp5&#39;</span><span class="p">,</span> <span class="s1">&#39;AcceptedCmp1&#39;</span><span class="p">,</span><span class="s1">&#39;AcceptedCmp2&#39;</span><span class="p">]</span>
-
-<span class="c1">#Categorical attributes</span>
-<span class="n">cat</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Education&#39;</span><span class="p">,</span><span class="s1">&#39;Marital_Status&#39;</span><span class="p">]</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="n">df</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/rpi-techfundamentals/website_fall_2021/master/site/public/marketing_campaign.csv&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">df</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/rpi-techfundamentals/website_fall_2021/master/site/public/data2.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="q1-20-points-load-and-preprocess-the-data">
-<h2>Q1 [20 points]. Load and preprocess the data.<a class="headerlink" href="#q1-20-points-load-and-preprocess-the-data" title="Permalink to this headline">¶</a></h2>
-<p>Build and transform your dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code> using the following steps before modeling. Create a new dataframe <code class="docutils literal notranslate"><span class="pre">X</span></code> that has the following properties:</p>
+<div class="section" id="q1-20-points-cluster-analysis">
+<h2><span class="section-number">77.4. </span>Q1 [20 points]. Cluster Analysis<a class="headerlink" href="#q1-20-points-cluster-analysis" title="Permalink to this headline">¶</a></h2>
+<p>For the cluster analysis below use all variables in <code class="docutils literal notranslate"><span class="pre">df</span></code> except the <code class="docutils literal notranslate"><span class="pre">target</span></code> column.</p>
 <ol class="simple">
-<li><p>It should include only the columns from lists <code class="docutils literal notranslate"><span class="pre">num_or_bin</span></code> and <code class="docutils literal notranslate"><span class="pre">cat</span></code> (in the code above).</p></li>
-<li><p>Variables in <code class="docutils literal notranslate"><span class="pre">cat</span></code> should be transformed to <code class="docutils literal notranslate"><span class="pre">n</span></code>-1 dummy variables (where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of categories for each variable.)</p></li>
-<li><p>Missing variables in the <code class="docutils literal notranslate"><span class="pre">Income</span></code> table should be filled with the median of the <code class="docutils literal notranslate"><span class="pre">income</span></code> table.</p></li>
+<li><p>Using the KMEANS function to create a <code class="docutils literal notranslate"><span class="pre">kmeans</span></code> cluster mode in sklearn. Create columns in df called <code class="docutils literal notranslate"><span class="pre">kmeans_3</span></code> and <code class="docutils literal notranslate"><span class="pre">kmeans_5</span></code> which includes the cluster <code class="docutils literal notranslate"><span class="pre">labels</span></code> for a cluster analysis with <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code> clusters. Use <code class="docutils literal notranslate"><span class="pre">random_state=100</span></code> as a parameter in the KMeans.</p></li>
+<li><p>Create a dictionary from the analysis in 1 called <code class="docutils literal notranslate"><span class="pre">inert</span></code> in which the key of the dictionary is the number of clusters (3 and 5 in <code class="docutils literal notranslate"><span class="pre">int</span></code> type) and the value is the sum of squared distances of samples to their closest cluster center (i.e., the inertia).</p></li>
 </ol>
-<p><strong>Do not use a wrap the preprocessing in a function.  Just complete the steps asked.</strong></p>
+<p>#For example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inter</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">get</span> <span class="n">the</span> <span class="n">inertia</span> <span class="k">for</span> <span class="n">the</span> <span class="n">model</span> <span class="k">with</span> <span class="mi">3</span> <span class="n">clusters</span><span class="o">&gt;</span>
+<span class="n">inter</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">get</span> <span class="n">the</span> <span class="n">intertia</span> <span class="k">for</span> <span class="n">the</span> <span class="n">model</span> <span class="k">with</span> <span class="mi">5</span> <span class="n">clusters</span><span class="o">&gt;</span>
+
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Put your answer here. Don&#39;t create a function.  Just complete the exact steps asked. </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Put your entire answer here in this cell. </span>
+<span class="c1">#It is ok to use other temporary cells while working but for final submission move all related code to this cell.</span>
 
 <span class="c1"># YOUR CODE HERE</span>
 <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -750,21 +761,10 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 1 Test Cell </span>
-<span class="c1">#this tests the columns. </span>
-<span class="n">ecol</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Income&#39;</span><span class="p">,</span> <span class="s1">&#39;Kidhome&#39;</span><span class="p">,</span> <span class="s1">&#39;Recency&#39;</span><span class="p">,</span> <span class="s1">&#39;MntWines&#39;</span><span class="p">,</span> <span class="s1">&#39;MntFruits&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;MntMeatProducts&#39;</span><span class="p">,</span> <span class="s1">&#39;MntFishProducts&#39;</span><span class="p">,</span> <span class="s1">&#39;MntSweetProducts&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;MntGoldProds&#39;</span><span class="p">,</span> <span class="s1">&#39;NumDealsPurchases&#39;</span><span class="p">,</span> <span class="s1">&#39;NumWebPurchases&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;NumCatalogPurchases&#39;</span><span class="p">,</span> <span class="s1">&#39;NumStorePurchases&#39;</span><span class="p">,</span> <span class="s1">&#39;NumWebVisitsMonth&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;AcceptedCmp3&#39;</span><span class="p">,</span> <span class="s1">&#39;AcceptedCmp4&#39;</span><span class="p">,</span> <span class="s1">&#39;AcceptedCmp5&#39;</span><span class="p">,</span> <span class="s1">&#39;AcceptedCmp1&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;AcceptedCmp2&#39;</span><span class="p">,</span> <span class="s1">&#39;Education_Basic&#39;</span><span class="p">,</span> <span class="s1">&#39;Education_Graduation&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Education_Master&#39;</span><span class="p">,</span> <span class="s1">&#39;Education_PhD&#39;</span><span class="p">,</span> <span class="s1">&#39;Marital_Status_Alone&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Marital_Status_Divorced&#39;</span><span class="p">,</span> <span class="s1">&#39;Marital_Status_Married&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Marital_Status_Single&#39;</span><span class="p">,</span> <span class="s1">&#39;Marital_Status_Together&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Marital_Status_Widow&#39;</span><span class="p">,</span> <span class="s1">&#39;Marital_Status_YOLO&#39;</span><span class="p">])</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ecol</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span><span class="o">==</span><span class="mi">0</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">ecol</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#These are helper tests to make sure you have answers.  If this fails, please check your naming. </span>
+<span class="k">assert</span> <span class="s1">&#39;kmeans_3&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="k">assert</span> <span class="s1">&#39;kmeans_5&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="k">assert</span> <span class="s1">&#39;inert&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -772,14 +772,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 2 Test Cell </span>
-<span class="c1">#this tests the columns. </span>
-<span class="k">assert</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="o">==</span><span class="p">(</span><span class="mi">2240</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">q2</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">q2</span><span class="p">[</span><span class="s1">&#39;Response&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Response&#39;</span><span class="p">]</span>
-<span class="n">q2</span><span class="p">[</span><span class="s1">&#39;Year_Birth&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year_Birth&#39;</span><span class="p">]</span>
-<span class="n">q2</span><span class="p">[</span><span class="s1">&#39;Dt_Customer&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dt_Customer&#39;</span><span class="p">]</span>
-<span class="n">q2</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;q2.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -787,8 +779,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 3 Test Cell </span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X</span><span class="p">[</span><span class="s1">&#39;Income&#39;</span><span class="p">]</span><span class="o">==</span><span class="mf">51381.5</span><span class="p">,</span><span class="s1">&#39;Income&#39;</span><span class="p">])</span><span class="o">==</span><span class="mi">24</span>
 </pre></div>
 </div>
 </div>
@@ -796,8 +786,13 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 4 Test Cell</span>
-<span class="k">assert</span> <span class="n">X</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
 </pre></div>
 </div>
 </div>
@@ -807,143 +802,97 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
 <span class="c1">#Reload data</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df_cl</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/rpi-techfundamentals/website_fall_2021/master/site/public/q2.csv&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">df_q2</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/rpi-techfundamentals/website_fall_2021/master/site/public/data2.csv&quot;</span><span class="p">)</span>
+<span class="n">train_X</span><span class="p">,</span> <span class="n">test_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">test_y</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df_q2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:],</span> <span class="n">df_q2</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">],</span> 
+                                                    <span class="n">train_size</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+                                                    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">122</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="q2-20-points-feature-creation">
-<h2>Q2 [20 points]. Feature Creation<a class="headerlink" href="#q2-20-points-feature-creation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="q2-21-points-gbm-regressor">
+<h1><span class="section-number">78. </span>Q2 [21 points]. GBM Regressor<a class="headerlink" href="#q2-21-points-gbm-regressor" title="Permalink to this headline">¶</a></h1>
+<p>Using the training and test data provided (<code class="docutils literal notranslate"><span class="pre">train_X</span></code>, <code class="docutils literal notranslate"><span class="pre">test_X</span></code>, <code class="docutils literal notranslate"><span class="pre">train_y</span></code>, <code class="docutils literal notranslate"><span class="pre">test_y</span></code>), use the <code class="docutils literal notranslate"><span class="pre">sklearn.ensemble.GradientBoostingRegressor</span></code> with <code class="docutils literal notranslate"><span class="pre">random_state</span> <span class="pre">=</span> <span class="pre">100</span></code>.</p>
 <ol class="simple">
-<li><p>In the <code class="docutils literal notranslate"><span class="pre">df_cl</span></code> dataframe, create an integer feature <code class="docutils literal notranslate"><span class="pre">age</span></code> which is <code class="docutils literal notranslate"><span class="pre">2021</span></code> minus <code class="docutils literal notranslate"><span class="pre">Year_Birth</span></code>.</p></li>
+<li><p>Calculate the r-squared for both the <code class="docutils literal notranslate"><span class="pre">train</span></code> and the <code class="docutils literal notranslate"><span class="pre">test</span></code> set and assign to <code class="docutils literal notranslate"><span class="pre">gbm_r2_train</span></code> and <code class="docutils literal notranslate"><span class="pre">gbm_r2_test</span></code>, respectively.</p></li>
+<li><p>Calculate the mean absolute error for both the <code class="docutils literal notranslate"><span class="pre">train</span></code> and the <code class="docutils literal notranslate"><span class="pre">test</span></code> set and assign to <code class="docutils literal notranslate"><span class="pre">gbm_mae_train</span></code> and <code class="docutils literal notranslate"><span class="pre">gbm_mae_test</span></code>, respectively.</p></li>
+<li><p>Create a varaible <code class="docutils literal notranslate"><span class="pre">gbm_most_important</span></code> and indicate the column name of the most important column from the GradientBoostingRegressor analysis.</p></li>
 </ol>
-<p><strong>NOTE: Be sure to set <code class="docutils literal notranslate"><span class="pre">age</span></code> as type <code class="docutils literal notranslate"><span class="pre">int</span></code>.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Put your entire answer here in this cell. </span>
+<span class="c1">#It is ok to use other temporary cells while working but for final submission move all related code to this cell.</span>
+
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#These are helper tests to make sure you have answers.  If this fails, please check your naming. </span>
+<span class="k">assert</span> <span class="s1">&#39;gbm_mae_train&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;gbm_mae_test&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;gbm_r2_test&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;gbm_r2_train&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;gbm_most_important&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="q3-15-points-regression">
+<h2><span class="section-number">78.1. </span>Q3 [15 points] Regression<a class="headerlink" href="#q3-15-points-regression" title="Permalink to this headline">¶</a></h2>
+<p>Using the  <code class="docutils literal notranslate"><span class="pre">df_q2</span></code> dataframe, use the <code class="docutils literal notranslate"><span class="pre">sklearn.linear_model.LinearRegression</span></code> to do linear regression.</p>
 <ol class="simple">
-<li><p>In the <code class="docutils literal notranslate"><span class="pre">df_cl</span></code> dataframe, create an integer feature <code class="docutils literal notranslate"><span class="pre">holiday</span></code> which is 1 if the month of <code class="docutils literal notranslate"><span class="pre">Dt_Customer</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">12</span></code> and 0 otherwise. You can get the month by accessing <code class="docutils literal notranslate"><span class="pre">mm</span></code> from the date format dd-mm-yyyy</p></li>
+<li><p>Calculate the r-squared for both the <code class="docutils literal notranslate"><span class="pre">train</span></code> and the <code class="docutils literal notranslate"><span class="pre">test</span></code> set and assign to <code class="docutils literal notranslate"><span class="pre">reg_r2_train</span></code> and <code class="docutils literal notranslate"><span class="pre">reg_r2_test</span></code>, respectively.</p></li>
+<li><p>Calculate the mean absolute error for both the <code class="docutils literal notranslate"><span class="pre">train</span></code> and the <code class="docutils literal notranslate"><span class="pre">test</span></code> set and assign to <code class="docutils literal notranslate"><span class="pre">reg_mae_train</span></code> and <code class="docutils literal notranslate"><span class="pre">reg_mae_test</span></code>, respectively.</p></li>
+<li><p>For the treatment, set the treatment coeffient to the <code class="docutils literal notranslate"><span class="pre">treat_coef</span></code>.</p></li>
+<li><p>Based on the coefficient (don’t worry about significance) does the treatment tend to <code class="docutils literal notranslate"><span class="pre">increase</span></code> or <code class="docutils literal notranslate"><span class="pre">decrease</span></code> the <code class="docutils literal notranslate"><span class="pre">target</span></code>? Set the value of <code class="docutils literal notranslate"><span class="pre">treat_dir</span></code> to your answer.</p></li>
 </ol>
-<p><strong>NOTE: 04-09-2012 is in the form dd-mm-yyyy so for the months you want the middle numbers. Be sure to set <code class="docutils literal notranslate"><span class="pre">holiday</span></code> as type <code class="docutils literal notranslate"><span class="pre">int</span></code>.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your solution here.</span>
-<span class="c1"># YOUR CODE HERE</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 5 Test Cell</span>
-<span class="k">assert</span> <span class="n">df_cl</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">==</span><span class="mi">116915</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 6 Test Cell</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">df_cl</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 7 Test Cell</span>
-<span class="k">assert</span> <span class="n">df_cl</span><span class="p">[</span><span class="s1">&#39;holiday&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">==</span><span class="mi">175</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 8 Test Cell</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">df_cl</span><span class="p">[</span><span class="s1">&#39;holiday&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df_cl2</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/rpi-techfundamentals/website_fall_2021/master/site/public/dfcl2.csv&#39;</span><span class="p">)</span>
-<span class="n">y_reload</span><span class="o">=</span><span class="n">df_cl2</span><span class="p">[</span><span class="s1">&#39;Response&#39;</span><span class="p">]</span>
-<span class="n">X_reload</span><span class="o">=</span><span class="n">df_cl2</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Response&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="q3-10-points-train-test-split">
-<h3>Q3 [10 points] Train Test Split<a class="headerlink" href="#q3-10-points-train-test-split" title="Permalink to this headline">¶</a></h3>
-<p>Now split the data <code class="docutils literal notranslate"><span class="pre">X_reload</span></code>, <code class="docutils literal notranslate"><span class="pre">y_reload</span></code> intro training (50%) and testing data (50%) by using these variable names while making sure there are Make sure that there are equal number of positive cases (1’s) in the train and the test se</p>
-<p><code class="docutils literal notranslate"><span class="pre">X_train</span></code>: Training feature columns</p>
-<p><code class="docutils literal notranslate"><span class="pre">X_test</span></code>: Testing feature columns</p>
-<p><code class="docutils literal notranslate"><span class="pre">y_train</span></code>: Training DV</p>
-<p><code class="docutils literal notranslate"><span class="pre">y_test</span></code>: Testing DV</p>
-<p>When doing so set the <code class="docutils literal notranslate"><span class="pre">random_state</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">100</span></code> so you get the same split that is in the solution.</p>
-<p><strong>Make sure that there are an equal number of positive cases (1’s) in the train and the test set!</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Put your solution here. </span>
-
-<span class="c1"># YOUR CODE HERE</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 9 Test Cell</span>
-<span class="k">assert</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="o">==</span><span class="p">(</span><span class="mi">1120</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="o">==</span><span class="p">(</span><span class="mi">1120</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 10 Test Cell</span>
-<span class="k">assert</span>  <span class="n">y_train</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">==</span><span class="n">y_test</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df_cl2</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/rpi-techfundamentals/website_fall_2021/master/site/public/dfcl2.csv&#39;</span><span class="p">)</span>
-<span class="n">y_reload</span><span class="o">=</span><span class="n">df_cl2</span><span class="p">[</span><span class="s1">&#39;Response&#39;</span><span class="p">]</span>
-<span class="n">X_reload</span><span class="o">=</span><span class="n">df_cl2</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Response&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">X_train2</span><span class="p">,</span> <span class="n">X_test2</span><span class="p">,</span> <span class="n">y_train2</span><span class="p">,</span> <span class="n">y_test2</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_reload</span><span class="p">,</span> <span class="n">y_reload</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="q4-10-points-classification">
-<h4>Q4 [10 points]. Classification<a class="headerlink" href="#q4-10-points-classification" title="Permalink to this headline">¶</a></h4>
-<p>Use X_train2, X_test2, y_train2, y_test2 from above. Use a Gradient Boosting classifier (as instantiated below).</p>
-<p>Calculate:</p>
-<p><code class="docutils literal notranslate"><span class="pre">test_acc</span></code>  The accuracy of the classifier on the test set.<br />
-<code class="docutils literal notranslate"><span class="pre">test_roc</span></code>  The area under the ROC curve on on the test set.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">GradientBoostingClassifier</span>
-<span class="c1">#use this classifier</span>
-<span class="n">classifier</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Put your entire answer here in this cell. </span>
+<span class="c1">#It is ok to use other temporary cells while working but for final submission move all related code to this cell.</span>
 
 
 <span class="c1"># YOUR CODE HERE</span>
@@ -954,9 +903,13 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 11 Test Cell</span>
-<span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">test_acc</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="mf">0.860</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#These are helper tests to make sure you have answers.  If this fails, please check your naming. </span>
+<span class="k">assert</span> <span class="s1">&#39;reg_mae_train&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;reg_mae_test&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;reg_r2_test&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;reg_r2_train&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;treat_coef&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">treat_dir</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;increase&#39;</span><span class="p">,</span><span class="s1">&#39;decrease&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -964,10 +917,175 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
-<span class="c1"># 12 Test Cell</span>
-<span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">test_roc</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="mf">0.846</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="q4-15-points-deep-learning">
+<h3><span class="section-number">78.1.1. </span>Q4[15 points]. Deep Learning.<a class="headerlink" href="#q4-15-points-deep-learning" title="Permalink to this headline">¶</a></h3>
+<p>Build a 4-layer neural network called <code class="docutils literal notranslate"><span class="pre">model</span></code>:</p>
+<ul class="simple">
+<li><p>Layer 0 is a normalization layer.</p></li>
+<li><p>Layer 1 is a dense layer with 100 nodes and relu activation</p></li>
+<li><p>Layer 2 is a dense layer with 100 nodes and relu activation</p></li>
+<li><p>Layer 3 is the final dense layer with 1 output.</p></li>
+</ul>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">adam</span></code> optimizer and <code class="docutils literal notranslate"><span class="pre">mean_absolute_error</span></code> as the loss function with <code class="docutils literal notranslate"><span class="pre">epochs</span></code>=175.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Put your entire answer here in this cell. </span>
+<span class="c1">#It is ok to use other temporary cells while working but for final submission move all related code to this cell.</span>
+
+
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="s1">&#39;model&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;deep_r2_train&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;deep_mae_train&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;deep_r2_test&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s1">&#39;deep_mae_test&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="q5-17-5-points-comparison">
+<h3><span class="section-number">78.1.2. </span>Q5 [17.5 points]. Comparison<a class="headerlink" href="#q5-17-5-points-comparison" title="Permalink to this headline">¶</a></h3>
+<p>For each of the questions below, reply with the available options in <code class="docutils literal notranslate"><span class="pre">()</span></code>. Even if you didn’t get all models to work, at least make a guess. Hint: The intuition of what you might expect for the 3 different models is correct.</p>
+<p><code class="docutils literal notranslate"><span class="pre">q5a</span></code>  Which is a linear model? (<code class="docutils literal notranslate"><span class="pre">gbm</span></code> or <code class="docutils literal notranslate"><span class="pre">reg</span></code> or <code class="docutils literal notranslate"><span class="pre">deep</span></code>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">q5b</span></code>  Which is actually make up of many different models working together (an ensemble model) (<code class="docutils literal notranslate"><span class="pre">gbm</span></code> or <code class="docutils literal notranslate"><span class="pre">reg</span></code> or <code class="docutils literal notranslate"><span class="pre">deep</span></code>)?</p>
+<p><code class="docutils literal notranslate"><span class="pre">q5c</span></code>  Which performs better from a prediction standpoint (<code class="docutils literal notranslate"><span class="pre">gbm</span></code> or <code class="docutils literal notranslate"><span class="pre">reg</span></code> or <code class="docutils literal notranslate"><span class="pre">deep</span></code>)?</p>
+<p><code class="docutils literal notranslate"><span class="pre">q5d</span></code>  Which gives you an understanding of the direction of the treatment on the target (<code class="docutils literal notranslate"><span class="pre">gbm</span></code> or <code class="docutils literal notranslate"><span class="pre">reg</span></code> or <code class="docutils literal notranslate"><span class="pre">deep</span></code>)?</p>
+<p><code class="docutils literal notranslate"><span class="pre">q5e</span></code>  Which shows more evidence of overfitting between train and test (<code class="docutils literal notranslate"><span class="pre">gbm</span></code> or <code class="docutils literal notranslate"><span class="pre">reg</span></code> or <code class="docutils literal notranslate"><span class="pre">deep</span></code>)?</p>
+<p><code class="docutils literal notranslate"><span class="pre">q5f</span></code>  Which model has the most parameters?(<code class="docutils literal notranslate"><span class="pre">gbm</span></code> or <code class="docutils literal notranslate"><span class="pre">reg</span></code> or <code class="docutils literal notranslate"><span class="pre">deep</span></code>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">q5g</span></code>  The importance metric from a GBM analysis is always very highly correlated with the coefficients from a regression analysis (<code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Put your entire answer here in this cell. </span>
+<span class="c1">#It is ok to use other temporary cells while working but for final submission move all related code to this cell.</span>
+
+
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#These are helper tests to make sure you have answers.  If this fails, please check your naming. </span>
+<span class="k">assert</span> <span class="n">q5a</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span><span class="s1">&#39;gbm&#39;</span><span class="p">,</span><span class="s1">&#39;deep&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">q5b</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span><span class="s1">&#39;gbm&#39;</span><span class="p">,</span><span class="s1">&#39;deep&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">q5c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span><span class="s1">&#39;gbm&#39;</span><span class="p">,</span><span class="s1">&#39;deep&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">q5d</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span><span class="s1">&#39;gbm&#39;</span><span class="p">,</span><span class="s1">&#39;deep&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">q5e</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span><span class="s1">&#39;gbm&#39;</span><span class="p">,</span><span class="s1">&#39;deep&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">q5f</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span><span class="s1">&#39;gbm&#39;</span><span class="p">,</span><span class="s1">&#39;deep&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">q5g</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;True&#39;</span><span class="p">,</span><span class="s1">&#39;False&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Please do not modify/delete this cell</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -999,7 +1117,21 @@
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="hw-7.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">62. </span>Homework-7</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../content/capstone.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>The MS Business Analytics Capstone Course</strong></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
