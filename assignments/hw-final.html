@@ -886,7 +886,7 @@
 <ol class="simple">
 <li><p>Calculate the r-squared for both the <code class="docutils literal notranslate"><span class="pre">train</span></code> and the <code class="docutils literal notranslate"><span class="pre">test</span></code> set and assign to <code class="docutils literal notranslate"><span class="pre">reg_r2_train</span></code> and <code class="docutils literal notranslate"><span class="pre">reg_r2_test</span></code>, respectively.</p></li>
 <li><p>Calculate the mean absolute error for both the <code class="docutils literal notranslate"><span class="pre">train</span></code> and the <code class="docutils literal notranslate"><span class="pre">test</span></code> set and assign to <code class="docutils literal notranslate"><span class="pre">reg_mae_train</span></code> and <code class="docutils literal notranslate"><span class="pre">reg_mae_test</span></code>, respectively.</p></li>
-<li><p>For the treatment, set the treatment coeffient to the <code class="docutils literal notranslate"><span class="pre">treat_coef</span></code>.</p></li>
+<li><p>From you regression model, get the  beta coefficient of the column <code class="docutils literal notranslate"><span class="pre">treatment</span></code> and set it to the variable  <code class="docutils literal notranslate"><span class="pre">treat_coef</span></code>.</p></li>
 <li><p>Based on the coefficient (don’t worry about significance) does the treatment tend to <code class="docutils literal notranslate"><span class="pre">increase</span></code> or <code class="docutils literal notranslate"><span class="pre">decrease</span></code> the <code class="docutils literal notranslate"><span class="pre">target</span></code>? Set the value of <code class="docutils literal notranslate"><span class="pre">treat_dir</span></code> to your answer.</p></li>
 </ol>
 <div class="cell docutils container">
@@ -952,6 +952,7 @@
 <li><p>Layer 3 is the final dense layer with 1 output.</p></li>
 </ul>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">adam</span></code> optimizer and <code class="docutils literal notranslate"><span class="pre">mean_absolute_error</span></code> as the loss function with <code class="docutils literal notranslate"><span class="pre">epochs</span></code>=175.</p>
+<p>Also, evaluate the model. Calculate <code class="docutils literal notranslate"><span class="pre">deep_r2_train</span></code>, <code class="docutils literal notranslate"><span class="pre">deep_mae_train</span></code>,  <code class="docutils literal notranslate"><span class="pre">deep_r2_test</span></code>, and   <code class="docutils literal notranslate"><span class="pre">deep_mae_test</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Put your entire answer here in this cell. </span>
